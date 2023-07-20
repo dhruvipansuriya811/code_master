@@ -14,9 +14,12 @@ class OnBoardingScreen extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
           body: Stack(
+            alignment: Alignment.bottomCenter,
         children: [
           onBoardingPageView,
-          Positioned(bottom: 50,left: 160,child: commonDotRow,),
+          Positioned(
+            bottom: Get.height/25,
+              child: commonDotRow),
         ],
       )),
     );
