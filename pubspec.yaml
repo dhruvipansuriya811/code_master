@@ -78,6 +78,51 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
+
+  fonts:
+    - family: AbrilFatface-Regular
+      fonts:
+        - asset: assets/fonts/abrilfatfac/AbrilFatface-Regular.ttf
+
+    - family: ZillaSlab-Light
+      fonts:
+        - asset: assets/fonts/zillaslab/ZillaSlab-Light.ttf
+
+    - family: DMSerifDisplay-Regular
+      fonts:
+        - asset: assets/fonts/dmsserifdis/DMSerifDisplay-Regular.ttf
+
+    - family: Butcherman-Regular
+      fonts:
+        - asset: assets/fonts/butcherma/Butcherman-Regular.ttf
+
+    - family: RubikBeastly-Regular
+      fonts:
+        - asset: assets/fonts/rubikbeast/RubikBeastly-Regular.ttf
+
+    - family: Barrio-Regular
+      fonts:
+        - asset: assets/fonts/barrio/Barrio-Regular.ttf
+
+    - family: ondrinaOutline-Regular
+      fonts:
+        - asset: assets/fonts/londrina/LondrinaOutline-Regular.ttf
+
+
+    - family: Galada-Regular
+      fonts:
+        - asset: assets/fonts/galada reg/Galada-Regular.ttf
+
+    - family: FasterOne-Regular
+      fonts:
+        - asset: assets/fonts/fasterone/FasterOne-Regular.ttf
+
+
+    - family: Anton-Regular
+      fonts:
+        - asset: assets/fonts/anton/Anton-Regular.ttf
+
+
   # fonts:
   #   - family: Schyler
   #     fonts:

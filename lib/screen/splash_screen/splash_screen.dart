@@ -9,7 +9,7 @@ class SplashScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return const SafeArea(
       child: Scaffold(
-        body: Center(child: Text("Splash Creen")),
+        body: Center(child: Text("Splash Screen")),
       ),
     );
   }

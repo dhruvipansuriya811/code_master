@@ -10,3 +10,69 @@ void main() {
       )
   );
 }
+
+
+
+// SizedBox(
+//   height: 5,
+// ),
+// Text(
+//   "LET'S LEARN",
+//   style: TextStyle(fontFamily: "DMSerifDisplay-Regular", fontSize: 20),
+// ),
+// SizedBox(
+//   height: 5,
+// ),
+// Text(
+//   "LET'S START",
+//   style: TextStyle(fontFamily: "DMSerifDisplay-Regular", fontSize: 20),
+// ),
+// SizedBox(
+//   height: 5,
+// ),
+// Text(
+//   "SOMETHING NEW",
+//   style: TextStyle(fontFamily: "Butcherman-Regular", fontSize: 20),
+// ),
+// SizedBox(
+//   height: 5,
+// ),
+// Text(
+//   "LET'S LEARN",
+//   style: TextStyle(fontFamily: "RubikBeastly-Regular", fontSize: 20),
+// ),
+// SizedBox(
+//   height: 5,
+// ),
+// Text(
+//   "LET'S START",
+//   style: TextStyle(fontFamily: "Butcherman-Regular", fontSize: 20),
+// ),
+// SizedBox(
+//   height: 5,
+// ),
+// Text(
+//   "LET'S START",
+//   style: TextStyle(fontFamily: "Anton-Regular", fontSize: 20),
+// ),
+// SizedBox(
+//   height: 5,
+// ),
+// Text(
+//   "LET'S START",
+//   style: TextStyle(fontFamily: "FasterOne-Regular", fontSize: 20),
+// ),
+// SizedBox(
+//   height: 5,
+// ),
+// Text(
+//   "LET'S START",
+//   style: TextStyle(fontFamily: "Galada-Regular", fontSize: 20),
+// ),
+// SizedBox(
+//   height: 5,
+// ),
+// Text(
+//   "LET'S START",
+//   style: TextStyle(fontFamily: "ondrinaOutline-Regular", fontSize: 20),
+// ),
