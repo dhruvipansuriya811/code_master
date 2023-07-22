@@ -1,3 +1,4 @@
+
 import 'package:code_master/common/common%20textfiled.dart';
 import 'package:code_master/common/common_text.dart';
 import 'package:code_master/screen/login_screen/login_screen_controller.dart';
@@ -28,3 +29,4 @@ Widget loginEmailTextField = GetBuilder<LoginScreenController>(
     );
   },
 );
+
