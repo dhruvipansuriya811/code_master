@@ -1,15 +1,18 @@
 import 'package:code_master/common/common_sizebox.dart';
 import 'package:code_master/common/disposeKeyBoard';
-import 'package:code_master/screen/login_screen/login_screen_controller.dart';
 import 'package:code_master/screen/login_screen/login_screen_widget.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class LoginScreen extends StatelessWidget {
-  LoginScreen({super.key});
+import 'signup_screen_controller.dart';
+import 'signup_screen_widget.dart';
 
-  final LoginScreenController loginScreenController =
-      Get.put(LoginScreenController());
+class SignUpScreen extends StatelessWidget {
+  SignUpScreen({super.key});
+
+  final SignUpScreenController signUpScreenController =
+      Get.put(SignUpScreenController());
 
   @override
   Widget build(BuildContext context) {
@@ -26,19 +29,22 @@ class LoginScreen extends StatelessWidget {
               child: Column(
                 children: [
                   heightSizeBox(Get.height / 20),
-                  loginLogo,
+                  signUpLogo,
                   heightSizeBox(Get.height / 60),
-                  loginText,
+                  signUpText,
                   heightSizeBox(Get.height / 20),
-                  loginEmailTextField,
+                  signUpNameTextField,
                   heightSizeBox(Get.height / 30),
-                  loginPasswordTextField,
-                  heightSizeBox(Get.height / 8),
-                  loginScreenLoginButton,
+                  signUpEmailController,
                   heightSizeBox(Get.height / 30),
-                  forgotPasswordButton,
+                  signUpPasswordTextField,
                   heightSizeBox(Get.height / 30),
-                  goToSignUp,
+                  signUpPhoneController,
+                  heightSizeBox(Get.height / 20),
+                  signUpButton,
+                  heightSizeBox(Get.height / 30),
+                  goToSignIn,
+                  heightSizeBox(Get.height / 30),
                 ],
               ),
             ),

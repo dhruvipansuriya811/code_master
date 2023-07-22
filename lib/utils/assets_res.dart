@@ -7,7 +7,7 @@ class ImageRes {
   static const onBoardingLottie1 = '${imageBase}animation_lkazxx8p.json';
   static const onBoardingLottie2 = '${imageBase}animation_lkaw1cgj.json';
   static const onBoardingLottie3 = '${imageBase}animation_lkaw0xs8.json';
-  static const loginLogo = '${imageBase}loginlogo.png.png';
+  static const loginLogo = '${imageBase}loginscreenlogo.png';
 }
 
 //.................IconRes.....................

@@ -1,18 +1,18 @@
 import 'package:code_master/common/common%20textfiled.dart';
 import 'package:code_master/common/common_button.dart';
 import 'package:code_master/common/common_text.dart';
-import 'package:code_master/screen/login_screen/login_screen_controller.dart';
+import 'package:code_master/common/logo_container.dart';
 import 'package:code_master/screen/signup_sreen/signup_screen_controller.dart';
 import 'package:code_master/utils/assets_res.dart';
 import 'package:code_master/utils/colors_res.dart';
 import 'package:code_master/utils/string_res.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import '../../common/logo_container.dart';
 
-Widget loginLogo = logoContainer(imageName: ImageRes.loginLogo);
+Widget signUpLogo = logoContainer(imageName: ImageRes.loginLogo);
 
-Widget loginText = commonText(
+
+Widget signUpText = commonText(
   fontWeight: FontWeight.bold,
   text: StringRes.loginLogoText,
   fontFamily: "DMSerifDisplay-Regular",
@@ -20,10 +20,23 @@ Widget loginText = commonText(
   fontSize: Get.height / 40,
 );
 
-Widget loginEmailTextField = GetBuilder<LoginScreenController>(
+
+Widget signUpNameTextField = GetBuilder<SignUpScreenController>(
+  builder: (controller) {
+    return commonTextFiled( prefixIcon: IconRes.person,
+      textFiledName: StringRes.name,
+      fontSize: 18,
+      hintText: StringRes.name,
+      fontFamily: "Poppins",
+      controller: controller.nameController,
+    );
+  },
+);
+
+Widget signUpEmailController = GetBuilder<SignUpScreenController>(
   builder: (controller) {
     return commonTextFiled(
-      prefixIcon: IconRes.phoneNum,
+      prefixIcon: IconRes.email,
       textFiledName: StringRes.email,
       fontSize: 18,
       hintText: StringRes.email,
@@ -33,14 +46,15 @@ Widget loginEmailTextField = GetBuilder<LoginScreenController>(
   },
 );
 
-Widget loginPasswordTextField = GetBuilder<LoginScreenController>(
-  id: "changeLogInEyeValue",
+
+Widget signUpPasswordTextField = GetBuilder<SignUpScreenController>(
+  id: "changeSignUpEyeValue",
   builder: (controller) {
     return commonTextFiled(
       prefixIcon: IconRes.password,
-      obscureText: controller.logInEyeValue,
+      obscureText: controller.signEyeValue,
       suffixIcon:
-          controller.logInEyeValue ? IconRes.unVisibility : IconRes.visibility,
+      controller.signEyeValue ? IconRes.unVisibility : IconRes.visibility,
       textFiledName: StringRes.password,
       fontSize: 18,
       hintText: StringRes.password,
@@ -51,48 +65,50 @@ Widget loginPasswordTextField = GetBuilder<LoginScreenController>(
   },
 );
 
-Widget loginScreenLoginButton = GetBuilder<LoginScreenController>(
+
+Widget signUpPhoneController = GetBuilder<SignUpScreenController>(
+  builder: (controller) {
+    return commonTextFiled(
+      prefixIcon: IconRes.phoneNum,
+      textFiledName: StringRes.phone,
+      fontSize: 18,
+      hintText: StringRes.phone,
+      fontFamily: "Poppins",
+      controller: controller.phoneController,
+    );
+  },
+);
+
+Widget signUpButton = GetBuilder<SignUpScreenController>(
   builder: (controller) {
     return containerButton(
-      onTap: controller.loginToDesBoard,
-      data: StringRes.loginButton,
+      onTap: controller.loginToBackScreen,
+      data: StringRes.signUpButton,
       height: Get.height / 18,
       width: Get.width / 1.5,
     );
   },
 );
 
-Widget forgotPasswordButton = GetBuilder<LoginScreenController>(
-  builder: (controller) {
-    return GestureDetector(
-      onTap: () {},
-      child: commonText(
-        text: StringRes.forgotPass,
-        fontFamily: "Poppins-Light",
-        textColor: ColorRes.purpleDark,
-        fontSize: Get.height / 50,
-        fontWeight: FontWeight.w500,
-      ),
-    );
-  },
-);
 
-Widget goToSignUp = GetBuilder<LoginScreenController>(
+
+
+Widget goToSignIn = GetBuilder<SignUpScreenController>(
   builder: (controller) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         commonText(
-          text: StringRes.dontHaveAccount,
+          text: StringRes.alreadyHaveAnAccount,
           fontFamily: "Poppins-Light",
           textColor: ColorRes.blackColor,
           fontSize: Get.height / 50,
           fontWeight: FontWeight.w400,
         ),
         GestureDetector(
-          onTap: controller.loginToSignUp,
+          onTap: controller.signUpToSignIn,
           child: commonText(
-            text: StringRes.signUp,
+            text: StringRes.signIn,
             fontFamily: "Poppins-Light",
             fontSize: Get.height / 50,
             textColor: ColorRes.purpleDark,
@@ -103,5 +119,6 @@ Widget goToSignUp = GetBuilder<LoginScreenController>(
     );
   },
 );
+
 
 

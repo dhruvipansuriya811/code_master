@@ -6,10 +6,12 @@ Widget commonText({
   String? fontFamily,
   Color? textColor,
   FontWeight? fontWeight,
+  double? letterSpacing,
 }) {
   return Text(
     text,
     style: TextStyle(
+      letterSpacing:letterSpacing ,
       fontSize: fontSize,
       fontFamily: fontFamily,
       color: textColor,

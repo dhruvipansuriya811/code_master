@@ -11,6 +11,11 @@ class StringRes {
   static const String password = "Password";
   static const String loginButton = "Login";
   static const String forgotPass = "Forgot the password?";
-  static const String dontHaveAccount = "Don't have account?";
+  static const String dontHaveAccount = "Don't have account? ";
   static const String signUp = "Sign up";
+  static const String phone = "Phone number";
+  static const String name = "Name";
+  static const String signUpButton = "Sign up";
+  static const String alreadyHaveAnAccount = "Already have an account? ";
+  static const String signIn = "Sign in";
 }

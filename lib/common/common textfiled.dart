@@ -6,8 +6,10 @@ import 'package:get/get.dart';
 Widget commonTextFiled({
   required String hintText,
   IconData? suffixIcon,
+  IconData? prefixIcon,
   required String textFiledName,
   void Function()? suffixIconOnPressed,
+  void Function()? prefixIconOnPressed,
   required TextEditingController controller,
   double? fontSize,
   FontWeight? fontWeight,
@@ -36,11 +38,15 @@ Widget commonTextFiled({
           obscuringCharacter: "*",
           obscureText: obscureText,
           decoration: InputDecoration(
+            prefixIcon: IconButton(
+              onPressed: prefixIconOnPressed,
+              icon: Icon(prefixIcon),
+            ),
             focusedBorder: const OutlineInputBorder(
               borderSide: BorderSide(color: ColorRes.purpleDark, width: 1.5),
             ),
             border: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(10),
+              borderRadius: BorderRadius.circular(15),
             ),
             hintText: hintText,
             hintStyle:
