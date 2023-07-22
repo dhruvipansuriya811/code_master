@@ -5,12 +5,14 @@ import 'package:flutter/material.dart';
 Widget containerButton({
   required void Function()? onTap,
   required String data,
+  double? height,
+  double? width,
 }) {
   return InkWell(
     onTap: onTap,
     child: Container(
-      height: 45,
-      width: 150,
+      height: height,
+      width: width,
       decoration: BoxDecoration(
         boxShadow: [
           BoxShadow(

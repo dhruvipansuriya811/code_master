@@ -9,4 +9,8 @@ class StringRes {
   static const String loginLogoText = "LogIn to your account";
   static const  String email = "Email";
   static const String password = "Password";
+  static const String loginButton = "Login";
+  static const String forgotPass = "Forgot the password?";
+  static const String dontHaveAccount = "Don't have account?";
+  static const String signUp = "Sign up";
 }

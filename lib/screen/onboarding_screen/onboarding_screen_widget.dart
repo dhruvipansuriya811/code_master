@@ -123,6 +123,8 @@ Widget commonDot({required int index, required int pageIndex}) {
 Widget onBoardingNextButton = GetBuilder<OnBoardingController>(
   id: "nextButton",
   builder: (controller) => containerButton(
+    height: Get.height/18,
+      width: Get.width/2,
       data: controller.onBoardingPageIndex == 0 ||
               controller.onBoardingPageIndex == 1
           ? StringRes.next

@@ -12,6 +12,7 @@ Widget commonTextFiled({
   double? fontSize,
   FontWeight? fontWeight,
   String? fontFamily,
+  bool obscureText = false,
 }) {
   return Column(
     crossAxisAlignment: CrossAxisAlignment.start,
@@ -28,22 +29,23 @@ Widget commonTextFiled({
         ),
       ),
       heightSizeBox(Get.height / 90),
-      SizedBox(
-        height: 50,
+      Container(
+        color: ColorRes.weightColor,
         child: TextField(
           controller: controller,
+          obscuringCharacter: "*",
+          obscureText: obscureText,
           decoration: InputDecoration(
             focusedBorder: const OutlineInputBorder(
-              borderSide:
-                  BorderSide(color: ColorRes.purpleDark, width: 1.5),
+              borderSide: BorderSide(color: ColorRes.purpleDark, width: 1.5),
             ),
-            contentPadding:
-                EdgeInsets.only(bottom: Get.height / 15, left: Get.width / 20),
             border: OutlineInputBorder(
               borderRadius: BorderRadius.circular(10),
             ),
             hintText: hintText,
-            suffix: IconButton(
+            hintStyle:
+                TextStyle(color: Colors.grey, fontWeight: FontWeight.bold),
+            suffixIcon: IconButton(
               icon: Icon(suffixIcon),
               onPressed: suffixIconOnPressed,
             ),

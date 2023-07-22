@@ -1,7 +1,7 @@
 import 'package:code_master/common/common_sizebox.dart';
+import 'package:code_master/common/disposeKeyBoard';
 import 'package:code_master/screen/login_screen/login_screen_controller.dart';
 import 'package:code_master/screen/login_screen/login_screen_widget.dart';
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -14,18 +14,34 @@ class LoginScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      child: Scaffold(
-        body: Padding(
-          padding: EdgeInsets.symmetric(horizontal: Get.width / 20),
-          child: Column(
-            children: [
-              heightSizeBox(Get.height / 15),
-              loginLogo,
-              heightSizeBox(Get.height / 70),
-              loginText,
-              heightSizeBox(Get.height / 20),
-              loginEmailTextField,
-            ],
+      child: GestureDetector(
+        onTap: () {
+          disposeKeyBoard();
+        },
+        child: Scaffold(
+          resizeToAvoidBottomInset: true,
+          body: Padding(
+            padding: EdgeInsets.symmetric(horizontal: Get.width / 20),
+            child: SingleChildScrollView(
+              child: Column(
+                children: [
+                  heightSizeBox(Get.height / 15),
+                  loginLogo,
+                  heightSizeBox(Get.height / 70),
+                  loginText,
+                  heightSizeBox(Get.height / 20),
+                  loginEmailTextField,
+                  heightSizeBox(Get.height / 30),
+                  loginPasswordTextField,
+                  heightSizeBox(Get.height / 8),
+                  loginScreenLoginButton,
+                  heightSizeBox(Get.height / 30),
+                  forgotPasswordButton,
+                  heightSizeBox(Get.height / 30),
+                  goToSignUp,
+                ],
+              ),
+            ),
           ),
         ),
       ),
