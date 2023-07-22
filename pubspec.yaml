@@ -122,6 +122,15 @@ flutter:
       fonts:
         - asset: assets/fonts/anton/Anton-Regular.ttf
 
+    - family: Poppins
+      fonts:
+        - asset: assets/fonts/poppins/Poppins-Black.ttf
+
+    - family: Poppins-Light
+      fonts:
+        - asset: assets/fonts/poppins/Poppins-Light.ttf
+
+
 
   # fonts:
   #   - family: Schyler

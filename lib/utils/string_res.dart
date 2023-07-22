@@ -6,4 +6,7 @@ class StringRes {
   static const String continueText = "Continue >>";
   static const String next = "Next";
   static const String getStarted = "Get Started";
+  static const String loginLogoText = "LogIn to your account";
+  static const  String email = "Email";
+  static const String password = "Password";
 }

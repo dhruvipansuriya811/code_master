@@ -1,4 +1,4 @@
-import 'package:code_master/common/commonbutton.dart';
+import 'package:code_master/common/common_button.dart';
 import 'package:code_master/screen/onboarding_screen/onboarding_controller.dart';
 import 'package:code_master/screen/onboarding_screen/onboarding_screen_widget.dart';
 import 'package:flutter/material.dart';

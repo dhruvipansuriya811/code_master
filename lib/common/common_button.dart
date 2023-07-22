@@ -1,9 +1,6 @@
 //.......................onBoarding button........................//
 
-import 'package:code_master/screen/onboarding_screen/onboarding_controller.dart';
-import 'package:code_master/utils/string_res.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get_state_manager/src/simple/get_state.dart';
 
 Widget containerButton({
   required void Function()? onTap,

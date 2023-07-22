@@ -1,5 +1,5 @@
 import 'package:code_master/common/common_sizebox.dart';
-import 'package:code_master/common/commonbutton.dart';
+import 'package:code_master/common/common_button.dart';
 import 'package:code_master/screen/onboarding_screen/onboarding_controller.dart';
 import 'package:code_master/utils/assets_res.dart';
 import 'package:code_master/utils/string_res.dart';
