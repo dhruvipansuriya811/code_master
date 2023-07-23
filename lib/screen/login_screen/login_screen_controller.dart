@@ -8,7 +8,7 @@ class LoginScreenController extends GetxController {
   TextEditingController passwordController = TextEditingController();
 
   bool logInEyeValue = false;
-  void changeSignUpEyeValue() {
+  void changeLoginEyeValue() {
     logInEyeValue = !logInEyeValue;
     update(['changeLogInEyeValue']);
   }

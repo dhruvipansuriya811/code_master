@@ -1,10 +1,7 @@
 import 'package:code_master/common/common_sizebox.dart';
 import 'package:code_master/common/disposeKeyBoard';
-import 'package:code_master/screen/login_screen/login_screen_widget.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
 import 'signup_screen_controller.dart';
 import 'signup_screen_widget.dart';
 

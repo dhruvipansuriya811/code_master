@@ -83,7 +83,7 @@ Widget signUpButton = GetBuilder<SignUpScreenController>(
   builder: (controller) {
     return containerButton(
       onTap: controller.loginToBackScreen,
-      data: StringRes.signUpButton,
+      data: StringRes.signUp,
       height: Get.height / 18,
       width: Get.width / 1.5,
     );
@@ -108,7 +108,7 @@ Widget goToSignIn = GetBuilder<SignUpScreenController>(
         GestureDetector(
           onTap: controller.signUpToSignIn,
           child: commonText(
-            text: StringRes.signIn,
+            text: StringRes.login,
             fontFamily: "Poppins-Light",
             fontSize: Get.height / 50,
             textColor: ColorRes.purpleDark,

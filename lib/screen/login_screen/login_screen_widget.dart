@@ -2,7 +2,6 @@ import 'package:code_master/common/common%20textfiled.dart';
 import 'package:code_master/common/common_button.dart';
 import 'package:code_master/common/common_text.dart';
 import 'package:code_master/screen/login_screen/login_screen_controller.dart';
-import 'package:code_master/screen/signup_sreen/signup_screen_controller.dart';
 import 'package:code_master/utils/assets_res.dart';
 import 'package:code_master/utils/colors_res.dart';
 import 'package:code_master/utils/string_res.dart';
@@ -46,7 +45,7 @@ Widget loginPasswordTextField = GetBuilder<LoginScreenController>(
       hintText: StringRes.password,
       fontFamily: "Poppins",
       controller: controller.passwordController,
-      suffixIconOnPressed: controller.changeSignUpEyeValue,
+      suffixIconOnPressed: controller.changeLoginEyeValue,
     );
   },
 );
@@ -55,7 +54,7 @@ Widget loginScreenLoginButton = GetBuilder<LoginScreenController>(
   builder: (controller) {
     return containerButton(
       onTap: controller.loginToDesBoard,
-      data: StringRes.loginButton,
+      data: StringRes.login,
       height: Get.height / 18,
       width: Get.width / 1.5,
     );
@@ -83,7 +82,7 @@ Widget goToSignUp = GetBuilder<LoginScreenController>(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         commonText(
-          text: StringRes.dontHaveAccount,
+          text: StringRes.doNotHaveAccount,
           fontFamily: "Poppins-Light",
           textColor: ColorRes.blackColor,
           fontSize: Get.height / 50,

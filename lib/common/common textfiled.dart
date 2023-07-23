@@ -49,8 +49,8 @@ Widget commonTextFiled({
               borderRadius: BorderRadius.circular(15),
             ),
             hintText: hintText,
-            hintStyle:
-                TextStyle(color: Colors.grey, fontWeight: FontWeight.bold),
+            hintStyle: const TextStyle(
+                color: Colors.grey, fontWeight: FontWeight.bold),
             suffixIcon: IconButton(
               icon: Icon(suffixIcon),
               onPressed: suffixIconOnPressed,

@@ -7,15 +7,14 @@ class StringRes {
   static const String next = "Next";
   static const String getStarted = "Get Started";
   static const String loginLogoText = "LogIn to your account";
+  static const String signUpLogoText = "SignUp for free";
   static const  String email = "Email";
   static const String password = "Password";
-  static const String loginButton = "Login";
+  static const String login = "Login";
   static const String forgotPass = "Forgot the password?";
-  static const String dontHaveAccount = "Don't have account? ";
+  static const String doNotHaveAccount = "Don't have account? ";
   static const String signUp = "Sign up";
   static const String phone = "Phone number";
   static const String name = "Name";
-  static const String signUpButton = "Sign up";
   static const String alreadyHaveAnAccount = "Already have an account? ";
-  static const String signIn = "Sign in";
 }
