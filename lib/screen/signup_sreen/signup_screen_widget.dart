@@ -9,12 +9,11 @@ import 'package:code_master/utils/string_res.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-Widget signUpLogo = logoContainer(imageName: ImageRes.loginLogo);
-
+Widget signUpLogo = logoContainer(imageName: ImageRes.signUpLogo);
 
 Widget signUpText = commonText(
   fontWeight: FontWeight.bold,
-  text: StringRes.loginLogoText,
+  text: StringRes.signUpLogoText,
   fontFamily: "DMSerifDisplay-Regular",
   letterSpacing: 1,
   fontSize: Get.height / 40,
