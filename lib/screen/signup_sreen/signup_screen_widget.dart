@@ -14,7 +14,7 @@ Widget signUpLogo = logoContainer(imageName: ImageRes.loginLogo);
 
 Widget signUpText = commonText(
   fontWeight: FontWeight.bold,
-  text: StringRes.loginLogoText,
+  text: StringRes.signUpLogoText,
   fontFamily: "DMSerifDisplay-Regular",
   letterSpacing: 1,
   fontSize: Get.height / 40,
