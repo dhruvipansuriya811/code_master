@@ -18,16 +18,17 @@ Widget dashboardBottomNavigationBar = GetBuilder<DashboardScreenController>(
         durationInMilliSeconds: 300,
         bottomBarItems: List.generate(
           controller.bottomNavigationItem.length,
-          (index) => BottomBarItem(
-              inActiveItem: Icon(
-                controller.bottomNavigationItem[index]['icon'],
-                color: ColorRes.purpleDark,
-              ),
-              activeItem: Icon(
-                controller.bottomNavigationItem[index]['icon'],
-                color: Colors.white,
-              ),
-              itemLabel: controller.bottomNavigationItem[index]['label']),
+              (index) =>
+              BottomBarItem(
+                  inActiveItem: Icon(
+                    controller.bottomNavigationItem[index]['icon'],
+                    color: ColorRes.purpleDark,
+                  ),
+                  activeItem: Icon(
+                    controller.bottomNavigationItem[index]['icon'],
+                    color: Colors.white,
+                  ),
+                  itemLabel: controller.bottomNavigationItem[index]['label']),
         ),
         onTap: controller.onTapBottomBar);
   },
@@ -35,13 +36,16 @@ Widget dashboardBottomNavigationBar = GetBuilder<DashboardScreenController>(
 
 Widget dashBoardPageView = GetBuilder<DashboardScreenController>(
   id: "Dashboard",
-  builder: (controller) => PageView(
-    controller: controller.pageController,
-    physics: const NeverScrollableScrollPhysics(),
-    children: List.generate(controller.dashBoardScreenList.length,
-        (index) => controller.dashBoardScreenList[index]),
-  ),
+  builder: (controller) =>
+      PageView(
+        controller: controller.pageController,
+        physics: const NeverScrollableScrollPhysics(),
+        children: List.generate(controller.dashBoardScreenList.length,
+                (index) => controller.dashBoardScreenList[index]),
+      ),
 );
 
-AppBar dashBoardAppBar = commonAppbar(titleText:"dhuli" );
+AppBar dashBoardAppBar = commonAppbar(
+    titleText: Get.find<DashboardScreenController>().appBarTitleList[ Get.find<DashboardScreenController>().selectedPage]
+);
 

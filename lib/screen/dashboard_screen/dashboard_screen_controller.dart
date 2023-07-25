@@ -12,7 +12,8 @@ import 'search_screen/search_screen.dart';
 
 class DashboardScreenController extends GetxController {
   int selectedPage = 0;
-  NotchBottomBarController notchBottomBarController = NotchBottomBarController(index: 0);
+  NotchBottomBarController notchBottomBarController =
+      NotchBottomBarController(index: 0);
   PageController pageController = PageController(initialPage: 0);
 
   List<Map> bottomNavigationItem = [
@@ -30,8 +31,15 @@ class DashboardScreenController extends GetxController {
     },
     {
       'icon': IconRes.profile,
-      'label':StringRes.profile,
+      'label': StringRes.profile,
     }
+  ];
+
+  List appBarTitleList = [
+    StringRes.homeScreen,
+    StringRes.searchScreen,
+    StringRes.exampleScreen,
+    StringRes.profileScreen,
   ];
 
   List dashBoardScreenList = [
@@ -43,12 +51,14 @@ class DashboardScreenController extends GetxController {
 
   void onTap(int index) {
     selectedPage = index;
-    update(["DashboardScreen",]);
+    update([
+      "DashboardScreen",
+    ]);
   }
 
   onTapBottomBar(index) {
-  /// perform action on tab change and to update pages you can update pages without pages
-  pageController.jumpToPage(index);
+    /// perform action on tab change and to update pages you can update pages without pages
+    pageController.jumpToPage(index);
   }
 
   @override

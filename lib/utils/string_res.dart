@@ -20,6 +20,7 @@ class StringRes {
   static const String homeScreen = 'Home Screen';
   static const String searchScreen = 'Search Screen';
   static const String exampleScreen = 'Example Screen';
+  static const String profileScreen = 'Profile Screen';
   static const String home = 'Home';
   static const String search = 'Search';
   static const String example = 'Example';
