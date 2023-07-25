@@ -3,8 +3,6 @@ import 'package:code_master/screen/onboarding_screen/onboarding_screen_widget.da
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-
-
 class OnBoardingScreen extends StatelessWidget {
   OnBoardingScreen({super.key});
 
