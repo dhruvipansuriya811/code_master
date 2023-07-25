@@ -20,26 +20,34 @@ class LoginScreen extends StatelessWidget {
         },
         child: Scaffold(
           resizeToAvoidBottomInset: true,
-          body: Padding(
-            padding: EdgeInsets.symmetric(horizontal: Get.width / 20),
-            child: SingleChildScrollView(
-              child: Column(
-                children: [
-                  heightSizeBox(Get.height / 20),
-                  loginLogo,
-                  heightSizeBox(Get.height / 60),
-                  loginText,
-                  heightSizeBox(Get.height / 20),
-                  loginEmailTextField,
-                  heightSizeBox(Get.height / 30),
-                  loginPasswordTextField,
-                  heightSizeBox(Get.height / 8),
-                  loginScreenLoginButton,
-                  heightSizeBox(Get.height / 30),
-                  forgotPasswordButton,
-                  heightSizeBox(Get.height / 30),
-                  goToSignUp,
-                ],
+          body: Container(
+            decoration: BoxDecoration(
+              gradient: LinearGradient(
+                colors: [Color(0XFFf3e7e9), Color(0XFFe3eeff)],
+              ),
+            ),
+            child: Padding(
+              padding: EdgeInsets.symmetric(horizontal: Get.width / 20),
+              child: SingleChildScrollView(
+                child: Column(
+                  children: [
+                    heightSizeBox(Get.height / 20),
+                    loginLogo,
+                    heightSizeBox(Get.height / 60),
+                    loginText,
+                    heightSizeBox(Get.height / 20),
+                    loginEmailTextField,
+                    heightSizeBox(Get.height / 30),
+                    loginPasswordTextField,
+                    heightSizeBox(Get.height / 8),
+                    loginScreenLoginButton,
+                    heightSizeBox(Get.height / 30),
+                    forgotPasswordButton,
+                    heightSizeBox(Get.height / 30),
+                    goToSignUp,
+                    heightSizeBox(Get.height / 30),
+                  ],
+                ),
               ),
             ),
           ),

@@ -1,10 +1,9 @@
-import 'package:code_master/common/common_button.dart';
 import 'package:code_master/screen/onboarding_screen/onboarding_controller.dart';
 import 'package:code_master/screen/onboarding_screen/onboarding_screen_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../utils/string_res.dart';
+
 
 class OnBoardingScreen extends StatelessWidget {
   OnBoardingScreen({super.key});
@@ -16,19 +15,26 @@ class OnBoardingScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        body: Stack(
-          alignment: Alignment.bottomCenter,
-          children: [
-            onBoardingPageView,
-            Positioned(bottom: Get.height / 8, child: commonDotRow),
-            Positioned(
-                top: Get.height / 40,
-                right: Get.width / 20,
-                child: onBoardingTextButton),
-            Positioned(bottom: Get.height / 40, child: onBoardingNextButton),
+        body: Container(
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              colors: [Color(0XFFf3e7e9), Color(0XFFe3eeff)],
+            ),
+          ),
+          child: Stack(
+            alignment: Alignment.bottomCenter,
+            children: [
+              onBoardingPageView,
+              Positioned(bottom: Get.height / 8, child: commonDotRow),
+              Positioned(
+                  top: Get.height / 40,
+                  right: Get.width / 20,
+                  child: onBoardingTextButton),
+              Positioned(bottom: Get.height / 40, child: onBoardingNextButton),
 
-            // containerButton,
-          ],
+              // containerButton,
+            ],
+          ),
         ),
       ),
     );

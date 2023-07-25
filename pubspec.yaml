@@ -35,8 +35,17 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
+  eva_icons_flutter: ^3.1.0
   get:
   lottie:
+  curved_navigation_bar:
+  animated_list_item:
+  animation_list:
+  responsive_navigation_bar:
+  animated_notch_bottom_bar:
+  anim_search_bar:
+  easy_search_bar:
+  searchbar_animation:
 
 
 dev_dependencies:
@@ -130,6 +139,10 @@ flutter:
     - family: Poppins-Light
       fonts:
         - asset: assets/fonts/poppins/Poppins-Light.ttf
+
+    - family: Squada-One
+      fonts:
+        - asset: assets/fonts/squadaone/SquadaOne-Regular.ttf
 
 
 
