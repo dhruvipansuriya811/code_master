@@ -32,12 +32,13 @@ Widget commonTextFiled({
       ),
       heightSizeBox(Get.height / 90),
       Container(
-        color: ColorRes.weightColor,
         child: TextField(
           controller: controller,
           obscuringCharacter: "*",
           obscureText: obscureText,
           decoration: InputDecoration(
+            filled: true,
+            fillColor: ColorRes.weightColor,
             prefixIcon: IconButton(
               onPressed: prefixIconOnPressed,
               icon: Icon(prefixIcon),

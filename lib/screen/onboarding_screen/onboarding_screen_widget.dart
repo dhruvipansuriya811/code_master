@@ -70,7 +70,7 @@ Widget onBoardingColumn({
 
 Widget onBoardingTextButton = GetBuilder<OnBoardingController>(
   id: 'skipButton',
-  builder: (controller) => OutlinedButton(
+  builder: (controller) => TextButton(
     onPressed: () {
       controller.moveToNextScreen();
     },
@@ -80,13 +80,12 @@ Widget onBoardingTextButton = GetBuilder<OnBoardingController>(
             ? StringRes.skip
             : StringRes.continueText,
         style: TextStyle(
-          fontSize: 15,
+          fontSize: 18,
           color: Color(0XFF8B4EFF),
           fontFamily: "DMSerifDisplay-Regular",
         )),
   ),
 );
-
 //.......................onBoarding common dot row........................//
 
 Widget commonDotRow = GetBuilder<OnBoardingController>(
@@ -123,8 +122,8 @@ Widget commonDot({required int index, required int pageIndex}) {
 Widget onBoardingNextButton = GetBuilder<OnBoardingController>(
   id: "nextButton",
   builder: (controller) => containerButton(
-    height: Get.height/18,
-      width: Get.width/2,
+      height: Get.height / 18,
+      width: Get.width / 2,
       data: controller.onBoardingPageIndex == 0 ||
               controller.onBoardingPageIndex == 1
           ? StringRes.next

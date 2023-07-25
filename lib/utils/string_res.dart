@@ -17,4 +17,11 @@ class StringRes {
   static const String phone = "Phone number";
   static const String name = "Name";
   static const String alreadyHaveAnAccount = "Already have an account? ";
+  static const String homeScreen = 'Home Screen';
+  static const String searchScreen = 'Search Screen';
+  static const String exampleScreen = 'Example Screen';
+  static const String home = 'Home';
+  static const String search = 'Search';
+  static const String example = 'Example';
+  static const String profile = 'Profile';
 }
