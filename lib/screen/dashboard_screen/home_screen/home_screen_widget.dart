@@ -36,11 +36,10 @@ Widget homeScreenAllTopicContainer = GetBuilder<HomeScreenController>(
                 ),
               ),
             ),
-
           ),
         ),
       ),
-      heightSizeBox(Get.height/10.5),
+      heightSizeBox(Get.height / 10.5),
     ],
   ),
 );

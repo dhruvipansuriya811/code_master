@@ -1,6 +1,6 @@
-import 'package:code_master/common/common%20textfiled.dart';
 import 'package:code_master/common/common_button.dart';
 import 'package:code_master/common/common_text.dart';
+import 'package:code_master/common/common_textfield.dart';
 import 'package:code_master/common/logo_container.dart';
 import 'package:code_master/screen/signup_sreen/signup_screen_controller.dart';
 import 'package:code_master/utils/assets_res.dart';

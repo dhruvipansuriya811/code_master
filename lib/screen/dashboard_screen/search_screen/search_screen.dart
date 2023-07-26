@@ -11,7 +11,8 @@ class SearchScreen extends StatefulWidget {
 }
 
 class _SearchScreenState extends State<SearchScreen> {
-  final SearchScreenController screenController = Get.put(SearchScreenController());
+  final SearchScreenController screenController =
+      Get.put(SearchScreenController());
 
   @override
   Widget build(BuildContext context) {
@@ -33,6 +34,6 @@ class _SearchScreenState extends State<SearchScreen> {
           ],
         ),
       ),
-       );
+    );
   }
 }
