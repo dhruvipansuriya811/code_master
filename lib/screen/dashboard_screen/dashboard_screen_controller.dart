@@ -43,7 +43,7 @@ class DashboardScreenController extends GetxController {
   ];
 
   List dashBoardScreenList = [
-    const HomeScreen(),
+     HomeScreen(),
     SearchScreen(),
     ExampleScreen(),
     ProfileScreen(),

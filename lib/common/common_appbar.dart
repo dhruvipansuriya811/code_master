@@ -11,6 +11,8 @@ AppBar commonAppbar({
   double? size,
 }) {
   return AppBar(
+    //backgroundColor: Colors.blue,
+    //iconTheme: IconThemeData(color: Colors.yellow),
     title: commonText(
       text: titleText,
       fontFamily: "Poppins",

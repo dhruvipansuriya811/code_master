@@ -27,6 +27,7 @@ class ProfileScreen extends StatelessWidget {
             indent: Get.width / 17,
             color: ColorRes.purpleLight,
           ),
+          profileScreenListContainer,
         ],
       ),
     );

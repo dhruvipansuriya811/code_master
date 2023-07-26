@@ -8,13 +8,20 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
+  HomeScreen({super.key});
+
+  HomeScreenController homeScreenController = Get.put(HomeScreenController());
 
   @override
   Widget build(BuildContext context) {
-    Get.put(HomeScreenController());
     return Scaffold(
+      drawer: Drawer(),
       appBar: commonAppbar(
+          leadingButtonOnPress: () {
+            homeScreenController.drawerOnTap();
+          },
+          //actionButtonOnPress: ,
+          leadingIconName: IconRes.menu,
           titleText: StringRes.homeScreen,
           actionIconName: IconRes.moreVert,
           color: ColorRes.blackColor,
