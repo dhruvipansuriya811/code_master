@@ -25,4 +25,11 @@ class StringRes {
   static const String search = 'Search';
   static const String example = 'Example';
   static const String profile = 'Profile';
+  static const String study = 'Study';
+  static const String studyName = 'Study';
+  static const String genderHintText = 'Gender';
+  static const String genderName = 'Gender';
+  static const String male = 'Male';
+  static const String female = 'Female';
+  static const String other = 'Other';
 }

@@ -43,7 +43,12 @@ class SignUpScreen extends StatelessWidget {
                     signUpPasswordTextField,
                     heightSizeBox(Get.height / 30),
                     signUpPhoneController,
+                    heightSizeBox(Get.height / 30),
+                    signUpStudyController,
+                    heightSizeBox(Get.height / 30),
+                    signUpRadioButtonColumn,
                     heightSizeBox(Get.height / 20),
+
                     signUpButton,
                     heightSizeBox(Get.height / 30),
                     goToSignIn,

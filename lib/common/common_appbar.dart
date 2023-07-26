@@ -7,11 +7,13 @@ AppBar commonAppbar({
   void Function()? leadingButtonOnPress,
   IconData? actionIconName,
   IconData? leadingIconName,
+  Color? color,
+  double? size,
 }) {
   return AppBar(
     title: commonText(
       text: titleText,
-      fontFamily: 'Poppins',
+      fontFamily: "Poppins",
     ),
     centerTitle: true,
     leading: IconButton(
@@ -21,7 +23,11 @@ AppBar commonAppbar({
     actions: [
       IconButton(
         onPressed: actionButtonOnPress,
-        icon: Icon(actionIconName),
+        icon: Icon(
+          actionIconName,
+          color: color,
+          size: size,
+        ),
       ),
     ],
   );

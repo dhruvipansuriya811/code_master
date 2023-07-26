@@ -3,6 +3,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import 'screen/dashboard_screen/profile_screen/profile_screen.dart';
+
 void main() {
   runApp(
       GetMaterialApp(
@@ -10,7 +12,7 @@ void main() {
           theme: ThemeData(
             useMaterial3: true,
           ),
-          home:SplashScreen(),
+          home:ProfileScreen(),
       )
   );
 }

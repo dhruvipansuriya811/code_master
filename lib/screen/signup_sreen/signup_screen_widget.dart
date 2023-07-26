@@ -1,4 +1,5 @@
 import 'package:code_master/common/common_button.dart';
+import 'package:code_master/common/common_radiobutton.dart';
 import 'package:code_master/common/common_text.dart';
 import 'package:code_master/common/common_textfield.dart';
 import 'package:code_master/common/logo_container.dart';
@@ -19,10 +20,10 @@ Widget signUpText = commonText(
   fontSize: Get.height / 40,
 );
 
-
 Widget signUpNameTextField = GetBuilder<SignUpScreenController>(
   builder: (controller) {
-    return commonTextFiled( prefixIcon: IconRes.person,
+    return commonTextFiled(
+      prefixIcon: IconRes.person,
       textFiledName: StringRes.name,
       fontSize: 18,
       hintText: StringRes.name,
@@ -45,7 +46,6 @@ Widget signUpEmailController = GetBuilder<SignUpScreenController>(
   },
 );
 
-
 Widget signUpPasswordTextField = GetBuilder<SignUpScreenController>(
   id: "changeSignUpEyeValue",
   builder: (controller) {
@@ -53,7 +53,7 @@ Widget signUpPasswordTextField = GetBuilder<SignUpScreenController>(
       prefixIcon: IconRes.password,
       obscureText: controller.signEyeValue,
       suffixIcon:
-      controller.signEyeValue ? IconRes.unVisibility : IconRes.visibility,
+          controller.signEyeValue ? IconRes.unVisibility : IconRes.visibility,
       textFiledName: StringRes.password,
       fontSize: 18,
       hintText: StringRes.password,
@@ -63,7 +63,6 @@ Widget signUpPasswordTextField = GetBuilder<SignUpScreenController>(
     );
   },
 );
-
 
 Widget signUpPhoneController = GetBuilder<SignUpScreenController>(
   builder: (controller) {
@@ -78,6 +77,95 @@ Widget signUpPhoneController = GetBuilder<SignUpScreenController>(
   },
 );
 
+Widget signUpStudyController = GetBuilder<SignUpScreenController>(
+  builder: (controller) {
+    return commonTextFiled(
+      prefixIcon: IconRes.study,
+      textFiledName: StringRes.studyName,
+      fontSize: 18,
+      hintText: StringRes.study,
+      fontFamily: "Poppins",
+      controller: controller.studyController,
+    );
+  },
+);
+
+Widget signUpRadioButtonColumn = GetBuilder<SignUpScreenController>(
+  id: "signUpScreenRadioButton",
+  builder: (controller) => Column(
+    crossAxisAlignment: CrossAxisAlignment.start,
+    children: [
+      Text(
+        StringRes.genderName,
+        style: TextStyle(
+          fontSize: 18,
+          fontFamily: "Poppins-Light",
+          fontWeight: FontWeight.bold,
+        ),
+      ),
+      Row(
+        children: [
+          commonRadioButton(
+            value: controller.signUpRadioMale,
+            groupValue: controller.signUpRadioGroupValue,
+            onChanged: (value) {
+              controller.signUpMaleOnTap(value);
+            },
+          ),
+          Text(
+            StringRes.male,
+            style: TextStyle(
+              fontSize: 18,
+              fontFamily: "Poppins-Light",
+            ),
+          ),
+          commonRadioButton(
+            value: controller.signUpRadioFemale,
+            groupValue: controller.signUpRadioGroupValue,
+            onChanged: (value) {
+              controller.signUpFemaleOnTap(value);
+            },
+          ),
+          Text(
+            StringRes.female,
+            style: TextStyle(
+              fontSize: 18,
+              fontFamily: "Poppins-Light",
+            ),
+          ),
+          commonRadioButton(
+            value: controller.signRadioOther,
+            groupValue: controller.signUpRadioGroupValue,
+            onChanged: (value) {
+              controller.signUpOtherOnTap(value);
+            },
+          ),
+          Text(
+            StringRes.other,
+            style: TextStyle(
+              fontSize: 18,
+              fontFamily: "Poppins-Light",
+            ),
+          ),
+        ],
+      )
+    ],
+  ),
+);
+
+// Widget signUpgenderController = GetBuilder<SignUpScreenController>(
+//   builder: (controller) {
+//     return commonTextFiled(
+//       prefixIcon: IconRes.person,
+//       textFiledName: StringRes.genderName,
+//       fontSize: 18,
+//       hintText: StringRes.genederHintText,
+//       fontFamily: "Poppins",
+//       controller: controller.genderController,
+//     );
+//   },
+// );
+
 Widget signUpButton = GetBuilder<SignUpScreenController>(
   builder: (controller) {
     return containerButton(
@@ -88,9 +176,6 @@ Widget signUpButton = GetBuilder<SignUpScreenController>(
     );
   },
 );
-
-
-
 
 Widget goToSignIn = GetBuilder<SignUpScreenController>(
   builder: (controller) {
@@ -118,6 +203,3 @@ Widget goToSignIn = GetBuilder<SignUpScreenController>(
     );
   },
 );
-
-
-

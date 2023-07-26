@@ -43,7 +43,7 @@ Widget dashBoardPageView = GetBuilder<DashboardScreenController>(
   ),
 );
 
-AppBar dashBoardAppBar = commonAppbar(
-  titleText: Get.find<DashboardScreenController>()
-      .appBarTitleList[Get.find<DashboardScreenController>().selectedPage],
-);
+// AppBar dashBoardAppBar = commonAppbar(
+//   titleText: Get.find<DashboardScreenController>()
+//       .appBarTitleList[Get.find<DashboardScreenController>().selectedPage],
+// );

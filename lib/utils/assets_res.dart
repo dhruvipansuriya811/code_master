@@ -20,8 +20,10 @@ class IconRes {
   static const IconData email = Icons.email_outlined;
   static const IconData person = Icons.person;
   static const IconData phoneNum = Icons.phone;
-  static const IconData home = Icons.home;
+  static const IconData study = Icons.cast_for_education;
+   static const IconData home = Icons.home;
   static const IconData search = Icons.search;
   static const IconData example = Icons.file_copy_outlined;
   static const IconData profile = Icons.person;
+  static const IconData moreVert = Icons.more_vert;
 }
