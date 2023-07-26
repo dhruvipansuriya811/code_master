@@ -14,7 +14,7 @@ class LoginScreenController extends GetxController {
   }
 
   void loginToDesBoard() {
-    Get.to(const DashBordScreen());
+    Get.to( DashBordScreen());
   }
 
   void loginToSignUp() {

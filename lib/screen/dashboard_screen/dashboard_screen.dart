@@ -13,6 +13,7 @@ class DashBordScreen extends StatelessWidget {
     Get.put(DashboardScreenController());
     return SafeArea(
       child: Scaffold(
+
      //   appBar: commonAppbar(titleText: StringRes.homeScreen),
         resizeToAvoidBottomInset: false,
         body: Container(

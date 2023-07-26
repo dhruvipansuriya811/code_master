@@ -47,3 +47,5 @@ Widget dashBoardPageView = GetBuilder<DashboardScreenController>(
 //   titleText: Get.find<DashboardScreenController>()
 //       .appBarTitleList[Get.find<DashboardScreenController>().selectedPage],
 // );
+
+
