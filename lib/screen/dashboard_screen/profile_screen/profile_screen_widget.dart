@@ -1,5 +1,4 @@
 import 'package:animation_list/animation_list.dart';
-import 'package:code_master/common/common_sizebox.dart';
 import 'package:code_master/screen/dashboard_screen/profile_screen/profile_screen_controller.dart';
 import 'package:code_master/utils/assets_res.dart';
 import 'package:code_master/utils/colors_res.dart';

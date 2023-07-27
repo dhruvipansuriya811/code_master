@@ -43,7 +43,7 @@ class DashboardScreenController extends GetxController {
   ];
 
   List dashBoardScreenList = [
-     HomeScreen(),
+    HomeScreen(),
     SearchScreen(),
     ExampleScreen(),
     ProfileScreen(),
@@ -51,14 +51,16 @@ class DashboardScreenController extends GetxController {
 
   void onTap(int index) {
     selectedPage = index;
-    update([
-      "DashboardScreen",
-    ]);
+   // update(["Dashboard", "appBarCommon"]);
   }
 
   onTapBottomBar(index) {
-    /// perform action on tab change and to update pages you can update pages without pages
+    print('index : $index');
+
+    selectedPage = index;
+    update(['appBarCommon']);
     pageController.jumpToPage(index);
+
   }
 
   @override

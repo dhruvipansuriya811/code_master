@@ -10,12 +10,10 @@ import 'package:get/get.dart';
 class HomeScreen extends StatelessWidget {
   HomeScreen({super.key});
 
-  HomeScreenController homeScreenController = Get.put(HomeScreenController());
-
+ final HomeScreenController homeScreenController = Get.put(HomeScreenController());
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: Drawer(),
       appBar: commonAppbar(
           leadingButtonOnPress: () {
             homeScreenController.drawerOnTap();

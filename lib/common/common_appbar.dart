@@ -1,5 +1,7 @@
 import 'package:code_master/common/common_text.dart';
+import 'package:code_master/screen/dashboard_screen/dashboard_screen_controller.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 AppBar commonAppbar({
   required String titleText,
@@ -13,9 +15,9 @@ AppBar commonAppbar({
   return AppBar(
     //backgroundColor: Colors.blue,
     //iconTheme: IconThemeData(color: Colors.yellow),
-    title: commonText(
-      text: titleText,
-      fontFamily: "Poppins",
+    title: GetBuilder<DashboardScreenController>(
+      id: 'appBarCommon',
+      builder: (controller) => commonText(text: titleText),
     ),
     centerTitle: true,
     leading: IconButton(

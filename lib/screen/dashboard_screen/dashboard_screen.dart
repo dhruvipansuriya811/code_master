@@ -6,15 +6,15 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class DashBordScreen extends StatelessWidget {
-  const DashBordScreen({super.key});
-
+  DashBordScreen({super.key});
+  DashboardScreenController controller = Get.put(DashboardScreenController());
   @override
   Widget build(BuildContext context) {
-    Get.put(DashboardScreenController());
+   // Get.put(DashboardScreenController());
     return SafeArea(
       child: Scaffold(
-
-     //   appBar: commonAppbar(titleText: StringRes.homeScreen),
+        //drawer: Drawer(),
+       appBar: dashBoardAppBar,
         resizeToAvoidBottomInset: false,
         body: Container(
           decoration: BoxDecoration(
