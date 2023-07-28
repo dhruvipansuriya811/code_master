@@ -28,4 +28,8 @@ class IconRes {
   static const IconData moreVert = Icons.more_vert;
   static const IconData menu = Icons.menu;
   static const IconData clear = Icons.clear;
+  static const IconData share = Icons.share;
+  static const IconData rating = Icons.star;
+  static const IconData logOut = Icons.logout;
+  static const IconData edit = Icons.edit;
 }

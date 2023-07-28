@@ -32,4 +32,8 @@ class StringRes {
   static const String male = 'Male';
   static const String female = 'Female';
   static const String other = 'Other';
+  static const String share = 'Share';
+  static const String rating = 'Rating';
+  static const String logOut = 'LogOut';
+  static const String edit = 'Edit';
 }

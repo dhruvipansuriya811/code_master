@@ -8,6 +8,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_advanced_drawer/flutter_advanced_drawer.dart';
 import 'package:get/get.dart';
 
+import 'dashboard_screen_widget.dart';
 import 'profile_screen/profile_screen.dart';
 import 'search_screen/search_screen.dart';
 
@@ -18,7 +19,8 @@ class DashboardScreenController extends GetxController {
   PageController pageController = PageController(initialPage: 0);
 
   // final scaffoldKey = GlobalKey<ScaffoldState>();
-  AdvancedDrawerController advancedDrawerController = AdvancedDrawerController();
+  AdvancedDrawerController advancedDrawerController =
+      AdvancedDrawerController();
 
   List<Map> bottomNavigationItem = [
     {
@@ -67,5 +69,31 @@ class DashboardScreenController extends GetxController {
 
   void drawerOnTap() {
     advancedDrawerController.showDrawer();
+  }
+
+  List<Map> drawerListItem = [
+    {'icon': IconRes.edit, 'title': StringRes.edit},
+    {
+      'icon': IconRes.share,
+      'title': StringRes.share,
+    },
+    {
+      'icon': IconRes.rating,
+      'title': StringRes.rating,
+    },
+    {
+      'icon': IconRes.logOut,
+      'title': StringRes.logOut,
+    },
+  ];
+
+  List drawerScreenData = [];
+
+  void drawerListTile(int index,BuildContext context) {
+    index == 1 ? Get.defaultDialog(): index == 2 ? ratingBarDialog(context) : index == 3 ? logOutDialog(context) : SizedBox();
+
+
+
+
   }
 }
