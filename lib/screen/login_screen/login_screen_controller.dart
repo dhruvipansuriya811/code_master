@@ -1,5 +1,5 @@
 import 'package:code_master/screen/dashboard_screen/dashboard_screen.dart';
-import 'package:code_master/screen/signup_sreen/signup_screen.dart';
+import 'package:code_master/screen/signup_screen/signup_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 
@@ -14,7 +14,7 @@ class LoginScreenController extends GetxController {
   }
 
   void loginToDesBoard() {
-    Get.to( DashBordScreen());
+    Get.to(DashBordScreen());
   }
 
   void loginToSignUp() {

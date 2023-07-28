@@ -20,11 +20,13 @@ Widget onBoardingPageView = GetBuilder<OnBoardingController>(
           onBoardingText: StringRes.letsLearn,
         ),
         onBoardingColumn(
-            lottieName: ImageRes.onBoardingLottie2,
-            onBoardingText: StringRes.somethingNew),
+          lottieName: ImageRes.onBoardingLottie2,
+          onBoardingText: StringRes.somethingNew,
+        ),
         onBoardingColumn(
-            lottieName: ImageRes.onBoardingLottie3,
-            onBoardingText: StringRes.letsStart),
+          lottieName: ImageRes.onBoardingLottie3,
+          onBoardingText: StringRes.letsStart,
+        ),
       ],
       onPageChanged: (index) {
         controller.onPageChange(index);
@@ -40,27 +42,26 @@ Widget onBoardingColumn({
   required String onBoardingText,
 }) {
   return Column(
-    //crossAxisAlignment: CrossAxisAlignment.center,
-    // mainAxisAlignment: MainAxisAlignment.center,
-
     children: [
       heightSizeBox(Get.height / 20),
       Lottie.asset(lottieName),
-      SizedBox(
-        height: Get.height / 50,
-      ),
+      SizedBox(height: Get.height / 50),
       Text(
         onBoardingText,
         style: TextStyle(
-            fontFamily: "DMSerifDisplay-Regular",
-            fontSize: 25,
-            letterSpacing: 1,
-            fontWeight: FontWeight.bold),
+          fontFamily: "DMSerifDisplay-Regular",
+          fontSize: Get.width / 15,
+          letterSpacing: 3,
+          fontWeight: FontWeight.bold,
+        ),
       ),
-      heightSizeBox(20),
+      heightSizeBox(Get.height / 40),
       Text(
         "Easy and simple way of learning C Programming",
-        style: TextStyle(fontSize: 15, fontFamily: "DMSerifDisplay-Regular"),
+        style: TextStyle(
+          fontSize: Get.width / 28,
+          fontFamily: "DMSerifDisplay-Regular",
+        ),
       ),
     ],
   );
@@ -75,17 +76,18 @@ Widget onBoardingTextButton = GetBuilder<OnBoardingController>(
       controller.moveToNextScreen();
     },
     child: Text(
-        controller.onBoardingPageIndex == 0 ||
-                controller.onBoardingPageIndex == 1
-            ? StringRes.skip
-            : StringRes.continueText,
-        style: TextStyle(
-          fontSize: 18,
-          color: Color(0XFF8B4EFF),
-          fontFamily: "DMSerifDisplay-Regular",
-        )),
+      controller.onBoardingPageIndex == 0 || controller.onBoardingPageIndex == 1
+          ? StringRes.skip
+          : StringRes.continueText,
+      style: const TextStyle(
+        fontSize: 18,
+        color: Color(0XFF8B4EFF),
+        fontFamily: "DMSerifDisplay-Regular",
+      ),
+    ),
   ),
 );
+
 //.......................onBoarding common dot row........................//
 
 Widget commonDotRow = GetBuilder<OnBoardingController>(
@@ -93,7 +95,6 @@ Widget commonDotRow = GetBuilder<OnBoardingController>(
   builder: (controller) {
     return Row(
       crossAxisAlignment: CrossAxisAlignment.center,
-      //    mainAxisAlignment: MainAxisAlignment.center,
       children: [
         commonDot(index: 0, pageIndex: controller.onBoardingPageIndex),
         widthSizeBox(Get.width / 40),
@@ -114,7 +115,9 @@ Widget commonDot({required int index, required int pageIndex}) {
     width: index == pageIndex ? Get.width * 0.07 : Get.width * 0.03,
     decoration: BoxDecoration(
       borderRadius: BorderRadius.circular(4),
-      color: index == pageIndex ? Color(0XFF8B4EFF) : Color(0XFFE2D3FE),
+      color: index == pageIndex
+          ? const Color(0XFF8B4EFF)
+          : const Color(0XFFE2D3FE),
     ),
   );
 }
@@ -122,18 +125,16 @@ Widget commonDot({required int index, required int pageIndex}) {
 Widget onBoardingNextButton = GetBuilder<OnBoardingController>(
   id: "nextButton",
   builder: (controller) => containerButton(
-      height: Get.height / 18,
-      width: Get.width / 2,
-      data: controller.onBoardingPageIndex == 0 ||
-              controller.onBoardingPageIndex == 1
-          ? StringRes.next
-          : StringRes.getStarted,
-      onTap: () {
-        controller.onBoardingPageIndex == 0 ||
-                controller.onBoardingPageIndex == 1
-            ? controller.pageChangeNextButton()
-            : controller.moveToNextScreen();
-      }
-      // onBoardingController.buttonChange()
-      ),
+    height: Get.height / 18,
+    width: Get.width / 2,
+    data: controller.onBoardingPageIndex == 0 ||
+            controller.onBoardingPageIndex == 1
+        ? StringRes.next
+        : StringRes.getStarted,
+    onTap: () {
+      controller.onBoardingPageIndex == 0 || controller.onBoardingPageIndex == 1
+          ? controller.pageChangeNextButton()
+          : controller.moveToNextScreen();
+    },
+  ),
 );

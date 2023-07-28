@@ -3,12 +3,11 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class SplashScreen extends StatelessWidget {
-  SplashScreen({super.key});
-
-  final SplashController splashController = Get.put(SplashController());
+  const SplashScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
+    Get.put(SplashController());
     return const SafeArea(
       child: Scaffold(
         body: Center(

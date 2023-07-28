@@ -4,19 +4,20 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class OnBoardingScreen extends StatelessWidget {
-  OnBoardingScreen({super.key});
-
-  final OnBoardingController onBoardingController =
-      Get.put(OnBoardingController());
+  const OnBoardingScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
+    Get.put(OnBoardingController());
     return SafeArea(
       child: Scaffold(
         body: Container(
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
             gradient: LinearGradient(
-              colors: [Color(0XFFf3e7e9), Color(0XFFe3eeff)],
+              colors: [
+                Color(0XFFf3e7e9),
+                Color(0XFFe3eeff),
+              ],
             ),
           ),
           child: Stack(
@@ -25,12 +26,14 @@ class OnBoardingScreen extends StatelessWidget {
               onBoardingPageView,
               Positioned(bottom: Get.height / 8, child: commonDotRow),
               Positioned(
-                  top: Get.height / 40,
-                  right: Get.width / 20,
-                  child: onBoardingTextButton),
-              Positioned(bottom: Get.height / 40, child: onBoardingNextButton),
-
-              // containerButton,
+                top: Get.height / 40,
+                right: Get.width / 20,
+                child: onBoardingTextButton,
+              ),
+              Positioned(
+                bottom: Get.height / 40,
+                child: onBoardingNextButton,
+              ),
             ],
           ),
         ),

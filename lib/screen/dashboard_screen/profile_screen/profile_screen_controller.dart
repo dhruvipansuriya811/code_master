@@ -8,8 +8,4 @@ class ProfileScreenController extends GetxController{
     "Male",
   ];
 
-
-
-
-
 }

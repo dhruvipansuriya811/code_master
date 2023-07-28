@@ -1,18 +1,16 @@
 import 'package:code_master/common/common_sizebox.dart';
-import 'package:code_master/common/disposeKeyBoard';
+import 'package:code_master/common/dispose_keyboard.dart';
 import 'package:code_master/screen/login_screen/login_screen_controller.dart';
 import 'package:code_master/screen/login_screen/login_screen_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class LoginScreen extends StatelessWidget {
-  LoginScreen({super.key});
-
-  final LoginScreenController loginScreenController =
-      Get.put(LoginScreenController());
+  const LoginScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
+    Get.put(LoginScreenController());
     return SafeArea(
       child: GestureDetector(
         onTap: () {
@@ -21,9 +19,12 @@ class LoginScreen extends StatelessWidget {
         child: Scaffold(
           resizeToAvoidBottomInset: true,
           body: Container(
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               gradient: LinearGradient(
-                colors: [Color(0XFFf3e7e9), Color(0XFFe3eeff)],
+                colors: [
+                  Color(0XFFf3e7e9),
+                  Color(0XFFe3eeff),
+                ],
               ),
             ),
             child: Padding(

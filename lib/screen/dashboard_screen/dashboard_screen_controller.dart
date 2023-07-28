@@ -5,6 +5,7 @@ import 'package:code_master/utils/assets_res.dart';
 import 'package:code_master/utils/string_res.dart';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_advanced_drawer/flutter_advanced_drawer.dart';
 import 'package:get/get.dart';
 
 import 'profile_screen/profile_screen.dart';
@@ -15,6 +16,9 @@ class DashboardScreenController extends GetxController {
   NotchBottomBarController notchBottomBarController =
       NotchBottomBarController(index: 0);
   PageController pageController = PageController(initialPage: 0);
+
+  // final scaffoldKey = GlobalKey<ScaffoldState>();
+  AdvancedDrawerController advancedDrawerController = AdvancedDrawerController();
 
   List<Map> bottomNavigationItem = [
     {
@@ -49,23 +53,19 @@ class DashboardScreenController extends GetxController {
     ProfileScreen(),
   ];
 
-  void onTap(int index) {
+  void onTapBottomBar(index) {
     selectedPage = index;
-   // update(["Dashboard", "appBarCommon"]);
-  }
-
-  onTapBottomBar(index) {
-    print('index : $index');
-
-    selectedPage = index;
-    update(['appBarCommon']);
+    update(['dashBoardAppBarTitle', 'dashboardPageView']);
     pageController.jumpToPage(index);
-
   }
 
   @override
   void dispose() {
     pageController.dispose();
     super.dispose();
+  }
+
+  void drawerOnTap() {
+    advancedDrawerController.showDrawer();
   }
 }

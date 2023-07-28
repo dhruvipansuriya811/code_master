@@ -1,5 +1,5 @@
 import 'package:code_master/common/common_sizebox.dart';
-import 'package:code_master/common/disposeKeyBoard';
+import 'package:code_master/common/dispose_keyboard.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'signup_screen_controller.dart';
@@ -48,7 +48,6 @@ class SignUpScreen extends StatelessWidget {
                     heightSizeBox(Get.height / 30),
                     signUpRadioButtonColumn,
                     heightSizeBox(Get.height / 20),
-
                     signUpButton,
                     heightSizeBox(Get.height / 30),
                     goToSignIn,

@@ -10,20 +10,12 @@ import 'package:get/get.dart';
 class HomeScreen extends StatelessWidget {
   HomeScreen({super.key});
 
- final HomeScreenController homeScreenController = Get.put(HomeScreenController());
+  final HomeScreenController homeScreenController =
+      Get.put(HomeScreenController());
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: commonAppbar(
-          leadingButtonOnPress: () {
-            homeScreenController.drawerOnTap();
-          },
-          //actionButtonOnPress: ,
-          leadingIconName: IconRes.menu,
-          titleText: StringRes.homeScreen,
-          actionIconName: IconRes.moreVert,
-          color: ColorRes.blackColor,
-          size: 25),
       body: homeScreenAllTopicContainer,
     );
   }

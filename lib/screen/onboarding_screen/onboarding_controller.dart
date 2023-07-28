@@ -1,6 +1,5 @@
 import 'package:code_master/screen/login_screen/login_screen.dart';
 import 'package:flutter/material.dart';
-
 import 'package:get/get.dart';
 
 class OnBoardingController extends GetxController {
@@ -20,7 +19,7 @@ class OnBoardingController extends GetxController {
 
   void pageChangeNextButton() {
     pageController.animateToPage(onBoardingPageIndex + 1,
-        duration: Duration(microseconds: 700000), curve: Curves.linear);
+        duration: const Duration(microseconds: 700000), curve: Curves.linear);
     update(['pageChange', 'skipButton', 'dotUpdate', 'nextButton']);
   }
 }

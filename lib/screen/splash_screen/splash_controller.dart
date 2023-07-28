@@ -6,9 +6,9 @@ import 'package:get/get.dart';
 class SplashController extends GetxController {
   @override
   void onInit() {
-    Timer(Duration(seconds: 2), () {
+    Timer(const Duration(seconds: 2), () {
       Get.off(
-        OnBoardingScreen(),
+        const OnBoardingScreen(),
       );
     });
     // TODO: implement onInit

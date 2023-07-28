@@ -26,17 +26,6 @@ Widget profileScreenListContainer = GetBuilder<ProfileScreenController>(
           decoration: BoxDecoration(
             color: ColorRes.purpleLight,
             borderRadius: BorderRadius.all(Radius.circular(25)),
-            // gradient: LinearGradient(
-            //   colors: index % 2 == 0
-            //       ? [
-            //           ColorRes.purpleLight,
-            //           ColorRes.purpleLight2,
-            //         ]
-            //       : [
-            //           ColorRes.purpleLight2,
-            //           ColorRes.purpleLight,
-            //         ],
-            // ),
           ),
           child: Center(
             child: Text(

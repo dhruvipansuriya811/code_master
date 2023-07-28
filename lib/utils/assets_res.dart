@@ -27,4 +27,5 @@ class IconRes {
   static const IconData profile = Icons.person;
   static const IconData moreVert = Icons.more_vert;
   static const IconData menu = Icons.menu;
+  static const IconData clear = Icons.clear;
 }

@@ -1,5 +1,4 @@
 import 'package:code_master/common/common_button.dart';
-import 'package:code_master/common/common_text.dart';
 import 'package:code_master/common/common_textfield.dart';
 import 'package:code_master/screen/login_screen/login_screen_controller.dart';
 import 'package:code_master/utils/assets_res.dart';
@@ -11,13 +10,16 @@ import '../../common/logo_container.dart';
 
 Widget loginLogo = logoContainer(imageName: ImageRes.loginLogo);
 
-Widget loginText = commonText(
-  fontWeight: FontWeight.bold,
-  text: StringRes.loginLogoText,
-  fontFamily: "DMSerifDisplay-Regular",
-  letterSpacing: 1,
-  fontSize: Get.height / 40,
+Widget loginText = Text(
+  StringRes.loginLogoText,
+  style: TextStyle(
+    fontWeight: FontWeight.bold,
+    letterSpacing: 1,
+    fontSize: Get.height / 40,
+    fontFamily: "DMSerifDisplay-Regular",
+  ),
 );
+
 
 Widget loginEmailTextField = GetBuilder<LoginScreenController>(
   builder: (controller) {
@@ -65,12 +67,14 @@ Widget forgotPasswordButton = GetBuilder<LoginScreenController>(
   builder: (controller) {
     return GestureDetector(
       onTap: () {},
-      child: commonText(
-        text: StringRes.forgotPass,
-        fontFamily: "Poppins-Light",
-        textColor: ColorRes.purpleDark,
-        fontSize: Get.height / 50,
-        fontWeight: FontWeight.w500,
+      child: Text(
+        StringRes.forgotPass,
+        style: TextStyle(
+          fontWeight: FontWeight.w500,
+          letterSpacing: 1,
+          fontSize: Get.height / 50,
+          fontFamily: "Poppins-Light",
+        ),
       ),
     );
   },
@@ -81,26 +85,28 @@ Widget goToSignUp = GetBuilder<LoginScreenController>(
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        commonText(
-          text: StringRes.doNotHaveAccount,
-          fontFamily: "Poppins-Light",
-          textColor: ColorRes.blackColor,
-          fontSize: Get.height / 50,
-          fontWeight: FontWeight.w400,
+        Text(
+          StringRes.doNotHaveAccount,
+          style: TextStyle(
+            fontWeight: FontWeight.w400,
+            fontSize: Get.height / 50,
+            fontFamily: "Poppins-Light",
+          ),
         ),
         GestureDetector(
           onTap: controller.loginToSignUp,
-          child: commonText(
-            text: StringRes.signUp,
-            fontFamily: "Poppins-Light",
-            fontSize: Get.height / 50,
-            textColor: ColorRes.purpleDark,
-            fontWeight: FontWeight.bold,
+          child: Text(
+            StringRes.signUp,
+            style: TextStyle(
+              fontWeight: FontWeight.bold,
+              color: ColorRes.purpleDark,
+              letterSpacing: 1,
+              fontSize: Get.height / 50,
+              fontFamily: "Poppins-Light",
+            ),
           ),
         ),
       ],
     );
   },
 );
-
-

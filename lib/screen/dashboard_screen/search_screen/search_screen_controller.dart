@@ -9,18 +9,9 @@ class SearchScreenController extends GetxController {
   }
 
   String searchValue = '';
-  //
-  // void onTapSearch(value) {
-  //   searchValue = value;
-  //   update(["searchValue"]);
-  // }
-  //
-  // void navigationToPop() {
-  //   Get.back();
-  // }
 
   List<String> searchBarList = [
-    'Afeganistan',
+    'Afghanistan',
     'Albania',
     'Algeria',
     'Australia',

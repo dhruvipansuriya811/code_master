@@ -10,9 +10,6 @@ class SignUpScreenController extends GetxController {
   TextEditingController studyController = TextEditingController();
   TextEditingController genderController = TextEditingController();
 
-
-
-
   bool signEyeValue = false;
 
   int signUpRadioGroupValue = 0;

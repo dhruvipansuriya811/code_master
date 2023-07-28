@@ -1,9 +1,8 @@
 import 'package:code_master/common/common_button.dart';
 import 'package:code_master/common/common_radiobutton.dart';
-import 'package:code_master/common/common_text.dart';
 import 'package:code_master/common/common_textfield.dart';
 import 'package:code_master/common/logo_container.dart';
-import 'package:code_master/screen/signup_sreen/signup_screen_controller.dart';
+import 'package:code_master/screen/signup_screen/signup_screen_controller.dart';
 import 'package:code_master/utils/assets_res.dart';
 import 'package:code_master/utils/colors_res.dart';
 import 'package:code_master/utils/string_res.dart';
@@ -12,12 +11,14 @@ import 'package:get/get.dart';
 
 Widget signUpLogo = logoContainer(imageName: ImageRes.signUpLogo);
 
-Widget signUpText = commonText(
-  fontWeight: FontWeight.bold,
-  text: StringRes.signUpLogoText,
-  fontFamily: "DMSerifDisplay-Regular",
-  letterSpacing: 1,
-  fontSize: Get.height / 40,
+Widget signUpText = Text(
+  StringRes.signUpLogoText,
+  style: TextStyle(
+    fontFamily: "DMSerifDisplay-Regular",
+    letterSpacing: 1,
+    fontSize: Get.height / 40,
+    fontWeight: FontWeight.bold,
+  ),
 );
 
 Widget signUpNameTextField = GetBuilder<SignUpScreenController>(
@@ -182,21 +183,24 @@ Widget goToSignIn = GetBuilder<SignUpScreenController>(
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        commonText(
-          text: StringRes.alreadyHaveAnAccount,
-          fontFamily: "Poppins-Light",
-          textColor: ColorRes.blackColor,
-          fontSize: Get.height / 50,
-          fontWeight: FontWeight.w400,
+        Text(
+          StringRes.alreadyHaveAnAccount,
+          style: TextStyle(
+            fontFamily: "Poppins-Light",
+            fontSize: Get.height / 50,
+            fontWeight: FontWeight.w400,
+          ),
         ),
         GestureDetector(
           onTap: controller.signUpToSignIn,
-          child: commonText(
-            text: StringRes.login,
-            fontFamily: "Poppins-Light",
-            fontSize: Get.height / 50,
-            textColor: ColorRes.purpleDark,
-            fontWeight: FontWeight.bold,
+          child: Text(
+            StringRes.login,
+            style: TextStyle(
+              fontFamily: "Poppins-Light",
+              fontSize: Get.height / 50,
+              color: ColorRes.purpleDark,
+              fontWeight: FontWeight.bold,
+            ),
           ),
         ),
       ],

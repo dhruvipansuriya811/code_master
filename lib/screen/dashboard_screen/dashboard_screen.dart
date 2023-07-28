@@ -1,29 +1,46 @@
-import 'package:code_master/common/common_appbar.dart';
 import 'package:code_master/screen/dashboard_screen/dashboard_screen_controller.dart';
 import 'package:code_master/screen/dashboard_screen/dashboard_screen_widget.dart';
-import 'package:code_master/utils/string_res.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_advanced_drawer/flutter_advanced_drawer.dart';
 import 'package:get/get.dart';
 
 class DashBordScreen extends StatelessWidget {
   DashBordScreen({super.key});
-  DashboardScreenController controller = Get.put(DashboardScreenController());
+
+  final DashboardScreenController dashboardScreenController =
+      Get.put(DashboardScreenController());
+
   @override
   Widget build(BuildContext context) {
-   // Get.put(DashboardScreenController());
-    return SafeArea(
-      child: Scaffold(
-        //drawer: Drawer(),
-       appBar: dashBoardAppBar,
-        resizeToAvoidBottomInset: false,
-        body: Container(
-          decoration: BoxDecoration(
-            gradient: LinearGradient(
-              colors: [Color(0XFFf3e7e9), Color(0XFFe3eeff)],
-            ),
+    return AdvancedDrawer(
+      backdrop: Container(
+        width: double.infinity,
+        height: double.infinity,
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
+            colors: [
+              Colors.yellow,
+              Colors.blueGrey.withOpacity(0.2),
+            ],
           ),
-          child: dashBoardPageView,
         ),
+      ),
+      controller: dashboardScreenController.advancedDrawerController,
+      animationCurve: Curves.linear,
+      animationDuration: const Duration(milliseconds: 500),
+      animateChildDecoration: true,
+      disabledGestures: false,
+      childDecoration: const BoxDecoration(
+        borderRadius: BorderRadius.all(Radius.circular(16)),
+      ),
+      drawer: drawer,
+      child: Scaffold(
+        // key: dashboardScreenController.scaffoldKey,
+        appBar: dashBoardAppBar,
+        resizeToAvoidBottomInset: false,
+        body: dashBoardPageView,
         extendBody: true,
         bottomNavigationBar: dashboardBottomNavigationBar,
       ),
