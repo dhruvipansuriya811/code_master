@@ -2,13 +2,13 @@ class StringRes {
   static const String letsLearn = "LET'S LEARN";
   static const String letsStart = "LET'S START";
   static const String somethingNew = "SOMETHING NEW";
-  static const String  skip = "Skip >>";
+  static const String skip = "Skip >>";
   static const String continueText = "Continue >>";
   static const String next = "Next";
   static const String getStarted = "Get Started";
   static const String loginLogoText = "LogIn to your account";
   static const String signUpLogoText = "SignUp for free";
-  static const  String email = "Email";
+  static const String email = "Email";
   static const String password = "Password";
   static const String login = "Login";
   static const String forgotPass = "Forgot the password?";
@@ -36,4 +36,10 @@ class StringRes {
   static const String rating = 'Rating';
   static const String logOut = 'LogOut';
   static const String edit = 'Edit';
+  static const String enterDate = 'Enter Date Of Birth';
+  static const String school = 'School';
+  static const String collage = 'Collage';
+  static const String editProfile = 'Edit Profile';
+  static const String cancel = 'Cancel';
+  static const String save = 'Save';
 }

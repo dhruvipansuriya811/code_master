@@ -78,18 +78,72 @@ Widget signUpPhoneController = GetBuilder<SignUpScreenController>(
   },
 );
 
-Widget signUpStudyController = GetBuilder<SignUpScreenController>(
-  builder: (controller) {
-    return commonTextFiled(
-      prefixIcon: IconRes.study,
-      textFiledName: StringRes.studyName,
-      fontSize: 18,
-      hintText: StringRes.study,
-      fontFamily: "Poppins",
-      controller: controller.studyController,
-    );
-  },
+
+Widget signUpStudyColumn = GetBuilder<SignUpScreenController>(
+  id: "signUpScreenStudyRadioButton",
+  builder: (controller) => Column(
+    crossAxisAlignment: CrossAxisAlignment.start,
+    children: [
+      Text(
+        StringRes.studyName,
+        style: TextStyle(
+          fontSize: 18,
+          fontFamily: "Poppins-Light",
+          fontWeight: FontWeight.bold,
+        ),
+      ),
+      Row(
+        children: [
+          commonRadioButton(
+            value: controller.signUpRadioSchool,
+            groupValue: controller.signUpStudyRadioGroupValue,
+            onChanged: (value) {
+              controller.signUpSchoolOnTap(value);
+            },
+          ),
+          Text(
+            StringRes.school,
+            style: TextStyle(
+              fontSize: 18,
+              fontFamily: "Poppins-Light",
+            ),
+          ),
+          commonRadioButton(
+            value: controller.signUpRadioCollage,
+            groupValue: controller.signUpStudyRadioGroupValue,
+            onChanged: (value) {
+              controller.signUpCollageOnTap(value);
+            },
+          ),
+          Text(
+            StringRes.collage,
+            style: TextStyle(
+              fontSize: 18,
+              fontFamily: "Poppins-Light",
+            ),
+          ),
+
+
+        ],
+      )
+    ],
+  ),
 );
+
+// Widget signUpStudyController = GetBuilder<SignUpScreenController>(
+//   builder: (controller) {
+//     return commonTextFiled(
+//       prefixIcon: IconRes.study,
+//       textFiledName: StringRes.studyName,
+//       fontSize: 18,
+//       hintText: StringRes.study,
+//       fontFamily: "Poppins",
+//       controller: controller.studyController,
+//     );
+//   },
+// );
+
+
 
 Widget signUpRadioButtonColumn = GetBuilder<SignUpScreenController>(
   id: "signUpScreenRadioButton",
@@ -152,6 +206,21 @@ Widget signUpRadioButtonColumn = GetBuilder<SignUpScreenController>(
       )
     ],
   ),
+);
+
+Widget birthOfDate = GetBuilder<SignUpScreenController>(
+  id: "datePicker",
+  builder: (controller) {
+    return commonTextFiled(
+      onTap: () => controller.birthDateOnTap(),
+      fontSize: 18,
+      fontFamily: "Poppins",
+      prefixIcon: IconRes.birthDate,
+      hintText: StringRes.enterDate,
+      textFiledName: StringRes.enterDate,
+      controller: controller.birtDateController,
+    );
+  },
 );
 
 // Widget signUpgenderController = GetBuilder<SignUpScreenController>(

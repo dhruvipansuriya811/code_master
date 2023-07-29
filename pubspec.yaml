@@ -42,6 +42,8 @@ dependencies:
   flutter_advanced_drawer:
   rating_dialog:
   flutter_rating_bar:
+  intl:
+  image_picker: ^0.8.4+3
 
 dev_dependencies:
   flutter_test:

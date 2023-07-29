@@ -1,13 +1,15 @@
 //.......................onBoarding button........................//
 
+import 'package:code_master/utils/colors_res.dart';
 import 'package:flutter/material.dart';
 
-Widget containerButton({
-  required void Function()? onTap,
-  required String data,
-  double? height,
-  double? width,
-}) {
+Widget containerButton(
+    {required void Function()? onTap,
+    required String data,
+    double? height,
+    double? width,
+    Color color1 = ColorRes.purpleDark,
+    Color color2 = ColorRes.purpleLight}) {
   return InkWell(
     onTap: onTap,
     child: Container(
@@ -26,11 +28,11 @@ Widget containerButton({
           end: FractionalOffset.centerRight,
           stops: [0.0, 1.0],
           colors: [
-            Color(0XFF8B4EFF),
-            Color(0XFFBF9EFF),
+            color1,
+            color2,
           ],
         ),
-        color: Colors.deepPurple.shade300,
+        //color: Colors.deepPurple.shade300,
         borderRadius: BorderRadius.circular(20),
       ),
       child: Center(

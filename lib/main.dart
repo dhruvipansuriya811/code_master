@@ -1,4 +1,5 @@
 import 'package:code_master/screen/dashboard_screen/dashboard_screen.dart';
+import 'package:code_master/screen/dashboard_screen/search_screen/drawer_screen/edit_screen/edit_screen.dart';
 import 'package:code_master/screen/splash_screen/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -10,7 +11,7 @@ void main() {
           theme: ThemeData(
             useMaterial3: true,
           ),
-          home:DashBordScreen(),
+          home:SplashScreen(),
       )
   );
 }

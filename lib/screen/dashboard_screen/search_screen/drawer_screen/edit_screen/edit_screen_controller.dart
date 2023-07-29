@@ -1,17 +1,15 @@
-import 'package:code_master/screen/login_screen/login_screen.dart';
-import 'package:flutter/cupertino.dart';
+import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:image_picker/image_picker.dart';
 import 'package:intl/intl.dart';
 
-class SignUpScreenController extends GetxController {
+class EditScreenController extends GetxController {
   TextEditingController nameController = TextEditingController();
-  TextEditingController emailController = TextEditingController();
-  TextEditingController passwordController = TextEditingController();
-  TextEditingController phoneController = TextEditingController();
   TextEditingController studyController = TextEditingController();
   TextEditingController genderController = TextEditingController();
   TextEditingController birtDateController = TextEditingController();
+
   var selectedDate = DateTime.now().obs;
   var selectedTime = TimeOfDay.now().obs;
 
@@ -51,26 +49,13 @@ class SignUpScreenController extends GetxController {
     update(["signUpScreenRadioButton"]);
   }
 
-  void changeSignUpEyeValue() {
-    signEyeValue = !signEyeValue;
-    update(['changeSignUpEyeValue']);
-  }
-
-  void loginToBackScreen() {
-    Get.back();
-  }
-
-  void signUpToSignIn() {
-    Get.to(LoginScreen());
-  }
-
   void birthDateOnTap() async {
     DateTime? pickedDate = await showDatePicker(
       context: Get.context!,
       initialDate: DateTime.now(),
-      firstDate: DateTime(2000),
-      currentDate: DateTime.now(),
       lastDate: DateTime.now(),
+      currentDate: DateTime.now(),
+      firstDate: DateTime(2000),
     );
     if (pickedDate != null) {
       print(pickedDate);
@@ -83,4 +68,21 @@ class SignUpScreenController extends GetxController {
       print("Date is not selected");
     }
   }
+
+  void appbarOnPress() {
+    Get.back();
+  }
+
+  File? file;
+
+  Future<void> imagePick() async {
+    ImagePicker picker = ImagePicker();
+    XFile? image = await picker.pickImage(source: ImageSource.gallery);
+    file = File(image!.path);
+    update(["imagePicker"]);
+  }
+
+  void saveBtnOnTap() {}
+
+  void cancelBtnOnTap() {}
 }

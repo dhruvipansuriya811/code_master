@@ -3,6 +3,7 @@ import 'package:code_master/common/common_sizebox.dart';
 import 'package:code_master/screen/dashboard_screen/dashboard_screen_controller.dart';
 import 'package:code_master/utils/assets_res.dart';
 import 'package:code_master/utils/colors_res.dart';
+import 'package:code_master/utils/string_res.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_advanced_drawer/flutter_advanced_drawer.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
@@ -121,7 +122,7 @@ logOutDialog(
 ) {
   return showDialog<void>(
     context: context,
-    barrierDismissible: false, // user must tap button!
+    barrierDismissible: false,
     builder: (BuildContext context) {
       return Dialog(
         insetPadding: const EdgeInsets.symmetric(horizontal: 20),
@@ -183,7 +184,7 @@ logOutDialog(
                                 borderRadius: BorderRadius.circular(10.0),
                               ),
                               child: Text(
-                                "Log Out",
+                                StringRes.logOut,
                                 style: TextStyle(
                                     fontSize: 20, fontWeight: FontWeight.bold),
                               ),
@@ -200,7 +201,7 @@ logOutDialog(
                                 borderRadius: BorderRadius.circular(10.0),
                               ),
                               child: Text(
-                                "Cancel",
+                                StringRes.cancel,
                                 style: TextStyle(
                                     fontSize: 20, fontWeight: FontWeight.bold
                                     // fontFamily: "Poppins",
@@ -287,30 +288,23 @@ ratingBarDialog(
                     },
                   ),
                   const SizedBox(height: 50),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 20),
-                    child: Row(
-                      children: [
-                        const SizedBox(width: 10),
-                        MaterialButton(
-                          height: 50,
-                          color: ColorRes.purpleLight2,
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(10.0),
+                  const SizedBox(width: 10),
+                  MaterialButton(
+                    height: 50,
+                    color: ColorRes.purpleLight2,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10.0),
+                    ),
+                    child: Text(
+                      "Submit",
+                      style: TextStyle(
+                          fontSize: 20, fontWeight: FontWeight.bold
+                          // fontFamily: "Poppins",
                           ),
-                          child: Text(
-                            "Submit",
-                            style: TextStyle(
-                                fontSize: 20, fontWeight: FontWeight.bold
-                                // fontFamily: "Poppins",
-                                ),
-                          ),
-                          onPressed: () {
-                            Get.back();
-                          },
-                        ),
-                      ],
-
+                    ),
+                    onPressed: () {
+                      Get.back();
+                    },
                   ),
                   const SizedBox(height: 20),
                 ],
@@ -322,3 +316,4 @@ ratingBarDialog(
     },
   );
 }
+

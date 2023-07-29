@@ -1,6 +1,7 @@
 import 'package:animated_notch_bottom_bar/animated_notch_bottom_bar/animated_notch_bottom_bar.dart';
 import 'package:code_master/screen/dashboard_screen/example_screen/example_screen.dart';
 import 'package:code_master/screen/dashboard_screen/home_screen/home_screen.dart';
+import 'package:code_master/screen/dashboard_screen/search_screen/drawer_screen/edit_screen/edit_screen.dart';
 import 'package:code_master/utils/assets_res.dart';
 import 'package:code_master/utils/string_res.dart';
 
@@ -89,11 +90,13 @@ class DashboardScreenController extends GetxController {
 
   List drawerScreenData = [];
 
-  void drawerListTile(int index,BuildContext context) {
-    index == 1 ? Get.defaultDialog(): index == 2 ? ratingBarDialog(context) : index == 3 ? logOutDialog(context) : SizedBox();
-
-
-
-
+  void drawerListTile(int index, BuildContext context) {
+    index == 0
+        ?Get.to(EditScreen())
+        : index == 1
+            ? Get.defaultDialog()
+            : index == 2
+                ? ratingBarDialog(context)
+                : logOutDialog(context);
   }
 }

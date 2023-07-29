@@ -15,6 +15,7 @@ Widget commonTextFiled({
   FontWeight? fontWeight,
   String? fontFamily,
   bool obscureText = false,
+  void Function()? onTap,
 }) {
   return Column(
     crossAxisAlignment: CrossAxisAlignment.start,
@@ -32,6 +33,8 @@ Widget commonTextFiled({
       ),
       heightSizeBox(Get.height / 200),
       TextField(
+        onTap:onTap ,
+        readOnly: true,
         controller: controller,
         obscuringCharacter: "*",
         obscureText: obscureText,

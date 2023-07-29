@@ -9,6 +9,7 @@ class ImageRes {
   static const onBoardingLottie3 = '${imageBase}animation_lkaw0xs8.json';
   static const signUpLogo = '${imageBase}loginscreenlogo.png';
   static const loginLogo = '${imageBase}loginlogo.png.png';
+  static const profileImage = '${imageBase}loginlogo.png.png';
 }
 
 //.................IconRes.....................
@@ -21,7 +22,7 @@ class IconRes {
   static const IconData person = Icons.person;
   static const IconData phoneNum = Icons.phone;
   static const IconData study = Icons.cast_for_education;
-   static const IconData home = Icons.home;
+  static const IconData home = Icons.home;
   static const IconData search = Icons.search;
   static const IconData example = Icons.file_copy_outlined;
   static const IconData profile = Icons.person;
@@ -32,4 +33,8 @@ class IconRes {
   static const IconData rating = Icons.star;
   static const IconData logOut = Icons.logout;
   static const IconData edit = Icons.edit;
+  static const IconData birthDate = Icons.date_range_outlined;
+  static const IconData backArrow = Icons.arrow_back_ios_new_outlined;
+
+
 }

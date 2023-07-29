@@ -1,4 +1,5 @@
 import 'package:code_master/screen/dashboard_screen/search_screen/search_screen_controller.dart';
+import 'package:code_master/screen/dashboard_screen/search_screen/search_screen_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -8,6 +9,8 @@ class SearchScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Get.put(SearchScreenController());
-    return const Scaffold();
+    return  Scaffold(
+      body: searchBar,
+    );
   }
 }
