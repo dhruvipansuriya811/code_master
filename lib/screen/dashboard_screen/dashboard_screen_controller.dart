@@ -1,14 +1,12 @@
 import 'package:animated_notch_bottom_bar/animated_notch_bottom_bar/animated_notch_bottom_bar.dart';
+import 'package:code_master/screen/dashboard_screen/drawer_screen/edit_screen/edit_screen.dart';
 import 'package:code_master/screen/dashboard_screen/example_screen/example_screen.dart';
 import 'package:code_master/screen/dashboard_screen/home_screen/home_screen.dart';
-import 'package:code_master/screen/dashboard_screen/search_screen/drawer_screen/edit_screen/edit_screen.dart';
 import 'package:code_master/utils/assets_res.dart';
 import 'package:code_master/utils/string_res.dart';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_advanced_drawer/flutter_advanced_drawer.dart';
 import 'package:get/get.dart';
-
 import 'dashboard_screen_widget.dart';
 import 'profile_screen/profile_screen.dart';
 import 'search_screen/search_screen.dart';

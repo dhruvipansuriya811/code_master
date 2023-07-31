@@ -14,11 +14,9 @@ class EditScreenController extends GetxController {
   var selectedTime = TimeOfDay.now().obs;
 
   bool signEyeValue = false;
-
   int signUpStudyRadioGroupValue = 0;
   int signUpRadioSchool = 1;
   int signUpRadioCollage = 2;
-
   int signUpRadioGroupValue = 0;
   int signUpRadioMale = 1;
   int signUpRadioFemale = 2;
@@ -57,15 +55,11 @@ class EditScreenController extends GetxController {
       currentDate: DateTime.now(),
       firstDate: DateTime(2000),
     );
-    if (pickedDate != null) {
-      print(pickedDate);
-      String formattedDate = DateFormat('dd-MM-yyy').format(pickedDate);
-      print(formattedDate);
 
+    if (pickedDate != null) {
+      String formattedDate = DateFormat('dd-MM-yyy').format(pickedDate);
       birtDateController.text = formattedDate;
-      update(["datePicker"]); //set foratted date to TextField value.
-    } else {
-      print("Date is not selected");
+      update(["datePicker"]);
     }
   }
 

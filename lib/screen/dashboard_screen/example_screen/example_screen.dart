@@ -1,18 +1,18 @@
-import 'package:code_master/common/common_appbar.dart';
 import 'package:code_master/screen/dashboard_screen/example_screen/example_screen_controller.dart';
-import 'package:code_master/utils/string_res.dart';
+import 'package:code_master/screen/dashboard_screen/example_screen/example_screen_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class ExampleScreen extends StatelessWidget {
-   ExampleScreen({super.key});
+  ExampleScreen({super.key});
 
-  ExampleScreenController exampleScreenController = Get.put(ExampleScreenController());
+  final ExampleScreenController exampleScreenController =
+      Get.put(ExampleScreenController());
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(child: Text("dataExample Screen")),
+      body: allExampleList,
     );
   }
 }

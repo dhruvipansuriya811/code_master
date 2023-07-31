@@ -1,10 +1,8 @@
-import 'package:code_master/common/common_sizebox.dart';
-import 'package:code_master/screen/dashboard_screen/search_screen/drawer_screen/edit_screen/edit_screen_controller.dart';
+import 'package:code_master/screen/dashboard_screen/drawer_screen/edit_screen/edit_screen_controller.dart';
 import 'package:code_master/utils/assets_res.dart';
 import 'package:code_master/utils/string_res.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
 import '../../../../../common/common_button.dart';
 import '../../../../../common/common_radiobutton.dart';
 import '../../../../../common/common_textfield.dart';

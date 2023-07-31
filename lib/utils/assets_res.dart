@@ -37,6 +37,6 @@ class IconRes {
   static const IconData edit = Icons.edit;
   static const IconData birthDate = Icons.date_range_outlined;
   static const IconData backArrow = Icons.arrow_back_ios_new_outlined;
-
-
+  static const IconData forwardArrow = Icons.arrow_forward_ios;
+  static const IconData downArrow = Icons.arrow_downward_outlined;
 }

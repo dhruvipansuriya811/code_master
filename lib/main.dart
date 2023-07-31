@@ -1,7 +1,13 @@
+<<<<<<< Updated upstream
 import 'package:code_master/screen/forgot_password/forgot_password_screen.dart';
+=======
+>>>>>>> Stashed changes
 import 'package:code_master/screen/splash_screen/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+
+import 'screen/dashboard_screen/dashboard_screen.dart';
+import 'screen/dashboard_screen/example_screen/example_screen.dart';
 
 void main() {
   runApp(
@@ -14,69 +20,3 @@ void main() {
       )
   );
 }
-
-
-
-// SizedBox(
-//   height: 5,
-// ),
-// Text(
-//   "LET'S LEARN",
-//   style: TextStyle(fontFamily: "DMSerifDisplay-Regular", fontSize: 20),
-// ),
-// SizedBox(
-//   height: 5,
-// ),
-// Text(
-//   "LET'S START",
-//   style: TextStyle(fontFamily: "DMSerifDisplay-Regular", fontSize: 20),
-// ),
-// SizedBox(
-//   height: 5,
-// ),
-// Text(
-//   "SOMETHING NEW",
-//   style: TextStyle(fontFamily: "Butcherman-Regular", fontSize: 20),
-// ),
-// SizedBox(
-//   height: 5,
-// ),
-// Text(
-//   "LET'S LEARN",
-//   style: TextStyle(fontFamily: "RubikBeastly-Regular", fontSize: 20),
-// ),
-// SizedBox(
-//   height: 5,
-// ),
-// Text(
-//   "LET'S START",
-//   style: TextStyle(fontFamily: "Butcherman-Regular", fontSize: 20),
-// ),
-// SizedBox(
-//   height: 5,
-// ),
-// Text(
-//   "LET'S START",
-//   style: TextStyle(fontFamily: "Anton-Regular", fontSize: 20),
-// ),
-// SizedBox(
-//   height: 5,
-// ),
-// Text(
-//   "LET'S START",
-//   style: TextStyle(fontFamily: "FasterOne-Regular", fontSize: 20),
-// ),
-// SizedBox(
-//   height: 5,
-// ),
-// Text(
-//   "LET'S START",
-//   style: TextStyle(fontFamily: "Galada-Regular", fontSize: 20),
-// ),
-// SizedBox(
-//   height: 5,
-// ),
-// Text(
-//   "LET'S START",
-//   style: TextStyle(fontFamily: "ondrinaOutline-Regular", fontSize: 20),
-// ),
