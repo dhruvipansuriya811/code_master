@@ -3,6 +3,8 @@ import 'package:code_master/screen/signup_screen/signup_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 
+import '../forgot_password/forgot_password_screen.dart';
+
 class LoginScreenController extends GetxController {
   TextEditingController emailController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
@@ -20,4 +22,9 @@ class LoginScreenController extends GetxController {
   void loginToSignUp() {
     Get.to(SignUpScreen());
   }
+
+  void loginToForgotPassScreen(){
+    Get.to(ForgotPasswordScreen());
+  }
+
 }

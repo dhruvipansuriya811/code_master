@@ -1,5 +1,4 @@
-import 'package:code_master/screen/dashboard_screen/dashboard_screen.dart';
-import 'package:code_master/screen/dashboard_screen/search_screen/drawer_screen/edit_screen/edit_screen.dart';
+import 'package:code_master/screen/forgot_password/forgot_password_screen.dart';
 import 'package:code_master/screen/splash_screen/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';

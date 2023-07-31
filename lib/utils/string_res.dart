@@ -42,4 +42,18 @@ class StringRes {
   static const String editProfile = 'Edit Profile';
   static const String cancel = 'Cancel';
   static const String save = 'Save';
+  static const String forgotPassword = 'Forgot password';
+  static const String forgotPassEmail = 'Email Address';
+  static const String emailText = 'Enter the register email address';
+  static const String emailText2 = 'We will email you a link to reset';
+  static const String emailText3 = 'Your password';
+  static const String send = 'Send';
+  static const String verification = 'Verification';
+  static const String otpVerification = 'OTP Verification';
+  static const String enterOtpNumber = 'Enter your OTP code number';
+  static const String verify = 'VERIFY';
+  static const String didNotReceiveOtp = "Didn't receive the OTP? ";
+  static const String resentOtp = 'RESEND OTP';
+
+
 }

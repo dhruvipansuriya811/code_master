@@ -10,6 +10,8 @@ class ImageRes {
   static const signUpLogo = '${imageBase}loginscreenlogo.png';
   static const loginLogo = '${imageBase}loginlogo.png.png';
   static const profileImage = '${imageBase}loginlogo.png.png';
+  static const forgotPass = '${imageBase}forgot_password.png';
+  static const otpVerification = '${imageBase}otpimage.png';
 }
 
 //.................IconRes.....................

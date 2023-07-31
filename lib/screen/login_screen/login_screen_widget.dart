@@ -66,7 +66,7 @@ Widget loginScreenLoginButton = GetBuilder<LoginScreenController>(
 Widget forgotPasswordButton = GetBuilder<LoginScreenController>(
   builder: (controller) {
     return GestureDetector(
-      onTap: () {},
+      onTap: controller.loginToForgotPassScreen,
       child: Text(
         StringRes.forgotPass,
         style: TextStyle(
