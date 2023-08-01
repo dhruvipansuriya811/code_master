@@ -7,7 +7,7 @@ import 'package:get/get.dart';
 
 Widget profileScreenImageContainer = GetBuilder<ProfileScreenController>(
   builder: (controller) {
-    return CircleAvatar(
+    return const CircleAvatar(
       backgroundImage: AssetImage(ImageRes.loginLogo),
       radius: 80,
     );
@@ -22,8 +22,8 @@ Widget profileScreenListContainer = GetBuilder<ProfileScreenController>(
         controller.profileScreenList.length,
         (index) => Container(
           height: Get.height / 15,
-          margin: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
-          decoration: BoxDecoration(
+          margin: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+          decoration: const BoxDecoration(
             color: ColorRes.purpleLight,
             borderRadius: BorderRadius.all(Radius.circular(25)),
           ),

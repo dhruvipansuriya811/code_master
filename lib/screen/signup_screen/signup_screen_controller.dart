@@ -1,5 +1,5 @@
 import 'package:code_master/screen/login_screen/login_screen.dart';
-import 'package:flutter/cupertino.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
@@ -61,7 +61,7 @@ class SignUpScreenController extends GetxController {
   }
 
   void signUpToSignIn() {
-    Get.to(LoginScreen());
+    Get.to(const LoginScreen());
   }
 
   void birthDateOnTap() async {
@@ -73,14 +73,20 @@ class SignUpScreenController extends GetxController {
       lastDate: DateTime.now(),
     );
     if (pickedDate != null) {
-      print(pickedDate);
+      if (kDebugMode) {
+        print(pickedDate);
+      }
       String formattedDate = DateFormat('dd-MM-yyy').format(pickedDate);
-      print(formattedDate);
+      if (kDebugMode) {
+        print(formattedDate);
+      }
 
       birtDateController.text = formattedDate;
-      update(["datePicker"]); //set foratted date to TextField value.
+      update(["datePicker"]);
     } else {
-      print("Date is not selected");
+      if (kDebugMode) {
+        print("Date is not selected");
+      }
     }
   }
 }

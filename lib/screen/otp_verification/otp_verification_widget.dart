@@ -21,7 +21,7 @@ Widget otpVerificationPassRow = GetBuilder<OtpVerificationController>(
           ),
           child: IconButton(
             onPressed: controller.otpVerificationArrow,
-            icon: Icon(
+            icon: const Icon(
               IconRes.backArrow,
               color: ColorRes.purpleDark,
             ),
@@ -41,7 +41,7 @@ Widget otpVerificationPassRow = GetBuilder<OtpVerificationController>(
 
 Widget otpVerificationImage = GetBuilder<OtpVerificationController>(
   builder: (controller) {
-    return CircleAvatar(
+    return const CircleAvatar(
       radius: 100,
       backgroundImage: AssetImage(ImageRes.otpVerification),
     );
@@ -52,12 +52,12 @@ Widget verificationTextColumn = GetBuilder<OtpVerificationController>(
   builder: (controller) {
     return Column(
       children: [
-        Text(
+        const Text(
           StringRes.otpVerification,
           style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
         ),
         heightSizeBox(10),
-        Text(
+        const Text(
           StringRes.enterOtpNumber,
           style: TextStyle(
             fontSize: 18,
@@ -88,7 +88,7 @@ Widget otpTextfiled(BuildContext context) =>
                   },
                   keyboardType: TextInputType.number,
                   maxLength: 1,
-                  decoration: InputDecoration(counterText: ""),
+                  decoration: const InputDecoration(counterText: ""),
                   textAlign: TextAlign.center,
                   style: Theme.of(context).textTheme.titleLarge,
                 ),
@@ -104,7 +104,7 @@ Widget otpTextfiled(BuildContext context) =>
                   },
                   keyboardType: TextInputType.number,
                   maxLength: 1,
-                  decoration: InputDecoration(counterText: ""),
+                  decoration: const InputDecoration(counterText: ""),
                   textAlign: TextAlign.center,
                   style: Theme.of(context).textTheme.titleLarge,
                 ),
@@ -120,7 +120,7 @@ Widget otpTextfiled(BuildContext context) =>
                   },
                   keyboardType: TextInputType.number,
                   maxLength: 1,
-                  decoration: InputDecoration(counterText: ""),
+                  decoration: const InputDecoration(counterText: ""),
                   textAlign: TextAlign.center,
                   style: Theme.of(context).textTheme.titleLarge,
                 ),
@@ -136,7 +136,7 @@ Widget otpTextfiled(BuildContext context) =>
                   },
                   keyboardType: TextInputType.number,
                   maxLength: 1,
-                  decoration: InputDecoration(counterText: ""),
+                  decoration: const InputDecoration(counterText: ""),
                   textAlign: TextAlign.center,
                   style: Theme.of(context).textTheme.titleLarge,
                 ),
@@ -160,7 +160,7 @@ Widget otpVerificationButton = GetBuilder<OtpVerificationController>(
 
 Widget resendOtpText = GetBuilder<OtpVerificationController>(
   builder: (controller) {
-    return Row(
+    return const Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Text(

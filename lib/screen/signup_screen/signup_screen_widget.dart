@@ -78,13 +78,12 @@ Widget signUpPhoneController = GetBuilder<SignUpScreenController>(
   },
 );
 
-
 Widget signUpStudyColumn = GetBuilder<SignUpScreenController>(
   id: "signUpScreenStudyRadioButton",
   builder: (controller) => Column(
     crossAxisAlignment: CrossAxisAlignment.start,
     children: [
-      Text(
+      const Text(
         StringRes.studyName,
         style: TextStyle(
           fontSize: 18,
@@ -101,7 +100,7 @@ Widget signUpStudyColumn = GetBuilder<SignUpScreenController>(
               controller.signUpSchoolOnTap(value);
             },
           ),
-          Text(
+          const Text(
             StringRes.school,
             style: TextStyle(
               fontSize: 18,
@@ -115,15 +114,13 @@ Widget signUpStudyColumn = GetBuilder<SignUpScreenController>(
               controller.signUpCollageOnTap(value);
             },
           ),
-          Text(
+          const Text(
             StringRes.collage,
             style: TextStyle(
               fontSize: 18,
               fontFamily: "Poppins-Light",
             ),
           ),
-
-
         ],
       )
     ],
@@ -143,14 +140,12 @@ Widget signUpStudyColumn = GetBuilder<SignUpScreenController>(
 //   },
 // );
 
-
-
 Widget signUpRadioButtonColumn = GetBuilder<SignUpScreenController>(
   id: "signUpScreenRadioButton",
   builder: (controller) => Column(
     crossAxisAlignment: CrossAxisAlignment.start,
     children: [
-      Text(
+      const Text(
         StringRes.genderName,
         style: TextStyle(
           fontSize: 18,
@@ -167,7 +162,7 @@ Widget signUpRadioButtonColumn = GetBuilder<SignUpScreenController>(
               controller.signUpMaleOnTap(value);
             },
           ),
-          Text(
+          const Text(
             StringRes.male,
             style: TextStyle(
               fontSize: 18,
@@ -181,7 +176,7 @@ Widget signUpRadioButtonColumn = GetBuilder<SignUpScreenController>(
               controller.signUpFemaleOnTap(value);
             },
           ),
-          Text(
+          const Text(
             StringRes.female,
             style: TextStyle(
               fontSize: 18,
@@ -195,7 +190,7 @@ Widget signUpRadioButtonColumn = GetBuilder<SignUpScreenController>(
               controller.signUpOtherOnTap(value);
             },
           ),
-          Text(
+          const Text(
             StringRes.other,
             style: TextStyle(
               fontSize: 18,
@@ -222,19 +217,6 @@ Widget birthOfDate = GetBuilder<SignUpScreenController>(
     );
   },
 );
-
-// Widget signUpgenderController = GetBuilder<SignUpScreenController>(
-//   builder: (controller) {
-//     return commonTextFiled(
-//       prefixIcon: IconRes.person,
-//       textFiledName: StringRes.genderName,
-//       fontSize: 18,
-//       hintText: StringRes.genederHintText,
-//       fontFamily: "Poppins",
-//       controller: controller.genderController,
-//     );
-//   },
-// );
 
 Widget signUpButton = GetBuilder<SignUpScreenController>(
   builder: (controller) {

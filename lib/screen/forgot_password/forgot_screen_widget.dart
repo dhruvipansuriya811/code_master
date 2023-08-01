@@ -22,7 +22,7 @@ Widget forgotPassRow = GetBuilder<ForgotPassController>(
           ),
           child: IconButton(
             onPressed: controller.forgotPassArrow,
-            icon: Icon(
+            icon: const Icon(
               IconRes.backArrow,
               color: ColorRes.purpleDark,
             ),
@@ -42,7 +42,7 @@ Widget forgotPassRow = GetBuilder<ForgotPassController>(
 
 Widget forgotPassImage = GetBuilder<ForgotPassController>(
   builder: (controller) {
-    return CircleAvatar(
+    return const CircleAvatar(
       radius: 100,
       backgroundImage: AssetImage(ImageRes.forgotPass),
     );
@@ -53,19 +53,19 @@ Widget forPassText = GetBuilder<ForgotPassController>(
   builder: (controller) {
     return Column(
       children: [
-        Text(
+        const Text(
           StringRes.emailText,
           style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
         ),
         heightSizeBox(10),
-        Text(
+        const Text(
           StringRes.emailText2,
           style: TextStyle(
             fontSize: 15,
             fontFamily: "Poppins-Light",
           ),
         ),
-        Text(
+        const Text(
           StringRes.emailText3,
           style: TextStyle(
             fontSize: 15,

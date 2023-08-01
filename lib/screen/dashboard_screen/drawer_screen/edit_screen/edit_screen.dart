@@ -16,7 +16,7 @@ class EditScreen extends StatelessWidget {
       child: Scaffold(
         appBar: editScreenAppBar,
         body: Container(
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
             gradient: LinearGradient(
               colors: [Color(0XFFf3e7e9), Color(0XFFe3eeff)],
             ),

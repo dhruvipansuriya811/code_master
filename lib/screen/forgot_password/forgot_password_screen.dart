@@ -6,6 +6,7 @@ import '../../common/common_sizebox.dart';
 import 'forgot_screen_widget.dart';
 
 class ForgotPasswordScreen extends StatelessWidget {
+
   ForgotPasswordScreen({super.key});
 
   ForgotPassController forgotPassController = Get.put(ForgotPassController());

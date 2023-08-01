@@ -17,9 +17,9 @@ Widget homeScreenAllTopicContainer = GetBuilder<HomeScreenController>(
                     (index) =>
                     Container(
                       height: Get.height / 10,
-                      margin: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+                      margin: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
                       decoration: BoxDecoration(
-                        borderRadius: BorderRadius.all(Radius.circular(25)),
+                        borderRadius: const BorderRadius.all(Radius.circular(25)),
                         gradient: LinearGradient(
                           colors: index % 2 == 0
                               ? [ColorRes.purpleLight, ColorRes.purpleLight2]

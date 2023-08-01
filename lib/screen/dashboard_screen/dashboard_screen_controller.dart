@@ -49,9 +49,9 @@ class DashboardScreenController extends GetxController {
 
   List dashBoardScreenList = [
     HomeScreen(),
-    SearchScreen(),
+    const SearchScreen(),
     ExampleScreen(),
-    ProfileScreen(),
+    const ProfileScreen(),
   ];
 
   void onTapBottomBar(index) {

@@ -11,14 +11,14 @@ import '../../../../../utils/colors_res.dart';
 AppBar editScreenAppBar = AppBar(
   backgroundColor: ColorRes.purpleLight,
   centerTitle: true,
-  title: Text(
+  title: const Text(
     StringRes.editProfile,
     style: TextStyle(fontFamily: "Poppins"),
   ),
   leading: GetBuilder<EditScreenController>(
     builder: (controller) => IconButton(
       onPressed: controller.appbarOnPress,
-      icon: Icon(IconRes.backArrow),
+      icon: const Icon(IconRes.backArrow),
     ),
   ),
 );
@@ -32,7 +32,7 @@ Widget imagePicker = GetBuilder<EditScreenController>(
           CircleAvatar(
             radius: 100,
             backgroundImage: controller.file == null
-                ? AssetImage(
+                ? const AssetImage(
                     ImageRes.profileImage,
                   )
                 : FileImage(controller.file!) as ImageProvider,
@@ -48,7 +48,7 @@ Widget imagePicker = GetBuilder<EditScreenController>(
                 onTap: () {
                   controller.imagePick();
                 },
-                child: Icon(
+                child: const Icon(
                   Icons.camera_alt,
                   color: Colors.white,
                   size: 20,
@@ -80,8 +80,8 @@ Widget editScreenStudyColumn = GetBuilder<EditScreenController>(
   builder: (controller) => Column(
     crossAxisAlignment: CrossAxisAlignment.start,
     children: [
-      Padding(
-        padding: const EdgeInsets.all(8.0),
+      const Padding(
+        padding: EdgeInsets.all(8.0),
         child: Text(
           StringRes.studyName,
           style: TextStyle(
@@ -101,7 +101,7 @@ Widget editScreenStudyColumn = GetBuilder<EditScreenController>(
               controller.signUpSchoolOnTap(value);
             },
           ),
-          Text(
+          const Text(
             StringRes.school,
             style: TextStyle(
               fontSize: 18,
@@ -115,7 +115,7 @@ Widget editScreenStudyColumn = GetBuilder<EditScreenController>(
               controller.signUpCollageOnTap(value);
             },
           ),
-          Text(
+          const Text(
             StringRes.collage,
             style: TextStyle(
               fontSize: 18,
@@ -133,7 +133,7 @@ Widget editScreenRadioButtonColumn = GetBuilder<EditScreenController>(
   builder: (controller) => Column(
     crossAxisAlignment: CrossAxisAlignment.start,
     children: [
-      Text(
+      const Text(
         StringRes.genderName,
         style: TextStyle(
           fontSize: 18,
@@ -150,7 +150,7 @@ Widget editScreenRadioButtonColumn = GetBuilder<EditScreenController>(
               controller.signUpMaleOnTap(value);
             },
           ),
-          Text(
+          const Text(
             StringRes.male,
             style: TextStyle(
               fontSize: 18,
@@ -164,7 +164,7 @@ Widget editScreenRadioButtonColumn = GetBuilder<EditScreenController>(
               controller.signUpFemaleOnTap(value);
             },
           ),
-          Text(
+          const Text(
             StringRes.female,
             style: TextStyle(
               fontSize: 18,
@@ -178,7 +178,7 @@ Widget editScreenRadioButtonColumn = GetBuilder<EditScreenController>(
               controller.signUpOtherOnTap(value);
             },
           ),
-          Text(
+          const Text(
             StringRes.other,
             style: TextStyle(
               fontSize: 18,
@@ -216,7 +216,7 @@ Widget editScreenRow = GetBuilder<EditScreenController>(
           height: Get.height / 18,
           width: Get.width / 3,
         ),
-        Spacer(),
+        const Spacer(),
         containerButton(
           onTap: controller.saveBtnOnTap,
           data: StringRes.save,

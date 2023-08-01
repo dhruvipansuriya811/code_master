@@ -14,7 +14,7 @@ Widget allExampleList = GetBuilder<ExampleScreenController>(
           margin: const EdgeInsets.all(10),
           child: AnimatedContainer(
             alignment: Alignment.center,
-            duration: Duration(seconds: 3),
+            duration: const Duration(seconds: 3),
             height: controller.animatedContainerHeight,
             child: ListTile(
               focusColor: ColorRes.purpleLight2,

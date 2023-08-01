@@ -4,11 +4,11 @@ import 'package:code_master/screen/dashboard_screen/dashboard_screen_controller.
 import 'package:code_master/utils/assets_res.dart';
 import 'package:code_master/utils/colors_res.dart';
 import 'package:code_master/utils/string_res.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_advanced_drawer/flutter_advanced_drawer.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:get/get.dart';
-import 'package:rating_dialog/rating_dialog.dart';
 
 Widget dashboardBottomNavigationBar = GetBuilder<DashboardScreenController>(
   builder: (controller) {
@@ -85,7 +85,7 @@ Widget drawer = GetBuilder<DashboardScreenController>(
     child: Column(
       children: [
         heightSizeBox(20),
-        CircleAvatar(
+        const CircleAvatar(
           backgroundImage: AssetImage(ImageRes.loginLogo),
           radius: 80,
         ),
@@ -106,7 +106,7 @@ Widget drawer = GetBuilder<DashboardScreenController>(
                 ),
                 title: Text(
                   controller.drawerListItem[index]['title'],
-                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
+                  style: const TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
                 ),
               );
             },
@@ -132,7 +132,7 @@ logOutDialog(
             topRight: Radius.circular(30),
             bottomLeft: Radius.circular(30),
           ),
-        ), //this right herea
+        ),
         child: ClipRRect(
           borderRadius: const BorderRadius.only(
             topLeft: Radius.circular(30),
@@ -146,8 +146,8 @@ logOutDialog(
                 children: [
                   Container(
                     color: ColorRes.purpleLight2,
-                    child: Padding(
-                      padding: const EdgeInsets.symmetric(
+                    child: const Padding(
+                      padding: EdgeInsets.symmetric(
                         horizontal: 20,
                         vertical: 10,
                       ),
@@ -156,7 +156,7 @@ logOutDialog(
                         children: [
                           Text(
                             "Log Out",
-                            style: const TextStyle(
+                            style: TextStyle(
                                 fontSize: 20, fontWeight: FontWeight.bold),
                           ),
                         ],
@@ -183,7 +183,7 @@ logOutDialog(
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(10.0),
                               ),
-                              child: Text(
+                              child: const Text(
                                 StringRes.logOut,
                                 style: TextStyle(
                                     fontSize: 20, fontWeight: FontWeight.bold),
@@ -200,7 +200,7 @@ logOutDialog(
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(10.0),
                               ),
-                              child: Text(
+                              child: const Text(
                                 StringRes.cancel,
                                 style: TextStyle(
                                     fontSize: 20, fontWeight: FontWeight.bold
@@ -240,7 +240,7 @@ ratingBarDialog(
             topRight: Radius.circular(30),
             bottomLeft: Radius.circular(30),
           ),
-        ), //this right herea
+        ),
         child: ClipRRect(
           borderRadius: const BorderRadius.only(
             topLeft: Radius.circular(30),
@@ -254,8 +254,8 @@ ratingBarDialog(
                 children: [
                   Container(
                     color: ColorRes.purpleLight2,
-                    child: Padding(
-                      padding: const EdgeInsets.symmetric(
+                    child: const Padding(
+                      padding: EdgeInsets.symmetric(
                         horizontal: 20,
                         vertical: 10,
                       ),
@@ -264,7 +264,7 @@ ratingBarDialog(
                         children: [
                           Text(
                             "Rating Dialog",
-                            style: const TextStyle(
+                            style: TextStyle(
                                 fontSize: 20, fontWeight: FontWeight.bold),
                           ),
                         ],
@@ -278,13 +278,15 @@ ratingBarDialog(
                     direction: Axis.horizontal,
                     allowHalfRating: true,
                     itemCount: 5,
-                    itemPadding: EdgeInsets.symmetric(horizontal: 4.0),
-                    itemBuilder: (context, _) => Icon(
+                    itemPadding: const EdgeInsets.symmetric(horizontal: 4.0),
+                    itemBuilder: (context, _) => const Icon(
                       Icons.star,
                       color: Colors.amber,
                     ),
                     onRatingUpdate: (rating) {
-                      print(rating);
+                      if (kDebugMode) {
+                        print(rating);
+                      }
                     },
                   ),
                   const SizedBox(height: 50),
@@ -295,7 +297,7 @@ ratingBarDialog(
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10.0),
                     ),
-                    child: Text(
+                    child: const Text(
                       "Submit",
                       style: TextStyle(
                           fontSize: 20, fontWeight: FontWeight.bold
