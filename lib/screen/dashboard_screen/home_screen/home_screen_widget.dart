@@ -11,6 +11,7 @@ Widget homeScreenAllTopicContainer = GetBuilder<HomeScreenController>(
         children: [
           Expanded(
             child: AnimationList(
+              
               padding: EdgeInsets.all(Get.width / 90),
               children: List.generate(
                 controller.cLanguageAllTopicList.length,

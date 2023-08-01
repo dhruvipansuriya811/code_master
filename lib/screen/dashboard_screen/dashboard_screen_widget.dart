@@ -41,7 +41,7 @@ Widget dashBoardPageView = GetBuilder<DashboardScreenController>(
   id: "dashboardPageView",
   builder: (controller) => PageView(
     controller: controller.pageController,
-    physics:   NeverScrollableScrollPhysics(),
+    physics: NeverScrollableScrollPhysics(),
     children: List.generate(
       controller.dashBoardScreenList.length,
       (index) => controller.dashBoardScreenList[index],
@@ -57,27 +57,35 @@ AppBar dashBoardAppBar = AppBar(
     id: 'dashBoardAppBarTitle',
     builder: (controller) => Text(
       controller.appBarTitleList[controller.selectedPage],
-      style:   TextStyle(fontFamily: "Poppins"),
+      style: TextStyle(fontFamily: "Poppins"),
     ),
   ),
   centerTitle: true,
   leading: GetBuilder<DashboardScreenController>(
     id: 'dashBoardAppBarIcon',
-    builder: (controller) => controller.selectedPage==0?IconButton(
-      onPressed: () =>controller.drawerOnTap(),
-      icon: ValueListenableBuilder<AdvancedDrawerValue>(
-        valueListenable: controller.advancedDrawerController,
-        builder: (_, value, __) {
-          return AnimatedSwitcher(
-            duration:   Duration(milliseconds: 500),
-            child: Icon(
-              value.visible? Icons.clear : controller.selectedPage==1||controller.selectedPage==2||controller.selectedPage==3? null : Icons.menu,
-              key: ValueKey<bool>(value.visible),
+    builder: (controller) => controller.selectedPage == 0
+        ? IconButton(
+            onPressed: () => controller.drawerOnTap(),
+            icon: ValueListenableBuilder<AdvancedDrawerValue>(
+              valueListenable: controller.advancedDrawerController,
+              builder: (_, value, __) {
+                return AnimatedSwitcher(
+                  duration: Duration(milliseconds: 500),
+                  child: Icon(
+                    value.visible
+                        ? Icons.clear
+                        : controller.selectedPage == 1 ||
+                                controller.selectedPage == 2 ||
+                                controller.selectedPage == 3
+                            ? null
+                            : Icons.menu,
+                    key: ValueKey<bool>(value.visible),
+                  ),
+                );
+              },
             ),
-          );
-        },
-      ),
-    ):  SizedBox(),
+          )
+        : SizedBox(),
   ),
 );
 
@@ -86,7 +94,7 @@ Widget drawer = GetBuilder<DashboardScreenController>(
     child: Column(
       children: [
         heightSizeBox(20),
-          CircleAvatar(
+        CircleAvatar(
           backgroundImage: AssetImage(ImageRes.loginLogo),
           radius: 80,
         ),
@@ -107,7 +115,7 @@ Widget drawer = GetBuilder<DashboardScreenController>(
                 ),
                 title: Text(
                   controller.drawerListItem[index]['title'],
-                  style:   TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
                 ),
               );
             },
@@ -126,8 +134,8 @@ logOutDialog(
     barrierDismissible: false,
     builder: (BuildContext context) {
       return Dialog(
-        insetPadding:   EdgeInsets.symmetric(horizontal: 20),
-        shape:   RoundedRectangleBorder(
+        insetPadding: EdgeInsets.symmetric(horizontal: 20),
+        shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.only(
             topLeft: Radius.circular(30),
             topRight: Radius.circular(30),
@@ -135,7 +143,7 @@ logOutDialog(
           ),
         ),
         child: ClipRRect(
-          borderRadius:   BorderRadius.only(
+          borderRadius: BorderRadius.only(
             topLeft: Radius.circular(30),
             topRight: Radius.circular(30),
             bottomLeft: Radius.circular(30),
@@ -147,8 +155,8 @@ logOutDialog(
                 children: [
                   Container(
                     color: ColorRes.purpleLight2,
-                    child:   Padding(
-                      padding:  EdgeInsets.symmetric(
+                    child: Padding(
+                      padding: EdgeInsets.symmetric(
                         horizontal: 20,
                         vertical: 10,
                       ),
@@ -164,17 +172,17 @@ logOutDialog(
                       ),
                     ),
                   ),
-                    SizedBox(height: 50),
-                    Text(
+                  SizedBox(height: 50),
+                  Text(
                     "Are You sure Want to log out?",
                     style: TextStyle(
                       fontSize: 20,
                       fontWeight: FontWeight.w600,
                     ),
                   ),
-                    SizedBox(height: 50),
+                  SizedBox(height: 50),
                   Padding(
-                    padding:   EdgeInsets.symmetric(horizontal: 20),
+                    padding: EdgeInsets.symmetric(horizontal: 20),
                     child: Row(
                       children: [
                         Expanded(
@@ -184,7 +192,7 @@ logOutDialog(
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(10.0),
                               ),
-                              child:   Text(
+                              child: Text(
                                 StringRes.logOut,
                                 style: TextStyle(
                                     fontSize: 20, fontWeight: FontWeight.bold),
@@ -193,7 +201,7 @@ logOutDialog(
                                 Get.back();
                               }),
                         ),
-                          SizedBox(width: 10),
+                        SizedBox(width: 10),
                         Expanded(
                           child: MaterialButton(
                               height: 50,
@@ -201,7 +209,7 @@ logOutDialog(
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(10.0),
                               ),
-                              child:   Text(
+                              child: Text(
                                 StringRes.cancel,
                                 style: TextStyle(
                                     fontSize: 20, fontWeight: FontWeight.bold
@@ -215,7 +223,7 @@ logOutDialog(
                       ],
                     ),
                   ),
-                    SizedBox(height: 20),
+                  SizedBox(height: 20),
                 ],
               ),
             ),
@@ -234,8 +242,8 @@ ratingBarDialog(
     barrierDismissible: false, // user must tap button!
     builder: (BuildContext context) {
       return Dialog(
-        insetPadding:   EdgeInsets.symmetric(horizontal: 20),
-        shape:   RoundedRectangleBorder(
+        insetPadding: EdgeInsets.symmetric(horizontal: 20),
+        shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.only(
             topLeft: Radius.circular(30),
             topRight: Radius.circular(30),
@@ -243,7 +251,7 @@ ratingBarDialog(
           ),
         ), //this right herea
         child: ClipRRect(
-          borderRadius:   BorderRadius.only(
+          borderRadius: BorderRadius.only(
             topLeft: Radius.circular(30),
             topRight: Radius.circular(30),
             bottomLeft: Radius.circular(30),
@@ -255,7 +263,7 @@ ratingBarDialog(
                 children: [
                   Container(
                     color: ColorRes.purpleLight2,
-                    child:   Padding(
+                    child: Padding(
                       padding: EdgeInsets.symmetric(
                         horizontal: 20,
                         vertical: 10,
@@ -272,15 +280,15 @@ ratingBarDialog(
                       ),
                     ),
                   ),
-                    SizedBox(height: 50),
+                  SizedBox(height: 50),
                   RatingBar.builder(
                     initialRating: 3,
                     minRating: 1,
                     direction: Axis.horizontal,
                     allowHalfRating: true,
                     itemCount: 5,
-                    itemPadding:   EdgeInsets.symmetric(horizontal: 4.0),
-                    itemBuilder: (context, _) =>   Icon(
+                    itemPadding: EdgeInsets.symmetric(horizontal: 4.0),
+                    itemBuilder: (context, _) => Icon(
                       Icons.star,
                       color: Colors.amber,
                     ),
@@ -298,8 +306,7 @@ ratingBarDialog(
                     ),
                     child: const Text(
                       "Submit",
-                      style: TextStyle(
-                          fontSize: 20, fontWeight: FontWeight.bold
+                      style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold
                           // fontFamily: "Poppins",
                           ),
                     ),
@@ -317,4 +324,3 @@ ratingBarDialog(
     },
   );
 }
-

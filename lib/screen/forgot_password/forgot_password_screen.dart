@@ -27,21 +27,27 @@ class ForgotPasswordScreen extends StatelessWidget {
           child: Padding(
             padding: EdgeInsets.symmetric(
                 horizontal: Get.width / 20, vertical: Get.height / 40),
-            child: SingleChildScrollView(
-              child: Column(
-                children: [
-                  forgotPassRow,
-                  heightSizeBox(Get.height / 30),
-                  forgotPassImage,
-                  heightSizeBox(Get.height / 60),
-                  forPassText,
-                  heightSizeBox(Get.height / 20),
-                  forgotPassEmail,
-                  heightSizeBox(Get.height / 10),
-                  forgotPassButton,
-                  heightSizeBox(Get.height /5 ),
-                ],
-              ),
+            child: Column(
+              children: [
+                forgotPassRow,
+                Expanded(
+                  child: SingleChildScrollView(
+                    child: Column(
+                      children: [
+                        heightSizeBox(Get.height / 30),
+                        forgotPassImage,
+                        heightSizeBox(Get.height / 60),
+                        forPassText,
+                        heightSizeBox(Get.height / 20),
+                        forgotPassEmail,
+                        heightSizeBox(Get.height / 10),
+                        forgotPassButton,
+                        heightSizeBox(Get.height /5 ),
+                      ],
+                    ),
+                  ),
+                ),
+              ],
             ),
           ),
         ),

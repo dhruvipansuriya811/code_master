@@ -1,5 +1,6 @@
 import 'package:code_master/common/common_button.dart';
 import 'package:code_master/common/common_radiobutton.dart';
+import 'package:code_master/common/common_sizebox.dart';
 import 'package:code_master/common/common_textfield.dart';
 import 'package:code_master/common/logo_container.dart';
 import 'package:code_master/screen/signup_screen/signup_screen_controller.dart';
@@ -91,54 +92,61 @@ Widget signUpStudyColumn = GetBuilder<SignUpScreenController>(
           fontWeight: FontWeight.bold,
         ),
       ),
-      Row(
-        children: [
-          commonRadioButton(
-            value: controller.signUpRadioSchool,
-            groupValue: controller.signUpStudyRadioGroupValue,
-            onChanged: (value) {
-              controller.signUpSchoolOnTap(value);
-            },
+      Container(
+        height: Get.height / 16,
+        decoration: BoxDecoration(
+          color: ColorRes.weightColor,
+          border: Border.all(
+            color: ColorRes.blackColor,
+            width: 0.7,
           ),
-          const Text(
-            StringRes.school,
-            style: TextStyle(
-              fontSize: 18,
-              fontFamily: "Poppins-Light",
+          borderRadius: BorderRadius.circular(Get.width / 30),
+        ),
+        child: Row(
+          children: [
+            commonRadioButton(
+              value: controller.signUpRadioSchool,
+              groupValue: controller.signUpStudyRadioGroupValue,
+              onChanged: (value) {
+                controller.signUpSchoolOnTap(value);
+              },
             ),
-          ),
-          commonRadioButton(
-            value: controller.signUpRadioCollage,
-            groupValue: controller.signUpStudyRadioGroupValue,
-            onChanged: (value) {
-              controller.signUpCollageOnTap(value);
-            },
-          ),
-          const Text(
-            StringRes.collage,
-            style: TextStyle(
-              fontSize: 18,
-              fontFamily: "Poppins-Light",
+             Text(
+              StringRes.school,
+              style: TextStyle(
+                fontSize: 18,
+                fontFamily: "Poppins-Light",
+                color: controller.signUpRadioSchool ==
+                    controller.signUpStudyRadioGroupValue
+                    ? ColorRes.purpleDark
+                    : null,
+              ),
             ),
-          ),
-        ],
+            widthSizeBox(Get.width / 30),
+            commonRadioButton(
+              value: controller.signUpRadioCollage,
+              groupValue: controller.signUpStudyRadioGroupValue,
+              onChanged: (value) {
+                controller.signUpCollageOnTap(value);
+              },
+            ),
+             Text(
+              StringRes.collage,
+              style: TextStyle(
+                fontSize: 18,
+                fontFamily: "Poppins-Light",
+                color: controller.signUpRadioCollage ==
+                    controller.signUpStudyRadioGroupValue
+                    ? ColorRes.purpleDark
+                    : null,
+              ),
+            ),
+          ],
+        ),
       )
     ],
   ),
 );
-
-// Widget signUpStudyController = GetBuilder<SignUpScreenController>(
-//   builder: (controller) {
-//     return commonTextFiled(
-//       prefixIcon: IconRes.study,
-//       textFiledName: StringRes.studyName,
-//       fontSize: 18,
-//       hintText: StringRes.study,
-//       fontFamily: "Poppins",
-//       controller: controller.studyController,
-//     );
-//   },
-// );
 
 Widget signUpRadioButtonColumn = GetBuilder<SignUpScreenController>(
   id: "signUpScreenRadioButton",
@@ -153,51 +161,76 @@ Widget signUpRadioButtonColumn = GetBuilder<SignUpScreenController>(
           fontWeight: FontWeight.bold,
         ),
       ),
-      Row(
-        children: [
-          commonRadioButton(
-            value: controller.signUpRadioMale,
-            groupValue: controller.signUpRadioGroupValue,
-            onChanged: (value) {
-              controller.signUpMaleOnTap(value);
-            },
+      Container(
+        height: Get.height / 16,
+        decoration: BoxDecoration(
+          color: ColorRes.weightColor,
+          border: Border.all(
+            color: ColorRes.blackColor,
+            width: 0.7,
           ),
-          const Text(
-            StringRes.male,
-            style: TextStyle(
-              fontSize: 18,
-              fontFamily: "Poppins-Light",
+          borderRadius: BorderRadius.circular(Get.width / 30),
+        ),
+        child: Row(
+          children: [
+            commonRadioButton(
+              value: controller.signUpRadioMale,
+              groupValue: controller.signUpGenderRadioGroupValue,
+              onChanged: (value) {
+                controller.signUpMaleOnTap(value);
+              },
             ),
-          ),
-          commonRadioButton(
-            value: controller.signUpRadioFemale,
-            groupValue: controller.signUpRadioGroupValue,
-            onChanged: (value) {
-              controller.signUpFemaleOnTap(value);
-            },
-          ),
-          const Text(
-            StringRes.female,
-            style: TextStyle(
-              fontSize: 18,
-              fontFamily: "Poppins-Light",
+            Text(
+              StringRes.male,
+              style: TextStyle(
+                fontSize: 18,
+                fontFamily: "Poppins-Light",
+                color: controller.signUpRadioMale ==
+                        controller.signUpGenderRadioGroupValue
+                    ? ColorRes.purpleDark
+                    : null,
+              ),
             ),
-          ),
-          commonRadioButton(
-            value: controller.signRadioOther,
-            groupValue: controller.signUpRadioGroupValue,
-            onChanged: (value) {
-              controller.signUpOtherOnTap(value);
-            },
-          ),
-          const Text(
-            StringRes.other,
-            style: TextStyle(
-              fontSize: 18,
-              fontFamily: "Poppins-Light",
+            widthSizeBox(Get.width / 30),
+            commonRadioButton(
+              value: controller.signUpRadioFemale,
+              groupValue: controller.signUpGenderRadioGroupValue,
+              onChanged: (value) {
+                controller.signUpFemaleOnTap(value);
+              },
             ),
-          ),
-        ],
+             Text(
+              StringRes.female,
+              style: TextStyle(
+                fontSize: 18,
+                fontFamily: "Poppins-Light",
+                color: controller.signUpRadioFemale ==
+                    controller.signUpGenderRadioGroupValue
+                    ? ColorRes.purpleDark
+                    : null,
+              ),
+            ),
+            widthSizeBox(Get.width / 30),
+            commonRadioButton(
+              value: controller.signRadioOther,
+              groupValue: controller.signUpGenderRadioGroupValue,
+              onChanged: (value) {
+                controller.signUpOtherOnTap(value);
+              },
+            ),
+             Text(
+              StringRes.other,
+              style: TextStyle(
+                fontSize: 18,
+                fontFamily: "Poppins-Light",
+                color: controller.signRadioOther ==
+                    controller.signUpGenderRadioGroupValue
+                    ? ColorRes.purpleDark
+                    : null,
+              ),
+            ),
+          ],
+        ),
       )
     ],
   ),
@@ -207,7 +240,7 @@ Widget birthOfDate = GetBuilder<SignUpScreenController>(
   id: "datePicker",
   builder: (controller) {
     return commonTextFiled(
-      onTap: () => controller.birthDateOnTap(),
+      bodSelect: () => controller.birthDateOnTap(),
       fontSize: 18,
       fontFamily: "Poppins",
       prefixIcon: IconRes.birthDate,

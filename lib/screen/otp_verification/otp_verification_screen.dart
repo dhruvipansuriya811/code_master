@@ -9,7 +9,7 @@ import 'otp_verification_widget.dart';
 class OtpVerification extends StatelessWidget {
   OtpVerification({super.key});
 
-  OtpVerificationController otpVerificationController =
+  final OtpVerificationController otpVerificationController =
       Get.put(OtpVerificationController());
 
   @override
@@ -27,24 +27,32 @@ class OtpVerification extends StatelessWidget {
           ),
           child: Padding(
             padding: EdgeInsets.symmetric(
-                horizontal: Get.width / 20, vertical: Get.height / 40),
-            child: SingleChildScrollView(
-              child: Column(
-                children: [
-                  otpVerificationPassRow,
-                  heightSizeBox(Get.height / 30),
-                  otpVerificationImage,
-                  heightSizeBox(Get.height / 60),
-                  verificationTextColumn,
-                  heightSizeBox(Get.height / 60),
-                  otpTextfiled(context),
-                  heightSizeBox(Get.height / 10),
-                  resendOtpText,
-                  heightSizeBox(Get.height / 60),
-                  otpVerificationButton,
-                  heightSizeBox(Get.height / 5),
-                ],
-              ),
+              horizontal: Get.width / 20,
+              vertical: Get.height / 40,
+            ),
+            child: Column(
+              children: [
+                otpVerificationPassRow,
+                Expanded(
+                  child: SingleChildScrollView(
+                    child: Column(
+                      children: [
+                        heightSizeBox(Get.height / 30),
+                        otpVerificationImage,
+                        heightSizeBox(Get.height / 60),
+                        verificationTextColumn,
+                        heightSizeBox(Get.height / 60),
+                        otpTextFiled(context),
+                        heightSizeBox(Get.height / 10),
+                        resendOtpText,
+                        heightSizeBox(Get.height / 60),
+                        otpVerificationButton,
+                        heightSizeBox(Get.height / 5),
+                      ],
+                    ),
+                  ),
+                ),
+              ],
             ),
           ),
         ),

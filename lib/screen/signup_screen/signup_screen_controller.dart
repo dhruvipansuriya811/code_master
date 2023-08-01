@@ -21,7 +21,7 @@ class SignUpScreenController extends GetxController {
   int signUpRadioSchool = 1;
   int signUpRadioCollage = 2;
 
-  int signUpRadioGroupValue = 0;
+  int signUpGenderRadioGroupValue = 0;
   int signUpRadioMale = 1;
   int signUpRadioFemale = 2;
   int signRadioOther = 3;
@@ -37,17 +37,17 @@ class SignUpScreenController extends GetxController {
   }
 
   void signUpMaleOnTap(int value) {
-    signUpRadioGroupValue = value;
+    signUpGenderRadioGroupValue = value;
     update(["signUpScreenRadioButton"]);
   }
 
   void signUpFemaleOnTap(int value) {
-    signUpRadioGroupValue = value;
+    signUpGenderRadioGroupValue = value;
     update(["signUpScreenRadioButton"]);
   }
 
   void signUpOtherOnTap(int value) {
-    signUpRadioGroupValue = value;
+    signUpGenderRadioGroupValue = value;
     update(["signUpScreenRadioButton"]);
   }
 

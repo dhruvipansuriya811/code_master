@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import '../../common/common_button.dart';
 import '../../common/common_sizebox.dart';
@@ -68,7 +69,7 @@ Widget verificationTextColumn = GetBuilder<OtpVerificationController>(
   },
 );
 
-Widget otpTextfiled(BuildContext context) =>
+Widget otpTextFiled(BuildContext context) =>
     GetBuilder<OtpVerificationController>(
       id: "otpTextFiled",
       builder: (controller) {
@@ -86,6 +87,10 @@ Widget otpTextfiled(BuildContext context) =>
                     controller.otpTextFiledOnChange(value, context);
                   },
                   keyboardType: TextInputType.number,
+                  inputFormatters: [
+                    LengthLimitingTextInputFormatter(1),
+                    FilteringTextInputFormatter.digitsOnly,
+                  ],
                   maxLength: 1,
                   decoration: const InputDecoration(counterText: ""),
                   textAlign: TextAlign.center,

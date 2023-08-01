@@ -15,7 +15,7 @@ Widget commonTextFiled({
   FontWeight? fontWeight,
   String? fontFamily,
   bool obscureText = false,
-  void Function()? onTap,
+  void Function()? bodSelect,
 }) {
   return Column(
     crossAxisAlignment: CrossAxisAlignment.start,
@@ -33,8 +33,7 @@ Widget commonTextFiled({
       ),
       heightSizeBox(Get.height / 200),
       TextField(
-        onTap:onTap ,
-        readOnly: true,
+        onTap: bodSelect,
         controller: controller,
         obscuringCharacter: "*",
         obscureText: obscureText,
@@ -52,8 +51,8 @@ Widget commonTextFiled({
             borderRadius: BorderRadius.circular(15),
           ),
           hintText: hintText,
-          hintStyle: const TextStyle(
-              color: Colors.grey, fontWeight: FontWeight.bold),
+          hintStyle:
+              const TextStyle(color: Colors.grey, fontWeight: FontWeight.bold),
           suffixIcon: IconButton(
             icon: Icon(suffixIcon),
             onPressed: suffixIconOnPressed,
