@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
 import '../../common/common_button.dart';
 import '../../common/common_sizebox.dart';
 import '../../utils/assets_res.dart';
@@ -71,7 +70,7 @@ Widget verificationTextColumn = GetBuilder<OtpVerificationController>(
 
 Widget otpTextfiled(BuildContext context) =>
     GetBuilder<OtpVerificationController>(
-      id: "otpTextfiled",
+      id: "otpTextFiled",
       builder: (controller) {
         return Form(
           child: Row(
@@ -84,7 +83,7 @@ Widget otpTextfiled(BuildContext context) =>
                   autofocus: true,
                   onSaved: (pin1) {},
                   onChanged: (value) {
-                    controller.otpTextfiledOnChange(value, context);
+                    controller.otpTextFiledOnChange(value, context);
                   },
                   keyboardType: TextInputType.number,
                   maxLength: 1,
@@ -100,7 +99,7 @@ Widget otpTextfiled(BuildContext context) =>
                   autofocus: true,
                   onSaved: (pin2) {},
                   onChanged: (value) {
-                    controller.otpTextfiledOnChange(value, context);
+                    controller.otpTextFiledOnChange(value, context);
                   },
                   keyboardType: TextInputType.number,
                   maxLength: 1,
@@ -116,7 +115,7 @@ Widget otpTextfiled(BuildContext context) =>
                   autofocus: true,
                   onSaved: (pin3) {},
                   onChanged: (value) {
-                    controller.otpTextfiledOnChange(value, context);
+                    controller.otpTextFiledOnChange(value, context);
                   },
                   keyboardType: TextInputType.number,
                   maxLength: 1,
@@ -132,7 +131,7 @@ Widget otpTextfiled(BuildContext context) =>
                   autofocus: true,
                   onSaved: (pin4) {},
                   onChanged: (value) {
-                    controller.otpTextfiledOnChange(value, context);
+                    controller.otpTextFiledOnChange(value, context);
                   },
                   keyboardType: TextInputType.number,
                   maxLength: 1,

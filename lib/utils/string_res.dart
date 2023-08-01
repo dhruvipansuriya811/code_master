@@ -54,6 +54,4 @@ class StringRes {
   static const String verify = 'VERIFY';
   static const String didNotReceiveOtp = "Didn't receive the OTP? ";
   static const String resentOtp = 'RESEND OTP';
-
-
 }

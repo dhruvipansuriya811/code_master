@@ -4,7 +4,6 @@ import 'package:code_master/screen/dashboard_screen/dashboard_screen_controller.
 import 'package:code_master/utils/assets_res.dart';
 import 'package:code_master/utils/colors_res.dart';
 import 'package:code_master/utils/string_res.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_advanced_drawer/flutter_advanced_drawer.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
@@ -87,11 +86,7 @@ Widget drawer = GetBuilder<DashboardScreenController>(
     child: Column(
       children: [
         heightSizeBox(20),
-<<<<<<< Updated upstream
-        const CircleAvatar(
-=======
           CircleAvatar(
->>>>>>> Stashed changes
           backgroundImage: AssetImage(ImageRes.loginLogo),
           radius: 80,
         ),
@@ -112,11 +107,7 @@ Widget drawer = GetBuilder<DashboardScreenController>(
                 ),
                 title: Text(
                   controller.drawerListItem[index]['title'],
-<<<<<<< Updated upstream
-                  style: const TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
-=======
                   style:   TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
->>>>>>> Stashed changes
                 ),
               );
             },
@@ -156,13 +147,8 @@ logOutDialog(
                 children: [
                   Container(
                     color: ColorRes.purpleLight2,
-<<<<<<< Updated upstream
-                    child: const Padding(
-                      padding: EdgeInsets.symmetric(
-=======
                     child:   Padding(
                       padding:  EdgeInsets.symmetric(
->>>>>>> Stashed changes
                         horizontal: 20,
                         vertical: 10,
                       ),
@@ -198,11 +184,7 @@ logOutDialog(
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(10.0),
                               ),
-<<<<<<< Updated upstream
-                              child: const Text(
-=======
                               child:   Text(
->>>>>>> Stashed changes
                                 StringRes.logOut,
                                 style: TextStyle(
                                     fontSize: 20, fontWeight: FontWeight.bold),
@@ -219,11 +201,7 @@ logOutDialog(
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(10.0),
                               ),
-<<<<<<< Updated upstream
-                              child: const Text(
-=======
                               child:   Text(
->>>>>>> Stashed changes
                                 StringRes.cancel,
                                 style: TextStyle(
                                     fontSize: 20, fontWeight: FontWeight.bold
@@ -263,7 +241,7 @@ ratingBarDialog(
             topRight: Radius.circular(30),
             bottomLeft: Radius.circular(30),
           ),
-        ),
+        ), //this right herea
         child: ClipRRect(
           borderRadius:   BorderRadius.only(
             topLeft: Radius.circular(30),
@@ -277,11 +255,7 @@ ratingBarDialog(
                 children: [
                   Container(
                     color: ColorRes.purpleLight2,
-<<<<<<< Updated upstream
-                    child: const Padding(
-=======
                     child:   Padding(
->>>>>>> Stashed changes
                       padding: EdgeInsets.symmetric(
                         horizontal: 20,
                         vertical: 10,
@@ -305,20 +279,13 @@ ratingBarDialog(
                     direction: Axis.horizontal,
                     allowHalfRating: true,
                     itemCount: 5,
-<<<<<<< Updated upstream
-                    itemPadding: const EdgeInsets.symmetric(horizontal: 4.0),
-                    itemBuilder: (context, _) => const Icon(
-=======
                     itemPadding:   EdgeInsets.symmetric(horizontal: 4.0),
                     itemBuilder: (context, _) =>   Icon(
->>>>>>> Stashed changes
                       Icons.star,
                       color: Colors.amber,
                     ),
                     onRatingUpdate: (rating) {
-                      if (kDebugMode) {
-                        print(rating);
-                      }
+                      print(rating);
                     },
                   ),
                   const SizedBox(height: 50),
