@@ -6,7 +6,9 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class LoginScreen extends StatelessWidget {
-  const LoginScreen({super.key});
+
+   LoginScreen({super.key});
+
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +16,7 @@ class LoginScreen extends StatelessWidget {
     return SafeArea(
       child: GestureDetector(
         onTap: () {
-          disposeKeyBoard();
+         disposeKeyBoard();
         },
         child: Scaffold(
           resizeToAvoidBottomInset: true,
@@ -30,6 +32,7 @@ class LoginScreen extends StatelessWidget {
             child: Padding(
               padding: EdgeInsets.symmetric(horizontal: Get.width / 20),
               child: SingleChildScrollView(
+
                 child: Column(
                   children: [
                     heightSizeBox(Get.height / 20),

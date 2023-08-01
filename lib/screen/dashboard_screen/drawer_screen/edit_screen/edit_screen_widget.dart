@@ -8,8 +8,8 @@ import '../../../../../common/common_radiobutton.dart';
 import '../../../../../common/common_textfield.dart';
 import '../../../../../utils/colors_res.dart';
 
-AppBar editScreenAppBar = AppBar(
-  backgroundColor: ColorRes.purpleLight,
+AppBar editScreenAppBar = AppBar(toolbarHeight: 60,
+  backgroundColor: ColorRes.purpleLight2,
   centerTitle: true,
   title: const Text(
     StringRes.editProfile,
@@ -30,7 +30,7 @@ Widget imagePicker = GetBuilder<EditScreenController>(
       child: Stack(
         children: [
           CircleAvatar(
-            radius: 100,
+            radius: Get.width/4,
             backgroundImage: controller.file == null
                 ? const AssetImage(
                     ImageRes.profileImage,
@@ -38,20 +38,20 @@ Widget imagePicker = GetBuilder<EditScreenController>(
                 : FileImage(controller.file!) as ImageProvider,
           ),
           Positioned(
-            left: 160,
-            bottom: 20,
+            left: Get.width/2.6,
+            bottom: Get.height/35,
             child: CircleAvatar(
               backgroundColor: ColorRes.purpleDark,
               // foregroundColor: Colors.red,
-              radius: 20,
+              radius: Get.width/20,
               child: InkWell(
                 onTap: () {
                   controller.imagePick();
                 },
-                child: const Icon(
+                child: Icon(
                   Icons.camera_alt,
                   color: Colors.white,
-                  size: 20,
+                  size: Get.width/20,
                 ),
               ),
             ),
@@ -67,7 +67,7 @@ Widget editScreenNameTextField = GetBuilder<EditScreenController>(
     return commonTextFiled(
       prefixIcon: IconRes.person,
       textFiledName: StringRes.name,
-      fontSize: 18,
+      fontSize: Get.width/20,
       hintText: StringRes.name,
       fontFamily: "Poppins",
       controller: controller.nameController,
@@ -80,12 +80,12 @@ Widget editScreenStudyColumn = GetBuilder<EditScreenController>(
   builder: (controller) => Column(
     crossAxisAlignment: CrossAxisAlignment.start,
     children: [
-      const Padding(
+       Padding(
         padding: EdgeInsets.all(8.0),
         child: Text(
           StringRes.studyName,
           style: TextStyle(
-            fontSize: 18,
+            fontSize: Get.width/20,
             fontFamily: "Poppins-Light",
             fontWeight: FontWeight.bold,
           ),
@@ -101,10 +101,10 @@ Widget editScreenStudyColumn = GetBuilder<EditScreenController>(
               controller.signUpSchoolOnTap(value);
             },
           ),
-          const Text(
+           Text(
             StringRes.school,
             style: TextStyle(
-              fontSize: 18,
+              fontSize: Get.width/20,
               fontFamily: "Poppins-Light",
             ),
           ),
@@ -115,10 +115,10 @@ Widget editScreenStudyColumn = GetBuilder<EditScreenController>(
               controller.signUpCollageOnTap(value);
             },
           ),
-          const Text(
+           Text(
             StringRes.collage,
             style: TextStyle(
-              fontSize: 18,
+              fontSize: Get.width/20,
               fontFamily: "Poppins-Light",
             ),
           ),
@@ -133,12 +133,15 @@ Widget editScreenRadioButtonColumn = GetBuilder<EditScreenController>(
   builder: (controller) => Column(
     crossAxisAlignment: CrossAxisAlignment.start,
     children: [
-      const Text(
-        StringRes.genderName,
-        style: TextStyle(
-          fontSize: 18,
-          fontFamily: "Poppins-Light",
-          fontWeight: FontWeight.bold,
+      Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Text(
+          StringRes.genderName,
+          style: TextStyle(
+            fontSize: Get.width/20,
+            fontFamily: "Poppins-Light",
+            fontWeight: FontWeight.bold,
+          ),
         ),
       ),
       Row(
@@ -150,10 +153,10 @@ Widget editScreenRadioButtonColumn = GetBuilder<EditScreenController>(
               controller.signUpMaleOnTap(value);
             },
           ),
-          const Text(
+          Text(
             StringRes.male,
             style: TextStyle(
-              fontSize: 18,
+              fontSize: Get.width/20,
               fontFamily: "Poppins-Light",
             ),
           ),
@@ -164,10 +167,10 @@ Widget editScreenRadioButtonColumn = GetBuilder<EditScreenController>(
               controller.signUpFemaleOnTap(value);
             },
           ),
-          const Text(
+          Text(
             StringRes.female,
             style: TextStyle(
-              fontSize: 18,
+              fontSize: Get.width/20,
               fontFamily: "Poppins-Light",
             ),
           ),
@@ -178,10 +181,10 @@ Widget editScreenRadioButtonColumn = GetBuilder<EditScreenController>(
               controller.signUpOtherOnTap(value);
             },
           ),
-          const Text(
+          Text(
             StringRes.other,
             style: TextStyle(
-              fontSize: 18,
+              fontSize: Get.width/20,
               fontFamily: "Poppins-Light",
             ),
           ),
@@ -195,8 +198,13 @@ Widget editScreenBirthOfDate = GetBuilder<EditScreenController>(
   id: "datePicker",
   builder: (controller) {
     return commonTextFiled(
+<<<<<<< Updated upstream
       bodSelect: () => controller.birthDateOnTap(),
       fontSize: 18,
+=======
+      onTap: () => controller.birthDateOnTap(),
+      fontSize: Get.width/20,
+>>>>>>> Stashed changes
       fontFamily: "Poppins",
       prefixIcon: IconRes.birthDate,
       hintText: StringRes.enterDate,
@@ -211,13 +219,17 @@ Widget editScreenRow = GetBuilder<EditScreenController>(
     return Row(
       children: [
         containerButton(
+          color1: Color(0XFFFF4F4B),
+          color2: Color(0XFFFF817E),
           onTap: controller.cancelBtnOnTap,
           data: StringRes.cancel,
           height: Get.height / 18,
           width: Get.width / 3,
         ),
-        const Spacer(),
+        Spacer(),
         containerButton(
+          color2: Color(0XFF00AB08),
+          color1: Color(0XFF95F985),
           onTap: controller.saveBtnOnTap,
           data: StringRes.save,
           height: Get.height / 18,

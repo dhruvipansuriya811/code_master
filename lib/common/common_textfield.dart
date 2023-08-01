@@ -33,7 +33,13 @@ Widget commonTextFiled({
       ),
       heightSizeBox(Get.height / 200),
       TextField(
+<<<<<<< Updated upstream
         onTap: bodSelect,
+=======
+        textCapitalization: TextCapitalization.words,
+        textInputAction: TextInputAction.next,
+        onTap: onTap,
+>>>>>>> Stashed changes
         controller: controller,
         obscuringCharacter: "*",
         obscureText: obscureText,

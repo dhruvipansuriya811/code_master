@@ -93,12 +93,16 @@ Widget drawer = GetBuilder<DashboardScreenController>(
   builder: (controller) => Drawer(
     child: Column(
       children: [
+<<<<<<< Updated upstream
         heightSizeBox(20),
+=======
+        heightSizeBox(Get.height / 40),
+>>>>>>> Stashed changes
         CircleAvatar(
           backgroundImage: AssetImage(ImageRes.loginLogo),
-          radius: 80,
+          radius: Get.width / 4.5,
         ),
-        heightSizeBox(10),
+        heightSizeBox(Get.height / 80),
         Divider(
           endIndent: Get.width / 17,
           indent: Get.width / 17,
@@ -115,7 +119,12 @@ Widget drawer = GetBuilder<DashboardScreenController>(
                 ),
                 title: Text(
                   controller.drawerListItem[index]['title'],
+<<<<<<< Updated upstream
                   style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
+=======
+                  style: TextStyle(
+                      fontSize: Get.width / 20, fontWeight: FontWeight.w500),
+>>>>>>> Stashed changes
                 ),
               );
             },
@@ -134,7 +143,11 @@ logOutDialog(
     barrierDismissible: false,
     builder: (BuildContext context) {
       return Dialog(
+<<<<<<< Updated upstream
         insetPadding: EdgeInsets.symmetric(horizontal: 20),
+=======
+        insetPadding: EdgeInsets.symmetric(horizontal: Get.width / 20),
+>>>>>>> Stashed changes
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.only(
             topLeft: Radius.circular(30),
@@ -157,8 +170,13 @@ logOutDialog(
                     color: ColorRes.purpleLight2,
                     child: Padding(
                       padding: EdgeInsets.symmetric(
+<<<<<<< Updated upstream
                         horizontal: 20,
                         vertical: 10,
+=======
+                        horizontal: Get.width / 20,
+                        vertical: Get.height / 50,
+>>>>>>> Stashed changes
                       ),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
@@ -166,28 +184,40 @@ logOutDialog(
                           Text(
                             "Log Out",
                             style: TextStyle(
-                                fontSize: 20, fontWeight: FontWeight.bold),
+                              fontSize: Get.width / 20,
+                              fontWeight: FontWeight.bold,
+                            ),
                           ),
                         ],
                       ),
                     ),
                   ),
+<<<<<<< Updated upstream
                   SizedBox(height: 50),
+=======
+                  heightSizeBox(Get.height/15),
+>>>>>>> Stashed changes
                   Text(
                     "Are You sure Want to log out?",
                     style: TextStyle(
-                      fontSize: 20,
+                      fontSize: Get.width / 20,
                       fontWeight: FontWeight.w600,
                     ),
                   ),
+<<<<<<< Updated upstream
                   SizedBox(height: 50),
                   Padding(
                     padding: EdgeInsets.symmetric(horizontal: 20),
+=======
+                  heightSizeBox(Get.height/15),
+                  Padding(
+                    padding: EdgeInsets.symmetric(horizontal: Get.width/20),
+>>>>>>> Stashed changes
                     child: Row(
                       children: [
                         Expanded(
                           child: MaterialButton(
-                              height: 50,
+                              height: Get.height/15,
                               color: ColorRes.purpleLight2,
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(10.0),
@@ -195,16 +225,21 @@ logOutDialog(
                               child: Text(
                                 StringRes.logOut,
                                 style: TextStyle(
-                                    fontSize: 20, fontWeight: FontWeight.bold),
+                                    fontSize: Get.width / 20,
+                                    fontWeight: FontWeight.bold),
                               ),
                               onPressed: () {
                                 Get.back();
                               }),
                         ),
+<<<<<<< Updated upstream
                         SizedBox(width: 10),
+=======
+                        widthSizeBox(Get.width/40),
+>>>>>>> Stashed changes
                         Expanded(
                           child: MaterialButton(
-                              height: 50,
+                              height: Get.height/15,
                               color: ColorRes.purpleLight2,
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(10.0),
@@ -212,7 +247,8 @@ logOutDialog(
                               child: Text(
                                 StringRes.cancel,
                                 style: TextStyle(
-                                    fontSize: 20, fontWeight: FontWeight.bold
+                                    fontSize: Get.width / 20,
+                                    fontWeight: FontWeight.bold
                                     // fontFamily: "Poppins",
                                     ),
                               ),
@@ -223,7 +259,11 @@ logOutDialog(
                       ],
                     ),
                   ),
+<<<<<<< Updated upstream
                   SizedBox(height: 20),
+=======
+                 heightSizeBox(Get.height/40),
+>>>>>>> Stashed changes
                 ],
               ),
             ),
@@ -242,7 +282,11 @@ ratingBarDialog(
     barrierDismissible: false, // user must tap button!
     builder: (BuildContext context) {
       return Dialog(
+<<<<<<< Updated upstream
         insetPadding: EdgeInsets.symmetric(horizontal: 20),
+=======
+        insetPadding: EdgeInsets.symmetric(horizontal: Get.width / 20),
+>>>>>>> Stashed changes
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.only(
             topLeft: Radius.circular(30),
@@ -265,8 +309,8 @@ ratingBarDialog(
                     color: ColorRes.purpleLight2,
                     child: Padding(
                       padding: EdgeInsets.symmetric(
-                        horizontal: 20,
-                        vertical: 10,
+                        horizontal: Get.width / 20,
+                        vertical: Get.height / 50,
                       ),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
@@ -274,13 +318,17 @@ ratingBarDialog(
                           Text(
                             "Rating Dialog",
                             style: TextStyle(
-                                fontSize: 20, fontWeight: FontWeight.bold),
+                                fontSize: Get.width / 20, fontWeight: FontWeight.bold),
                           ),
                         ],
                       ),
                     ),
                   ),
+<<<<<<< Updated upstream
                   SizedBox(height: 50),
+=======
+                  heightSizeBox(Get.height/15),
+>>>>>>> Stashed changes
                   RatingBar.builder(
                     initialRating: 3,
                     minRating: 1,
@@ -296,17 +344,21 @@ ratingBarDialog(
                       print(rating);
                     },
                   ),
-                  const SizedBox(height: 50),
-                  const SizedBox(width: 10),
+                  heightSizeBox(Get.height/20),
+                  // const SizedBox(width: 10),
                   MaterialButton(
-                    height: 50,
+                    height: Get.height/15,
                     color: ColorRes.purpleLight2,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10.0),
                     ),
-                    child: const Text(
+                    child:  Text(
                       "Submit",
+<<<<<<< Updated upstream
                       style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold
+=======
+                      style: TextStyle(fontSize: Get.width / 20, fontWeight: FontWeight.bold
+>>>>>>> Stashed changes
                           // fontFamily: "Poppins",
                           ),
                     ),
@@ -314,7 +366,7 @@ ratingBarDialog(
                       Get.back();
                     },
                   ),
-                  const SizedBox(height: 20),
+                  heightSizeBox(Get.height/40),
                 ],
               ),
             ),

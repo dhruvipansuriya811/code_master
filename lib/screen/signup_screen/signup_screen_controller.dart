@@ -61,7 +61,7 @@ class SignUpScreenController extends GetxController {
   }
 
   void signUpToSignIn() {
-    Get.to(const LoginScreen());
+    Get.to( LoginScreen());
   }
 
   void birthDateOnTap() async {

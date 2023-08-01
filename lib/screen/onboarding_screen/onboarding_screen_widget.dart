@@ -79,8 +79,8 @@ Widget onBoardingTextButton = GetBuilder<OnBoardingController>(
       controller.onBoardingPageIndex == 0 || controller.onBoardingPageIndex == 1
           ? StringRes.skip
           : StringRes.continueText,
-      style: const TextStyle(
-        fontSize: 18,
+      style:  TextStyle(
+        fontSize: Get.width/20,
         color: Color(0XFF8B4EFF),
         fontFamily: "DMSerifDisplay-Regular",
       ),

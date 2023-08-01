@@ -13,7 +13,7 @@ class OnBoardingController extends GetxController {
 
   void moveToNextScreen() {
     Get.to(
-      const LoginScreen(),
+       LoginScreen(),
     );
   }
 

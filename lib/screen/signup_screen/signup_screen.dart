@@ -24,6 +24,7 @@ class SignUpScreen extends StatelessWidget {
             gradient: LinearGradient(
               colors: [Color(0XFFf3e7e9), Color(0XFFe3eeff)],
             ),
+<<<<<<< Updated upstream
           ),
           child: Padding(
             padding: EdgeInsets.symmetric(horizontal: Get.width / 20),
@@ -54,6 +55,39 @@ class SignUpScreen extends StatelessWidget {
                   goToSignIn,
                   heightSizeBox(Get.height / 30),
                 ],
+=======
+            child: Padding(
+              padding: EdgeInsets.symmetric(horizontal: Get.width / 20),
+              child: SingleChildScrollView(
+                keyboardDismissBehavior: ScrollViewKeyboardDismissBehavior.onDrag,
+                child: Column(
+                  children: [
+                    heightSizeBox(Get.height / 20),
+                    signUpLogo,
+                    heightSizeBox(Get.height / 60),
+                    signUpText,
+                    heightSizeBox(Get.height / 20),
+                    signUpNameTextField,
+                    heightSizeBox(Get.height / 30),
+                    signUpEmailController,
+                    heightSizeBox(Get.height / 30),
+                    signUpPasswordTextField,
+                    heightSizeBox(Get.height / 30),
+                    signUpPhoneController,
+                    heightSizeBox(Get.height / 30),
+                    birthOfDate,
+                    heightSizeBox(Get.height / 30),
+                    signUpStudyColumn,
+                    heightSizeBox(Get.height / 30),
+                    signUpRadioButtonColumn,
+                    heightSizeBox(Get.height / 20),
+                    signUpButton,
+                    heightSizeBox(Get.height / 30),
+                    goToSignIn,
+                    heightSizeBox(Get.height / 30),
+                  ],
+                ),
+>>>>>>> Stashed changes
               ),
             ),
           ),

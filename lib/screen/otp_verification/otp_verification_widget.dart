@@ -52,18 +52,18 @@ Widget verificationTextColumn = GetBuilder<OtpVerificationController>(
   builder: (controller) {
     return Column(
       children: [
-        const Text(
+         Text(
           StringRes.otpVerification,
-          style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+          style: TextStyle(fontSize: Get.width/18, fontWeight: FontWeight.bold),
         ),
         heightSizeBox(10),
-        const Text(
+         Text(
           StringRes.enterOtpNumber,
           style: TextStyle(
-            fontSize: 18,
+            fontSize: Get.width/20,
           ),
         ),
-        heightSizeBox(10),
+        heightSizeBox(Get.height/20),
       ],
     );
   },
@@ -78,8 +78,8 @@ Widget otpTextFiled(BuildContext context) =>
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               SizedBox(
-                height: 64,
-                width: 68,
+                height: Get.height/35,
+                width: Get.width/5,
                 child: TextFormField(
                   autofocus: true,
                   onSaved: (pin1) {},
@@ -98,8 +98,8 @@ Widget otpTextFiled(BuildContext context) =>
                 ),
               ),
               SizedBox(
-                height: 64,
-                width: 68,
+                height: Get.height/35,
+                width: Get.width/5,
                 child: TextFormField(
                   autofocus: true,
                   onSaved: (pin2) {},
@@ -114,8 +114,8 @@ Widget otpTextFiled(BuildContext context) =>
                 ),
               ),
               SizedBox(
-                height: 64,
-                width: 68,
+                height: Get.height/35,
+                width: Get.width/5,
                 child: TextFormField(
                   autofocus: true,
                   onSaved: (pin3) {},
@@ -130,8 +130,8 @@ Widget otpTextFiled(BuildContext context) =>
                 ),
               ),
               SizedBox(
-                height: 64,
-                width: 68,
+                height: Get.height/35,
+                width: Get.width/5,
                 child: TextFormField(
                   autofocus: true,
                   onSaved: (pin4) {},
@@ -164,19 +164,19 @@ Widget otpVerificationButton = GetBuilder<OtpVerificationController>(
 
 Widget resendOtpText = GetBuilder<OtpVerificationController>(
   builder: (controller) {
-    return const Row(
+    return  Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Text(
           StringRes.didNotReceiveOtp,
           style: TextStyle(
-            fontSize: 15,
+            fontSize: Get.width/25,
           ),
         ),
         Text(
           StringRes.resentOtp,
           style: TextStyle(
-            fontSize: 17,
+            fontSize: Get.width/26,
             fontWeight: FontWeight.bold,
           ),
         ),

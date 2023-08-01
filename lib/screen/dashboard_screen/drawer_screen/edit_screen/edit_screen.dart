@@ -28,19 +28,19 @@ class EditScreen extends StatelessWidget {
               child: SingleChildScrollView(
                 child: Column(
                   children: [
-                    heightSizeBox(20),
+                    heightSizeBox(Get.height/50),
                     imagePicker,
                     heightSizeBox(Get.height / 30),
                     editScreenNameTextField,
                     heightSizeBox(Get.height / 30),
                     editScreenBirthOfDate,
                     heightSizeBox(Get.height / 40),
-                    editScreenStudyColumn,
+                   editScreenStudyColumn,
                     heightSizeBox(Get.height / 40),
                     editScreenRadioButtonColumn,
                     heightSizeBox(Get.height / 30),
                     editScreenRow,
-                    heightSizeBox(Get.height / 40),
+                    heightSizeBox(Get.height / 20),
                   ],
                 ),
               ),

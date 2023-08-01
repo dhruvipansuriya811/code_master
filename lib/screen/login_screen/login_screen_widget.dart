@@ -26,7 +26,7 @@ Widget loginEmailTextField = GetBuilder<LoginScreenController>(
     return commonTextFiled(
       prefixIcon: IconRes.phoneNum,
       textFiledName: StringRes.email,
-      fontSize: 18,
+      fontSize: Get.width/20,
       hintText: StringRes.email,
       fontFamily: "Poppins",
       controller: controller.emailController,
@@ -43,7 +43,7 @@ Widget loginPasswordTextField = GetBuilder<LoginScreenController>(
       suffixIcon:
           controller.logInEyeValue ? IconRes.unVisibility : IconRes.visibility,
       textFiledName: StringRes.password,
-      fontSize: 18,
+      fontSize: Get.width/20,
       hintText: StringRes.password,
       fontFamily: "Poppins",
       controller: controller.passwordController,

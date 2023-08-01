@@ -27,7 +27,7 @@ Widget signUpNameTextField = GetBuilder<SignUpScreenController>(
     return commonTextFiled(
       prefixIcon: IconRes.person,
       textFiledName: StringRes.name,
-      fontSize: 18,
+      fontSize: Get.width/20,
       hintText: StringRes.name,
       fontFamily: "Poppins",
       controller: controller.nameController,
@@ -40,7 +40,7 @@ Widget signUpEmailController = GetBuilder<SignUpScreenController>(
     return commonTextFiled(
       prefixIcon: IconRes.email,
       textFiledName: StringRes.email,
-      fontSize: 18,
+      fontSize: Get.width/20,
       hintText: StringRes.email,
       fontFamily: "Poppins",
       controller: controller.emailController,
@@ -57,7 +57,7 @@ Widget signUpPasswordTextField = GetBuilder<SignUpScreenController>(
       suffixIcon:
           controller.signEyeValue ? IconRes.unVisibility : IconRes.visibility,
       textFiledName: StringRes.password,
-      fontSize: 18,
+      fontSize: Get.width/20,
       hintText: StringRes.password,
       fontFamily: "Poppins",
       controller: controller.passwordController,
@@ -71,7 +71,7 @@ Widget signUpPhoneController = GetBuilder<SignUpScreenController>(
     return commonTextFiled(
       prefixIcon: IconRes.phoneNum,
       textFiledName: StringRes.phone,
-      fontSize: 18,
+      fontSize: Get.width/20,
       hintText: StringRes.phone,
       fontFamily: "Poppins",
       controller: controller.phoneController,
@@ -84,10 +84,10 @@ Widget signUpStudyColumn = GetBuilder<SignUpScreenController>(
   builder: (controller) => Column(
     crossAxisAlignment: CrossAxisAlignment.start,
     children: [
-      const Text(
+       Text(
         StringRes.studyName,
         style: TextStyle(
-          fontSize: 18,
+          fontSize: Get.width/20,
           fontFamily: "Poppins-Light",
           fontWeight: FontWeight.bold,
         ),
@@ -100,6 +100,7 @@ Widget signUpStudyColumn = GetBuilder<SignUpScreenController>(
             color: ColorRes.blackColor,
             width: 0.7,
           ),
+<<<<<<< Updated upstream
           borderRadius: BorderRadius.circular(Get.width / 30),
         ),
         child: Row(
@@ -121,6 +122,27 @@ Widget signUpStudyColumn = GetBuilder<SignUpScreenController>(
                     ? ColorRes.purpleDark
                     : null,
               ),
+=======
+           Text(
+            StringRes.school,
+            style: TextStyle(
+              fontSize: Get.width/20,
+              fontFamily: "Poppins-Light",
+            ),
+          ),
+          commonRadioButton(
+            value: controller.signUpRadioCollage,
+            groupValue: controller.signUpStudyRadioGroupValue,
+            onChanged: (value) {
+              controller.signUpCollageOnTap(value);
+            },
+          ),
+           Text(
+            StringRes.collage,
+            style: TextStyle(
+              fontSize: Get.width/20,
+              fontFamily: "Poppins-Light",
+>>>>>>> Stashed changes
             ),
             widthSizeBox(Get.width / 30),
             commonRadioButton(
@@ -153,10 +175,10 @@ Widget signUpRadioButtonColumn = GetBuilder<SignUpScreenController>(
   builder: (controller) => Column(
     crossAxisAlignment: CrossAxisAlignment.start,
     children: [
-      const Text(
+       Text(
         StringRes.genderName,
         style: TextStyle(
-          fontSize: 18,
+          fontSize: Get.width/20,
           fontFamily: "Poppins-Light",
           fontWeight: FontWeight.bold,
         ),
@@ -169,6 +191,7 @@ Widget signUpRadioButtonColumn = GetBuilder<SignUpScreenController>(
             color: ColorRes.blackColor,
             width: 0.7,
           ),
+<<<<<<< Updated upstream
           borderRadius: BorderRadius.circular(Get.width / 30),
         ),
         child: Row(
@@ -198,6 +221,41 @@ Widget signUpRadioButtonColumn = GetBuilder<SignUpScreenController>(
               onChanged: (value) {
                 controller.signUpFemaleOnTap(value);
               },
+=======
+           Text(
+            StringRes.male,
+            style: TextStyle(
+              fontSize: Get.width/20,
+              fontFamily: "Poppins-Light",
+            ),
+          ),
+          commonRadioButton(
+            value: controller.signUpRadioFemale,
+            groupValue: controller.signUpRadioGroupValue,
+            onChanged: (value) {
+              controller.signUpFemaleOnTap(value);
+            },
+          ),
+           Text(
+            StringRes.female,
+            style: TextStyle(
+              fontSize: Get.width/20,
+              fontFamily: "Poppins-Light",
+            ),
+          ),
+          commonRadioButton(
+            value: controller.signRadioOther,
+            groupValue: controller.signUpRadioGroupValue,
+            onChanged: (value) {
+              controller.signUpOtherOnTap(value);
+            },
+          ),
+           Text(
+            StringRes.other,
+            style: TextStyle(
+              fontSize: Get.width/20,
+              fontFamily: "Poppins-Light",
+>>>>>>> Stashed changes
             ),
              Text(
               StringRes.female,
@@ -240,8 +298,13 @@ Widget birthOfDate = GetBuilder<SignUpScreenController>(
   id: "datePicker",
   builder: (controller) {
     return commonTextFiled(
+<<<<<<< Updated upstream
       bodSelect: () => controller.birthDateOnTap(),
       fontSize: 18,
+=======
+     onTap: () => controller.birthDateOnTap(),
+      fontSize: Get.width/20,
+>>>>>>> Stashed changes
       fontFamily: "Poppins",
       prefixIcon: IconRes.birthDate,
       hintText: StringRes.enterDate,
