@@ -56,7 +56,7 @@ class DashboardScreenController extends GetxController {
 
   void onTapBottomBar(index) {
     selectedPage = index;
-    update(['dashBoardAppBarTitle', 'dashboardPageView']);
+    update(['dashBoardAppBarTitle', 'dashboardPageView','dashBoardAppBarIcon']);
     pageController.jumpToPage(index);
   }
 

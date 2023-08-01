@@ -31,7 +31,7 @@ class DashBordScreen extends StatelessWidget {
       animationCurve: Curves.linear,
       animationDuration: const Duration(milliseconds: 500),
       animateChildDecoration: true,
-      disabledGestures: false,
+      disabledGestures: true,
       childDecoration: const BoxDecoration(
         borderRadius: BorderRadius.all(Radius.circular(16)),
       ),

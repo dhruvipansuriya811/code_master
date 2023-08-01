@@ -11,7 +11,7 @@ Widget allExampleList = GetBuilder<ExampleScreenController>(
       itemCount: controller.exampleScreenData.length,
       itemBuilder: (context, index) {
         return Card(
-          margin: const EdgeInsets.all(10),
+          margin:  EdgeInsets.all(10),
           child: AnimatedContainer(
             alignment: Alignment.center,
             duration: const Duration(seconds: 3),

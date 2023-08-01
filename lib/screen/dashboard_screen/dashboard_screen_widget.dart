@@ -15,9 +15,8 @@ Widget dashboardBottomNavigationBar = GetBuilder<DashboardScreenController>(
     return AnimatedNotchBottomBar(
       notchBottomBarController: controller.notchBottomBarController,
       color: ColorRes.weightColor,
-      showLabel: false,
+      showLabel: true,
       notchColor: ColorRes.purpleDark,
-      removeMargins: false,
       bottomBarWidth: Get.width,
       durationInMilliSeconds: 300,
       bottomBarItems: List.generate(
@@ -43,7 +42,7 @@ Widget dashBoardPageView = GetBuilder<DashboardScreenController>(
   id: "dashboardPageView",
   builder: (controller) => PageView(
     controller: controller.pageController,
-    physics: const NeverScrollableScrollPhysics(),
+    physics:   NeverScrollableScrollPhysics(),
     children: List.generate(
       controller.dashBoardScreenList.length,
       (index) => controller.dashBoardScreenList[index],
@@ -52,31 +51,34 @@ Widget dashBoardPageView = GetBuilder<DashboardScreenController>(
 );
 
 AppBar dashBoardAppBar = AppBar(
-  //backgroundColor: ColorRes.purpleLight2,
+  excludeHeaderSemantics: false,
+  automaticallyImplyLeading: false,
+  backgroundColor: ColorRes.purpleLight2,
   title: GetBuilder<DashboardScreenController>(
     id: 'dashBoardAppBarTitle',
     builder: (controller) => Text(
       controller.appBarTitleList[controller.selectedPage],
-      style: const TextStyle(fontFamily: "Poppins"),
+      style:   TextStyle(fontFamily: "Poppins"),
     ),
   ),
   centerTitle: true,
   leading: GetBuilder<DashboardScreenController>(
-    builder: (controller) => IconButton(
-      onPressed: () => controller.drawerOnTap(),
+    id: 'dashBoardAppBarIcon',
+    builder: (controller) => controller.selectedPage==0?IconButton(
+      onPressed: () =>controller.drawerOnTap(),
       icon: ValueListenableBuilder<AdvancedDrawerValue>(
         valueListenable: controller.advancedDrawerController,
         builder: (_, value, __) {
           return AnimatedSwitcher(
-            duration: const Duration(milliseconds: 500),
+            duration:   Duration(milliseconds: 500),
             child: Icon(
-              value.visible ? Icons.clear : Icons.menu,
+              value.visible? Icons.clear : controller.selectedPage==1||controller.selectedPage==2||controller.selectedPage==3? null : Icons.menu,
               key: ValueKey<bool>(value.visible),
             ),
           );
         },
       ),
-    ),
+    ):  SizedBox(),
   ),
 );
 
@@ -85,7 +87,11 @@ Widget drawer = GetBuilder<DashboardScreenController>(
     child: Column(
       children: [
         heightSizeBox(20),
+<<<<<<< Updated upstream
         const CircleAvatar(
+=======
+          CircleAvatar(
+>>>>>>> Stashed changes
           backgroundImage: AssetImage(ImageRes.loginLogo),
           radius: 80,
         ),
@@ -106,7 +112,11 @@ Widget drawer = GetBuilder<DashboardScreenController>(
                 ),
                 title: Text(
                   controller.drawerListItem[index]['title'],
+<<<<<<< Updated upstream
                   style: const TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
+=======
+                  style:   TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
+>>>>>>> Stashed changes
                 ),
               );
             },
@@ -125,8 +135,8 @@ logOutDialog(
     barrierDismissible: false,
     builder: (BuildContext context) {
       return Dialog(
-        insetPadding: const EdgeInsets.symmetric(horizontal: 20),
-        shape: const RoundedRectangleBorder(
+        insetPadding:   EdgeInsets.symmetric(horizontal: 20),
+        shape:   RoundedRectangleBorder(
           borderRadius: BorderRadius.only(
             topLeft: Radius.circular(30),
             topRight: Radius.circular(30),
@@ -134,7 +144,7 @@ logOutDialog(
           ),
         ),
         child: ClipRRect(
-          borderRadius: const BorderRadius.only(
+          borderRadius:   BorderRadius.only(
             topLeft: Radius.circular(30),
             topRight: Radius.circular(30),
             bottomLeft: Radius.circular(30),
@@ -146,8 +156,13 @@ logOutDialog(
                 children: [
                   Container(
                     color: ColorRes.purpleLight2,
+<<<<<<< Updated upstream
                     child: const Padding(
                       padding: EdgeInsets.symmetric(
+=======
+                    child:   Padding(
+                      padding:  EdgeInsets.symmetric(
+>>>>>>> Stashed changes
                         horizontal: 20,
                         vertical: 10,
                       ),
@@ -163,17 +178,17 @@ logOutDialog(
                       ),
                     ),
                   ),
-                  const SizedBox(height: 50),
-                  const Text(
+                    SizedBox(height: 50),
+                    Text(
                     "Are You sure Want to log out?",
                     style: TextStyle(
                       fontSize: 20,
                       fontWeight: FontWeight.w600,
                     ),
                   ),
-                  const SizedBox(height: 50),
+                    SizedBox(height: 50),
                   Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 20),
+                    padding:   EdgeInsets.symmetric(horizontal: 20),
                     child: Row(
                       children: [
                         Expanded(
@@ -183,7 +198,11 @@ logOutDialog(
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(10.0),
                               ),
+<<<<<<< Updated upstream
                               child: const Text(
+=======
+                              child:   Text(
+>>>>>>> Stashed changes
                                 StringRes.logOut,
                                 style: TextStyle(
                                     fontSize: 20, fontWeight: FontWeight.bold),
@@ -192,7 +211,7 @@ logOutDialog(
                                 Get.back();
                               }),
                         ),
-                        const SizedBox(width: 10),
+                          SizedBox(width: 10),
                         Expanded(
                           child: MaterialButton(
                               height: 50,
@@ -200,7 +219,11 @@ logOutDialog(
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(10.0),
                               ),
+<<<<<<< Updated upstream
                               child: const Text(
+=======
+                              child:   Text(
+>>>>>>> Stashed changes
                                 StringRes.cancel,
                                 style: TextStyle(
                                     fontSize: 20, fontWeight: FontWeight.bold
@@ -214,7 +237,7 @@ logOutDialog(
                       ],
                     ),
                   ),
-                  const SizedBox(height: 20),
+                    SizedBox(height: 20),
                 ],
               ),
             ),
@@ -233,8 +256,8 @@ ratingBarDialog(
     barrierDismissible: false, // user must tap button!
     builder: (BuildContext context) {
       return Dialog(
-        insetPadding: const EdgeInsets.symmetric(horizontal: 20),
-        shape: const RoundedRectangleBorder(
+        insetPadding:   EdgeInsets.symmetric(horizontal: 20),
+        shape:   RoundedRectangleBorder(
           borderRadius: BorderRadius.only(
             topLeft: Radius.circular(30),
             topRight: Radius.circular(30),
@@ -242,7 +265,7 @@ ratingBarDialog(
           ),
         ),
         child: ClipRRect(
-          borderRadius: const BorderRadius.only(
+          borderRadius:   BorderRadius.only(
             topLeft: Radius.circular(30),
             topRight: Radius.circular(30),
             bottomLeft: Radius.circular(30),
@@ -254,7 +277,11 @@ ratingBarDialog(
                 children: [
                   Container(
                     color: ColorRes.purpleLight2,
+<<<<<<< Updated upstream
                     child: const Padding(
+=======
+                    child:   Padding(
+>>>>>>> Stashed changes
                       padding: EdgeInsets.symmetric(
                         horizontal: 20,
                         vertical: 10,
@@ -271,15 +298,20 @@ ratingBarDialog(
                       ),
                     ),
                   ),
-                  const SizedBox(height: 50),
+                    SizedBox(height: 50),
                   RatingBar.builder(
                     initialRating: 3,
                     minRating: 1,
                     direction: Axis.horizontal,
                     allowHalfRating: true,
                     itemCount: 5,
+<<<<<<< Updated upstream
                     itemPadding: const EdgeInsets.symmetric(horizontal: 4.0),
                     itemBuilder: (context, _) => const Icon(
+=======
+                    itemPadding:   EdgeInsets.symmetric(horizontal: 4.0),
+                    itemBuilder: (context, _) =>   Icon(
+>>>>>>> Stashed changes
                       Icons.star,
                       color: Colors.amber,
                     ),

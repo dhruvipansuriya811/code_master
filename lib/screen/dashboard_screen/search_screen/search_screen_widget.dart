@@ -9,7 +9,6 @@ Widget searchBar = GetBuilder<SearchScreenController>(
       child: CupertinoSearchTextField(
         controller: controller.searchController,
         placeholder: 'Search',
-
       ),
     );
   },
