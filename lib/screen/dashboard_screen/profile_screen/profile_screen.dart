@@ -31,13 +31,14 @@ class ProfileScreen extends StatelessWidget {
               Divider(
                 endIndent: Get.width / 17,
                 indent: Get.width / 17,
-              //  color: ColorRes.purpleLight,
+                //  color: ColorRes.purpleLight,
               ),
               heightSizeBox(Get.height / 40),
-              Expanded(
-                child: Container(child: profileScreenCard),
+              SizedBox(
+                height: Get.height * 0.5,
+                child: profileScreenCard,
               ),
-
+              // Expanded(child: profileScreenCard),
             ],
           ),
         ),

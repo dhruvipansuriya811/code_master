@@ -23,6 +23,7 @@ Widget profileScreenImageContainer = GetBuilder<ProfileScreenController>(
 Widget profileScreenCard = GetBuilder<ProfileScreenController>(
   builder: (controller) {
     return ListView.builder(
+      // physics: const NeverScrollableScrollPhysics(),
       itemCount: controller.profileScreenList.length,
       itemBuilder: (context, index) => Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -57,7 +58,6 @@ Widget profileScreenCard = GetBuilder<ProfileScreenController>(
               ),
             ),
           ),
-          // heightSizeBox(Get.height / 40),
         ],
       ),
     );
