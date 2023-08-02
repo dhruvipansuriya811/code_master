@@ -11,35 +11,34 @@ class ProfileScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Get.put(ProfileScreenController());
-    return SafeArea(
-      child: Scaffold(
-        body: Container(
-          decoration: const BoxDecoration(
-            gradient: LinearGradient(
-              colors: [
-                Color(0XFFf3e7e9),
-                Color(0XFFe3eeff),
-              ],
-            ),
+    return Scaffold(
+      body: Container(
+        decoration: const BoxDecoration(
+          gradient: LinearGradient(
+            colors: [
+              Color(0XFFf3e7e9),
+              Color(0XFFe3eeff),
+            ],
           ),
-          child: Padding(
-            padding: EdgeInsets.all(Get.height / 45),
-            child: Column(
-              children: [
-                heightSizeBox(Get.height / 50),
-                profileScreenImageContainer,
-                heightSizeBox(Get.height / 40),
-                Divider(
-                  endIndent: Get.width / 17,
-                  indent: Get.width / 17,
-                //  color: ColorRes.purpleLight,
-                ),
-                heightSizeBox(Get.height / 40),
-                Expanded(
-                  child: Container(child: profileScreenCard),
-                ),
-              ],
-            ),
+        ),
+        child: Padding(
+          padding: EdgeInsets.all(Get.height / 45),
+          child: Column(
+            children: [
+              heightSizeBox(Get.height / 50),
+              profileScreenImageContainer,
+              heightSizeBox(Get.height / 40),
+              Divider(
+                endIndent: Get.width / 17,
+                indent: Get.width / 17,
+              //  color: ColorRes.purpleLight,
+              ),
+              heightSizeBox(Get.height / 40),
+              Expanded(
+                child: Container(child: profileScreenCard),
+              ),
+
+            ],
           ),
         ),
       ),

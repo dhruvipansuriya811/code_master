@@ -56,8 +56,8 @@ Widget verificationTextColumn = GetBuilder<OtpVerificationController>(
           StringRes.otpVerification,
           style: TextStyle(fontSize: Get.width/18, fontWeight: FontWeight.bold),
         ),
-        heightSizeBox(10),
-         Text(
+        heightSizeBox(Get.height/90),
+        Text(
           StringRes.enterOtpNumber,
           style: TextStyle(
             fontSize: Get.width/20,

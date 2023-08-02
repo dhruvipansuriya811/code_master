@@ -198,13 +198,8 @@ Widget editScreenBirthOfDate = GetBuilder<EditScreenController>(
   id: "datePicker",
   builder: (controller) {
     return commonTextFiled(
-<<<<<<< Updated upstream
       bodSelect: () => controller.birthDateOnTap(),
-      fontSize: 18,
-=======
-      onTap: () => controller.birthDateOnTap(),
       fontSize: Get.width/20,
->>>>>>> Stashed changes
       fontFamily: "Poppins",
       prefixIcon: IconRes.birthDate,
       hintText: StringRes.enterDate,

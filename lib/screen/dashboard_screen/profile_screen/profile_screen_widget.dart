@@ -10,9 +10,8 @@ Widget profileScreenImageContainer = GetBuilder<ProfileScreenController>(
     return Container(
       height: Get.height / 5,
       width: Get.width / 2,
-
       child: Card(
-        elevation: Get.height/80,
+        elevation: Get.height / 80,
         child: Image(
           image: AssetImage(ImageRes.loginLogo),
         ),
@@ -29,7 +28,10 @@ Widget profileScreenCard = GetBuilder<ProfileScreenController>(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Padding(
-            padding: EdgeInsets.only(left: Get.width / 30),
+            padding: EdgeInsets.only(
+              left: Get.width / 30,
+              top: (Get.height / 40),
+            ),
             child: Text(
               controller.profileScreenList[index]['title'],
               style: TextStyle(
@@ -55,7 +57,7 @@ Widget profileScreenCard = GetBuilder<ProfileScreenController>(
               ),
             ),
           ),
-          heightSizeBox(Get.height / 40),
+          // heightSizeBox(Get.height / 40),
         ],
       ),
     );
