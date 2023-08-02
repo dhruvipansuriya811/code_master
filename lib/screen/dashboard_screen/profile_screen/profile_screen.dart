@@ -38,7 +38,6 @@ class ProfileScreen extends StatelessWidget {
                 height: Get.height * 0.5,
                 child: profileScreenCard,
               ),
-              // Expanded(child: profileScreenCard),
             ],
           ),
         ),
