@@ -13,23 +13,25 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        decoration: const BoxDecoration(
-          gradient: LinearGradient(
-            colors: [
-              Color(0XFFf3e7e9),
-              Color(0XFFe3eeff),
-            ],
+      body:
+          // Container(
+          //   decoration: const BoxDecoration(
+          //     gradient: LinearGradient(
+          //       colors: [
+          //         Color(0XFFf3e7e9),
+          //         Color(0XFFe3eeff),
+          //       ],
+          //     ),
+          //   ),
+          //   child:
+          Column(
+        children: [
+          Expanded(
+            child: homeScreenAllTopicContainer,
           ),
-        ),
-        child: Column(
-          children: [
-            Expanded(
-              child: homeScreenAllTopicContainer,
-            ),
-          ],
-        ),
+        ],
       ),
+      //   ),
     );
   }
 }

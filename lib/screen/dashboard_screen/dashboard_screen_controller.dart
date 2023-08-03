@@ -49,14 +49,15 @@ class DashboardScreenController extends GetxController {
 
   List dashBoardScreenList = [
     HomeScreen(),
-    const SearchScreen(),
+    SearchScreen(),
     ExampleScreen(),
-    const ProfileScreen(),
+    ProfileScreen(),
   ];
 
   void onTapBottomBar(index) {
     selectedPage = index;
-    update(['dashBoardAppBarTitle', 'dashboardPageView','dashBoardAppBarIcon']);
+    update(
+        ['dashBoardAppBarTitle', 'dashboardPageView', 'dashBoardAppBarIcon']);
     pageController.jumpToPage(index);
   }
 
@@ -90,7 +91,7 @@ class DashboardScreenController extends GetxController {
 
   void drawerListTile(int index, BuildContext context) {
     index == 0
-        ?Get.to(EditScreen())
+        ? Get.to(EditScreen())
         : index == 1
             ? Get.defaultDialog()
             : index == 2

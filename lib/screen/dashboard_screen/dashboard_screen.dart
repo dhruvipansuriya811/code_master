@@ -15,7 +15,7 @@ class DashBordScreen extends StatelessWidget {
     return AdvancedDrawer(
       backdrop: Container(
         width: double.infinity,
-        height: double.infinity,
+     height: double.infinity,
         decoration: BoxDecoration(
           gradient: LinearGradient(
             begin: Alignment.topLeft,

@@ -8,7 +8,8 @@ import '../../../../../common/common_radiobutton.dart';
 import '../../../../../common/common_textfield.dart';
 import '../../../../../utils/colors_res.dart';
 
-AppBar editScreenAppBar = AppBar(toolbarHeight: 60,
+AppBar editScreenAppBar = AppBar(
+  toolbarHeight: 60,
   backgroundColor: ColorRes.purpleLight2,
   centerTitle: true,
   title: const Text(
@@ -30,20 +31,18 @@ Widget imagePicker = GetBuilder<EditScreenController>(
       child: Stack(
         children: [
           CircleAvatar(
-            radius: Get.width/4,
+            radius: 100,
             backgroundImage: controller.file == null
-                ? const AssetImage(
-                    ImageRes.profileImage,
-                  )
+                ? AssetImage(ImageRes.profileImage)
                 : FileImage(controller.file!) as ImageProvider,
           ),
           Positioned(
-            left: Get.width/2.6,
-            bottom: Get.height/35,
+            left: Get.width * 0.40,
+            top: Get.height * 0.18,
             child: CircleAvatar(
               backgroundColor: ColorRes.purpleDark,
               // foregroundColor: Colors.red,
-              radius: Get.width/20,
+              radius: Get.width / 20,
               child: InkWell(
                 onTap: () {
                   controller.imagePick();
@@ -51,7 +50,7 @@ Widget imagePicker = GetBuilder<EditScreenController>(
                 child: Icon(
                   Icons.camera_alt,
                   color: Colors.white,
-                  size: Get.width/20,
+                  size: Get.width / 20,
                 ),
               ),
             ),
@@ -67,7 +66,7 @@ Widget editScreenNameTextField = GetBuilder<EditScreenController>(
     return commonTextFiled(
       prefixIcon: IconRes.person,
       textFiledName: StringRes.name,
-      fontSize: Get.width/20,
+      fontSize: Get.width / 20,
       hintText: StringRes.name,
       fontFamily: "Poppins",
       controller: controller.nameController,
@@ -80,49 +79,60 @@ Widget editScreenStudyColumn = GetBuilder<EditScreenController>(
   builder: (controller) => Column(
     crossAxisAlignment: CrossAxisAlignment.start,
     children: [
-       Padding(
+      Padding(
         padding: EdgeInsets.all(8.0),
         child: Text(
           StringRes.studyName,
           style: TextStyle(
-            fontSize: Get.width/20,
+            fontSize: Get.width / 20,
             fontFamily: "Poppins-Light",
             fontWeight: FontWeight.bold,
           ),
         ),
       ),
-      Row(
-        mainAxisAlignment: MainAxisAlignment.start,
-        children: [
-          commonRadioButton(
-            value: controller.signUpRadioSchool,
-            groupValue: controller.signUpStudyRadioGroupValue,
-            onChanged: (value) {
-              controller.signUpSchoolOnTap(value);
-            },
+      Container(
+        height: Get.height / 16,
+        decoration: BoxDecoration(
+          color: ColorRes.weightColor,
+          border: Border.all(
+            color: ColorRes.blackColor,
+            width: 0.7,
           ),
-           Text(
-            StringRes.school,
-            style: TextStyle(
-              fontSize: Get.width/20,
-              fontFamily: "Poppins-Light",
+          borderRadius: BorderRadius.circular(Get.width / 30),
+        ),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            commonRadioButton(
+              value: controller.signUpRadioSchool,
+              groupValue: controller.signUpStudyRadioGroupValue,
+              onChanged: (value) {
+                controller.signUpSchoolOnTap(value);
+              },
             ),
-          ),
-          commonRadioButton(
-            value: controller.signUpRadioCollage,
-            groupValue: controller.signUpStudyRadioGroupValue,
-            onChanged: (value) {
-              controller.signUpCollageOnTap(value);
-            },
-          ),
-           Text(
-            StringRes.collage,
-            style: TextStyle(
-              fontSize: Get.width/20,
-              fontFamily: "Poppins-Light",
+            Text(
+              StringRes.school,
+              style: TextStyle(
+                fontSize: Get.width / 20,
+                fontFamily: "Poppins-Light",
+              ),
             ),
-          ),
-        ],
+            commonRadioButton(
+              value: controller.signUpRadioCollage,
+              groupValue: controller.signUpStudyRadioGroupValue,
+              onChanged: (value) {
+                controller.signUpCollageOnTap(value);
+              },
+            ),
+            Text(
+              StringRes.collage,
+              style: TextStyle(
+                fontSize: Get.width / 20,
+                fontFamily: "Poppins-Light",
+              ),
+            ),
+          ],
+        ),
       )
     ],
   ),
@@ -138,57 +148,68 @@ Widget editScreenRadioButtonColumn = GetBuilder<EditScreenController>(
         child: Text(
           StringRes.genderName,
           style: TextStyle(
-            fontSize: Get.width/20,
+            fontSize: Get.width / 20,
             fontFamily: "Poppins-Light",
             fontWeight: FontWeight.bold,
           ),
         ),
       ),
-      Row(
-        children: [
-          commonRadioButton(
-            value: controller.signUpRadioMale,
-            groupValue: controller.signUpRadioGroupValue,
-            onChanged: (value) {
-              controller.signUpMaleOnTap(value);
-            },
+      Container(
+        height: Get.height / 16,
+        decoration: BoxDecoration(
+          color: ColorRes.weightColor,
+          border: Border.all(
+            color: ColorRes.blackColor,
+            width: 0.7,
           ),
-          Text(
-            StringRes.male,
-            style: TextStyle(
-              fontSize: Get.width/20,
-              fontFamily: "Poppins-Light",
+          borderRadius: BorderRadius.circular(Get.width / 30),
+        ),
+        child: Row(
+          children: [
+            commonRadioButton(
+              value: controller.signUpRadioMale,
+              groupValue: controller.signUpRadioGroupValue,
+              onChanged: (value) {
+                controller.signUpMaleOnTap(value);
+              },
             ),
-          ),
-          commonRadioButton(
-            value: controller.signUpRadioFemale,
-            groupValue: controller.signUpRadioGroupValue,
-            onChanged: (value) {
-              controller.signUpFemaleOnTap(value);
-            },
-          ),
-          Text(
-            StringRes.female,
-            style: TextStyle(
-              fontSize: Get.width/20,
-              fontFamily: "Poppins-Light",
+            Text(
+              StringRes.male,
+              style: TextStyle(
+                fontSize: Get.width / 20,
+                fontFamily: "Poppins-Light",
+              ),
             ),
-          ),
-          commonRadioButton(
-            value: controller.signRadioOther,
-            groupValue: controller.signUpRadioGroupValue,
-            onChanged: (value) {
-              controller.signUpOtherOnTap(value);
-            },
-          ),
-          Text(
-            StringRes.other,
-            style: TextStyle(
-              fontSize: Get.width/20,
-              fontFamily: "Poppins-Light",
+            commonRadioButton(
+              value: controller.signUpRadioFemale,
+              groupValue: controller.signUpRadioGroupValue,
+              onChanged: (value) {
+                controller.signUpFemaleOnTap(value);
+              },
             ),
-          ),
-        ],
+            Text(
+              StringRes.female,
+              style: TextStyle(
+                fontSize: Get.width / 20,
+                fontFamily: "Poppins-Light",
+              ),
+            ),
+            commonRadioButton(
+              value: controller.signRadioOther,
+              groupValue: controller.signUpRadioGroupValue,
+              onChanged: (value) {
+                controller.signUpOtherOnTap(value);
+              },
+            ),
+            Text(
+              StringRes.other,
+              style: TextStyle(
+                fontSize: Get.width / 20,
+                fontFamily: "Poppins-Light",
+              ),
+            ),
+          ],
+        ),
       )
     ],
   ),
@@ -199,7 +220,7 @@ Widget editScreenBirthOfDate = GetBuilder<EditScreenController>(
   builder: (controller) {
     return commonTextFiled(
       bodSelect: () => controller.birthDateOnTap(),
-      fontSize: Get.width/20,
+      fontSize: Get.width / 20,
       fontFamily: "Poppins",
       prefixIcon: IconRes.birthDate,
       hintText: StringRes.enterDate,
@@ -214,8 +235,8 @@ Widget editScreenRow = GetBuilder<EditScreenController>(
     return Row(
       children: [
         containerButton(
-          color1: Color(0XFFFF4F4B),
-          color2: Color(0XFFFF817E),
+          color1: ColorRes.purpleDark,
+          color2: ColorRes.purpleLight,
           onTap: controller.cancelBtnOnTap,
           data: StringRes.cancel,
           height: Get.height / 18,
@@ -223,8 +244,8 @@ Widget editScreenRow = GetBuilder<EditScreenController>(
         ),
         Spacer(),
         containerButton(
-          color2: Color(0XFF00AB08),
-          color1: Color(0XFF95F985),
+          color2: ColorRes.purpleLight,
+          color1: ColorRes.purpleDark,
           onTap: controller.saveBtnOnTap,
           data: StringRes.save,
           height: Get.height / 18,

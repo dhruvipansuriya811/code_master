@@ -34,7 +34,8 @@ class StringRes {
   static const String other = 'Other';
   static const String share = 'Share';
   static const String rating = 'Rating';
-  static const String logOut = 'LogOut';
+  static const String logOut = 'Log Out';
+  static const String areYouSureLogOut = 'Are you sure want to log out?';
   static const String edit = 'Edit';
   static const String enterDate = 'Enter Date Of Birth';
   static const String school = 'School';
@@ -54,4 +55,6 @@ class StringRes {
   static const String verify = 'VERIFY';
   static const String didNotReceiveOtp = "Didn't receive the OTP? ";
   static const String resentOtp = 'RESEND OTP';
+  static const String ratingDialog = 'Rating Dialog';
+  static const String submit = 'Submit';
 }

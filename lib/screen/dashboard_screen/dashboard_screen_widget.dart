@@ -93,30 +93,48 @@ Widget drawer = GetBuilder<DashboardScreenController>(
   builder: (controller) => Drawer(
     child: Column(
       children: [
-        heightSizeBox(Get.height / 40),
-        CircleAvatar(
-          backgroundImage: AssetImage(ImageRes.loginLogo),
-          radius: Get.width / 4.5,
+        heightSizeBox(Get.height / 20),
+        Container(
+          height: Get.height / 5,
+          width: Get.width / 2,
+          child: Card(
+            elevation: Get.height / 80,
+            child: Image(
+              image: AssetImage(ImageRes.loginLogo),
+            ),
+          ),
         ),
         heightSizeBox(Get.height / 80),
         Divider(
           endIndent: Get.width / 17,
           indent: Get.width / 17,
-          color: ColorRes.purpleLight,
+          //  color: ColorRes.purpleLight,
         ),
         Expanded(
           child: ListView.builder(
             itemCount: controller.drawerListItem.length,
             itemBuilder: (context, index) {
-              return ListTile(
-                onTap: () => controller.drawerListTile(index, context),
-                leading: Icon(
-                  controller.drawerListItem[index]['icon'],
-                ),
-                title: Text(
-                  controller.drawerListItem[index]['title'],
-                  style: TextStyle(
-                      fontSize: Get.width / 20, fontWeight: FontWeight.w500),
+              return Card(
+                margin:
+                    EdgeInsets.only(left: Get.width / 30, top: Get.width / 20,right:  Get.width / 30),
+                elevation: 10,
+                child: Container(
+                  margin: EdgeInsets.only(left: Get.width / 35),
+                  alignment: Alignment.centerLeft,
+                  height: Get.height / 15,
+                  width: double.infinity,
+                  child: ListTile(
+                    onTap: () => controller.drawerListTile(index, context),
+                    leading: Icon(
+                      controller.drawerListItem[index]['icon'],
+                    ),
+                    title: Text(
+                      controller.drawerListItem[index]['title'],
+                      style: TextStyle(
+                          fontSize: Get.width / 20,
+                          fontWeight: FontWeight.w500),
+                    ),
+                  ),
                 ),
               );
             },
@@ -165,7 +183,7 @@ logOutDialog(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Text(
-                            "Log Out",
+                            StringRes.logOut,
                             style: TextStyle(
                               fontSize: Get.width / 20,
                               fontWeight: FontWeight.bold,
@@ -175,22 +193,22 @@ logOutDialog(
                       ),
                     ),
                   ),
-                  heightSizeBox(Get.height/15),
+                  heightSizeBox(Get.height / 15),
                   Text(
-                    "Are You sure Want to log out?",
+                    StringRes.areYouSureLogOut,
                     style: TextStyle(
                       fontSize: Get.width / 20,
                       fontWeight: FontWeight.w600,
                     ),
                   ),
-                  heightSizeBox(Get.height/15),
+                  heightSizeBox(Get.height / 15),
                   Padding(
-                    padding: EdgeInsets.symmetric(horizontal: Get.width/20),
+                    padding: EdgeInsets.symmetric(horizontal: Get.width / 20),
                     child: Row(
                       children: [
                         Expanded(
                           child: MaterialButton(
-                              height: Get.height/15,
+                              height: Get.height / 15,
                               color: ColorRes.purpleLight2,
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(10.0),
@@ -205,10 +223,10 @@ logOutDialog(
                                 Get.back();
                               }),
                         ),
-                        widthSizeBox(Get.width/40),
+                        widthSizeBox(Get.width / 40),
                         Expanded(
                           child: MaterialButton(
-                              height: Get.height/15,
+                              height: Get.height / 15,
                               color: ColorRes.purpleLight2,
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(10.0),
@@ -228,7 +246,7 @@ logOutDialog(
                       ],
                     ),
                   ),
-                 heightSizeBox(Get.height/40),
+                  heightSizeBox(Get.height / 40),
                 ],
               ),
             ),
@@ -277,15 +295,16 @@ ratingBarDialog(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Text(
-                            "Rating Dialog",
+                           StringRes.ratingDialog,
                             style: TextStyle(
-                                fontSize: Get.width / 20, fontWeight: FontWeight.bold),
+                                fontSize: Get.width / 20,
+                                fontWeight: FontWeight.bold),
                           ),
                         ],
                       ),
                     ),
                   ),
-                  heightSizeBox(Get.height/15),
+                  heightSizeBox(Get.height / 15),
                   RatingBar.builder(
                     initialRating: 3,
                     minRating: 1,
@@ -301,17 +320,18 @@ ratingBarDialog(
                       print(rating);
                     },
                   ),
-                  heightSizeBox(Get.height/20),
+                  heightSizeBox(Get.height / 20),
                   // const SizedBox(width: 10),
                   MaterialButton(
-                    height: Get.height/15,
+                    height: Get.height / 15,
                     color: ColorRes.purpleLight2,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10.0),
                     ),
-                    child:  Text(
+                    child: Text(
                       "Submit",
-                      style: TextStyle(fontSize: Get.width / 20, fontWeight: FontWeight.bold
+                      style: TextStyle(
+                          fontSize: Get.width / 20, fontWeight: FontWeight.bold
                           // fontFamily: "Poppins",
                           ),
                     ),
@@ -319,7 +339,7 @@ ratingBarDialog(
                       Get.back();
                     },
                   ),
-                  heightSizeBox(Get.height/40),
+                  heightSizeBox(Get.height / 40),
                 ],
               ),
             ),

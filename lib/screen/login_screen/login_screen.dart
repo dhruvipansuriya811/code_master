@@ -20,16 +20,18 @@ class LoginScreen extends StatelessWidget {
         },
         child: Scaffold(
           resizeToAvoidBottomInset: true,
-          body: Container(
-            decoration: const BoxDecoration(
-              gradient: LinearGradient(
-                colors: [
-                  Color(0XFFf3e7e9),
-                  Color(0XFFe3eeff),
-                ],
-              ),
-            ),
-            child: Padding(
+          body:
+          // Container(
+          //   decoration: const BoxDecoration(
+          //     gradient: LinearGradient(
+          //       colors: [
+          //         Color(0XFFf3e7e9),
+          //         Color(0XFFe3eeff),
+          //       ],
+          //     ),
+          //   ),
+          //   child:
+            Padding(
               padding: EdgeInsets.symmetric(horizontal: Get.width / 20),
               child: SingleChildScrollView(
 
@@ -54,7 +56,7 @@ class LoginScreen extends StatelessWidget {
                 ),
               ),
             ),
-          ),
+        //  ),
         ),
       ),
     );

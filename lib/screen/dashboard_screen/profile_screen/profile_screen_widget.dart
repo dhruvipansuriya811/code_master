@@ -23,23 +23,31 @@ Widget profileScreenImageContainer = GetBuilder<ProfileScreenController>(
 Widget profileScreenCard = GetBuilder<ProfileScreenController>(
   builder: (controller) {
     return ListView.builder(
-      // physics: const NeverScrollableScrollPhysics(),
+      shrinkWrap: true,
+    //  physics: const NeverScrollableScrollPhysics(),
       itemCount: controller.profileScreenList.length,
       itemBuilder: (context, index) => Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisSize: MainAxisSize.min,
         children: [
-          Padding(
-            padding: EdgeInsets.only(
-              left: Get.width / 30,
-              top: (Get.height / 40),
-            ),
-            child: Text(
-              controller.profileScreenList[index]['title'],
-              style: TextStyle(
-                  fontSize: Get.width / 23,
-                  color: ColorRes.purpleDark,
-                  fontWeight: FontWeight.bold),
-            ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            mainAxisSize: MainAxisSize.max,
+            children: [
+              Padding(
+                padding: EdgeInsets.only(
+                  left: Get.width / 30,
+                  top: (Get.height / 40),
+                ),
+                child: Text(
+                  controller.profileScreenList[index]['title'],
+                  style: TextStyle(
+                    fontSize: Get.width / 23,
+                    color: ColorRes.purpleDark,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+            ],
           ),
           heightSizeBox(Get.height / 85),
           Card(
