@@ -12,27 +12,28 @@ class ProfileScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     Get.put(ProfileScreenController());
     return Scaffold(
-      body:
-      Padding(
-        padding: EdgeInsets.all(Get.height / 45),
-        child:
-        Column(
-          children: [
-            heightSizeBox(Get.height / 50),
-            profileScreenImageContainer,
-            heightSizeBox(Get.height / 40),
-            Divider(
-              endIndent: Get.width / 17,
-              indent: Get.width / 17,
-              //  color: ColorRes.purpleLight,
+      body: Column(
+        children: [
+          Expanded(
+            child: Padding(
+              padding:  EdgeInsets.symmetric(horizontal: Get.width*0.04),
+              child: Column(
+                children: [
+                  heightSizeBox(Get.height / 50),
+                  profileScreenImageContainer,
+                  heightSizeBox(Get.height / 40),
+                  Divider(
+                    endIndent: Get.width / 17,
+                    indent: Get.width / 17,
+                    //  color: ColorRes.purpleLight,
+                  ),
+                  profileScreenCard,
+                  // Expanded(child: profileScreenCard),
+                ],
+              ),
             ),
-
-            Expanded(
-              child: profileScreenCard,
-            ),
-            // Expanded(child: profileScreenCard),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }

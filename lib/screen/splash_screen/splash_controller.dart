@@ -11,7 +11,6 @@ class SplashController extends GetxController {
         const OnBoardingScreen(),
       );
     });
-
     super.onInit();
   }
 }

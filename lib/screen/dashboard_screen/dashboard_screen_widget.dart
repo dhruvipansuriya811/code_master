@@ -15,7 +15,7 @@ Widget dashboardBottomNavigationBar = GetBuilder<DashboardScreenController>(
       notchBottomBarController: controller.notchBottomBarController,
       color: ColorRes.weightColor,
       showLabel: true,
-      notchColor: ColorRes.purpleDark,
+      notchColor: ColorRes.purpleLight,
       bottomBarWidth: Get.width,
       durationInMilliSeconds: 300,
       bottomBarItems: List.generate(
@@ -41,7 +41,7 @@ Widget dashBoardPageView = GetBuilder<DashboardScreenController>(
   id: "dashboardPageView",
   builder: (controller) => PageView(
     controller: controller.pageController,
-    physics: NeverScrollableScrollPhysics(),
+    physics: const NeverScrollableScrollPhysics(),
     children: List.generate(
       controller.dashBoardScreenList.length,
       (index) => controller.dashBoardScreenList[index],
@@ -52,7 +52,7 @@ Widget dashBoardPageView = GetBuilder<DashboardScreenController>(
 AppBar dashBoardAppBar = AppBar(
   excludeHeaderSemantics: false,
   automaticallyImplyLeading: false,
-  backgroundColor: ColorRes.purpleLight2,
+  backgroundColor: ColorRes.purpleLight,
   title: GetBuilder<DashboardScreenController>(
     id: 'dashBoardAppBarTitle',
     builder: (controller) => Text(
@@ -94,16 +94,12 @@ Widget drawer = GetBuilder<DashboardScreenController>(
     child: Column(
       children: [
         heightSizeBox(Get.height / 20),
-        Container(
-          height: Get.height / 5,
-          width: Get.width / 2,
-          child: Card(
-            elevation: Get.height / 80,
-            child: Image(
-              image: AssetImage(ImageRes.loginLogo),
-            ),
-          ),
+      CircleAvatar(
+        radius: Get.height*0.10,
+        child: Image(
+          image: AssetImage(ImageRes.loginLogo),
         ),
+      ),
         heightSizeBox(Get.height / 80),
         Divider(
           endIndent: Get.width / 17,
