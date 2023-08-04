@@ -7,11 +7,15 @@ import 'package:get/get.dart';
 
 Widget profileScreenImageContainer = GetBuilder<ProfileScreenController>(
   builder: (controller) {
-    return CircleAvatar(
-      radius: Get.height*0.10,
-      child: Image(
-              image: AssetImage(ImageRes.loginLogo),
-            ),
+    return Container(
+      height: Get.height / 5,
+      width: Get.width / 2,
+      child: Card(
+        elevation: Get.height / 80,
+        child: Image(
+          image: AssetImage(ImageRes.loginLogo),
+        ),
+      ),
     );
     //
     //
@@ -87,7 +91,6 @@ Widget profileScreenCard = GetBuilder<ProfileScreenController>(
               ),
             ),
         ),
-      ),
     );
   },
 );

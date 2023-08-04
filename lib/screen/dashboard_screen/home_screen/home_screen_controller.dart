@@ -18,7 +18,6 @@ class HomeScreenController extends GetxController {
     "C switch-case",
     "C Conditional Operator",
     "C Loops",
-    "C Nested If",
     "C Infinite Loop",
     "C Break and Continue Keyword",
     "C Goto Statement",
@@ -31,6 +30,4 @@ class HomeScreenController extends GetxController {
     "C Recursion",
     "C Structure",
   ];
-
-
 }

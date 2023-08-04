@@ -11,8 +11,6 @@ class ExampleScreenController extends GetxController {
   List<Map> exampleScreenData = [
     {
       'topic': 'First C Program',
-      'data': false,
-      'height':50,
       'example': [
         'hello world program',
       ],
