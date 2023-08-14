@@ -57,7 +57,9 @@ AppBar dashBoardAppBar = AppBar(
     id: 'dashBoardAppBarTitle',
     builder: (controller) => Text(
       controller.appBarTitleList[controller.selectedPage],
-      style: TextStyle(fontFamily: "Poppins"),
+      style: TextStyle(
+        fontFamily: "Poppins",
+      ),
     ),
   ),
   centerTitle: true,
@@ -94,12 +96,12 @@ Widget drawer = GetBuilder<DashboardScreenController>(
     child: Column(
       children: [
         heightSizeBox(Get.height / 20),
-      CircleAvatar(
-        radius: Get.height*0.10,
-        child: Image(
-          image: AssetImage(ImageRes.loginLogo),
+        CircleAvatar(
+          radius: Get.height * 0.10,
+          child: Image(
+            image: AssetImage(ImageRes.loginLogo),
+          ),
         ),
-      ),
         heightSizeBox(Get.height / 80),
         Divider(
           endIndent: Get.width / 17,
@@ -111,8 +113,10 @@ Widget drawer = GetBuilder<DashboardScreenController>(
             itemCount: controller.drawerListItem.length,
             itemBuilder: (context, index) {
               return Card(
-                margin:
-                    EdgeInsets.only(left: Get.width / 30, top: Get.width / 20,right:  Get.width / 30),
+                margin: EdgeInsets.only(
+                    left: Get.width / 30,
+                    top: Get.width / 20,
+                    right: Get.width / 30),
                 elevation: 10,
                 child: Container(
                   margin: EdgeInsets.only(left: Get.width / 35),
@@ -141,9 +145,7 @@ Widget drawer = GetBuilder<DashboardScreenController>(
   ),
 );
 
-logOutDialog(
-  BuildContext context,
-) {
+logOutDialog(BuildContext context) {
   return showDialog<void>(
     context: context,
     barrierDismissible: false,
@@ -253,9 +255,7 @@ logOutDialog(
   );
 }
 
-ratingBarDialog(
-  BuildContext context,
-) {
+ratingBarDialog(BuildContext context) {
   return showDialog<void>(
     context: context,
     barrierDismissible: false, // user must tap button!
@@ -291,7 +291,7 @@ ratingBarDialog(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Text(
-                           StringRes.ratingDialog,
+                            StringRes.ratingDialog,
                             style: TextStyle(
                                 fontSize: Get.width / 20,
                                 fontWeight: FontWeight.bold),

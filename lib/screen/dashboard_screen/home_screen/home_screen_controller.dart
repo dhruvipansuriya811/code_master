@@ -2,7 +2,7 @@ import 'package:get/get.dart';
 import 'package:get/get_state_manager/src/simple/get_controllers.dart';
 
 class HomeScreenController extends GetxController {
-
+  int selectedIndex = -1;
   List cLanguageAllTopicList = [
     "What is c Language",
     "History of C",
@@ -30,4 +30,10 @@ class HomeScreenController extends GetxController {
     "C Recursion",
     "C Structure",
   ];
+  void onTapIndex(int index){
+    selectedIndex = index;
+    update(["listOfData"]);
+  }
+
+
 }
