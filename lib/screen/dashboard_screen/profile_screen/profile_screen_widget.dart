@@ -17,6 +17,18 @@ Widget profileScreenImageContainer = GetBuilder<ProfileScreenController>(
         ),
       ),
     );
+    //
+    //
+    // Container(
+    //   height: Get.height / 5,
+    //   width: Get.width / 2,
+    //   child: Card(
+    //     elevation: Get.height / 80,
+    //     child: Image(
+    //       image: AssetImage(ImageRes.loginLogo),
+    //     ),
+    //   ),
+    // );
   },
 );
 
